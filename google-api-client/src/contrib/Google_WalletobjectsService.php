@@ -1048,6 +1048,64 @@ class Google_Barcode extends Google_Model {
   }
 }
 
+class Google_TextModuleDatas extends Google_Model {
+  public $header;
+  public $body;
+  public function setHeader( $header) {
+    $this->header = $header;
+  }
+  public function getHeader() {
+    return $this->header;
+  }
+  public function setBody( $body) {
+    $this->body = $body;
+  }
+  public function getBody() {
+    return $this->body;
+  }
+}
+
+class Google_LinksModuleData extends Google_Model {
+  public $uri;
+  public function setUri( $uri ) {
+    $this->uri = $uri;
+  }
+  public function getUri() {
+    return $this->uri;
+  }
+}
+
+class Google_InfoModuleData extends Google_Model {
+  public $hexFontColor;
+  public $hexBackgroundColor;
+  public $labelValueRows;
+  public $showLastUpdateTime;
+  public function setHexFontColor( $hexFontColor ) {
+    $this->hexFontColor = $hexFontColor;
+  }
+  public function getHexBackgroundColor() {
+    return $this->hexBackgroundColor;
+  }
+  public function setHexBackgroundColor( $hexBackgroundColor ) {
+    $this->hexBackgroundColor = $hexBackgroundColor;
+  }
+  public function getHexFontColor() {
+    return $this->hexFontColor;
+  }
+  public function setLabelValueRows( $labelValueRows ) {
+    $this->labelValueRows = $labelValueRows;
+  }
+  public function getLabelValueRows() {
+    return $this->labelValueRows;
+  }
+  public function setShowLastUpdateTime( $showLastUpdateTime ) {
+    $this->showLastUpdateTime = $showLastUpdateTime;
+  }
+  public function getShowLastUpdateTime() {
+    return $this->showLastUpdateTime;
+  }
+}
+
 class Google_BoardingPassClass extends Google_Model {
   public $aircraftType;
   public $allowMultipleUsersPerObject;
@@ -2543,6 +2601,9 @@ class Google_LoyaltyObject extends Google_Model {
   protected $__barcodeType = 'Google_Barcode';
   protected $__barcodeDataType = '';
   public $barcode;
+  public $textModuleDatas;
+  public $linksModuleData;
+  public $infoModuleData;
   public $classId;
   protected $__classReferenceType = 'Google_LoyaltyClass';
   protected $__classReferenceDataType = '';
@@ -2583,6 +2644,24 @@ class Google_LoyaltyObject extends Google_Model {
   }
   public function getBarcode() {
     return $this->barcode;
+  }
+  public function setTextModuleDatas(Google_TextModuleDatas $textModuleDatas) {
+    $this->textModuleDatas = $textModuleDatas;
+  }
+  public function getTextModuleDatas() {
+    return $this->textModuleDatas;
+  }
+  public function setLinksModuleData(Google_LinksModuleData $linksModuleData) {
+    $this->linksModuleData = $linksModuleData;
+  }
+  public function getLinksModuleData() {
+    return $this->linksModuleData;
+  }
+  public function setInfoModuleData(Google_InfoModuleData $infoModuleData) {
+    $this->infoModuleData = $infoModuleData;
+  }
+  public function getInfoModuleData() {
+    return $this->infoModuleData;
   }
   public function setClassId( $classId) {
     $this->classId = $classId;

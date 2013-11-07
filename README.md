@@ -13,10 +13,10 @@ This sample showcases several aspects of the API
 * The Web Service API
 
 ## Creation of Wallet Classes and Objects
-The code for creation of classes and objects can be found under the src/com/google/wallet/objects/verticals directory. Each Wallet Object type, such as loyalty, is broken out into its own file.
+The code for creation of classes and objects can be found under the verticals directory. Each Wallet Object type, such as loyalty, is broken out into its own file.
 
 ## Save to Wallet insertion of Classes and Objects
-Save to Wallet is handled on both the client and server. The war/index.html file is the landing page for the application and includes app.js. The app.js file makes a request to the jwt.php file to generate Wallet Object type-specific JWTs. The app.js file inserts the appropriate g:wallet tags and the Save to Wallet JavaScript after all of the JWTs are generated. The JavaScript must be appended after the g:wallet tags because it parses the page to render Save to Wallet buttons when it's completed loading.
+Save to Wallet is handled on both the client and server. The index.html file is the landing page for the application and includes app.js. The app.js file makes a request to the jwt.php file to generate Wallet Object type-specific JWTs. The app.js file inserts the appropriate g:wallet tags and the Save to Wallet JavaScript after all of the JWTs are generated. The JavaScript must be appended after the g:wallet tags because it parses the page to render Save to Wallet buttons when it's completed loading.
 
 ## Webservice API
 The Webservice API handler is webservice.php. This script handles Webservice requests, generates Loyalty Objects, converts Loyalty Objects to JWTs, and responds with the JWT. You can configure your discoverable to point to the URL handled by the webservice.php.

@@ -60,73 +60,6 @@ class Loyalty {
             'longitude' => -122.085286
         )
     );
-    // Define issuer data.
-    $data =  array(
-        'textModule' => array(
-            'header' => array(
-                'string' => 'Rewards details'
-            ),
-            'body' => array(
-                'string' => 'Welcome to Baconrista rewards. For every 5 coffees'
-                .'purchased you\'ll receive a free bacon fat latte'
-            )
-        ),
-        'linksModule' => array(
-            'uri0' => array(
-                'uri' => array(
-                    'kind' => 'walletobjects#uri',
-                    'uri' => 'http://www.example.com',
-                    'description' => 'Example'
-                )
-            )
-        ),
-        'infoModule' => array(
-            'fontColor' => array(
-                'string' => '#FF3300'
-            ),
-            'backgroundColor' => array(
-                'string' => '#ABABAB'
-            ),
-            'row0' => array(
-                'col0' => array(
-                    'label' => array(
-                        'string' => 'Label 0'
-                    ),
-                    'value' => array(
-                        'string' => 'Value 0'
-                    )
-                ),
-                'col1' => array(
-                    'label' => array(
-                        'string' => 'Label 1'
-                    ),
-                    'value' => array(
-                        'string' => 'Value1'
-                    )
-                )
-            ),
-            'row1' => array(
-                'col0' => array(
-                    'label' => array(
-                        'string' => 'Label 0'
-                    ),
-                    'value' => array(
-                        'string' => 'Value 0'
-                    )
-                ),
-                'col1' => array(
-                    'label' => array(
-                        'string' => 'Label 1'
-                    ),
-                    'value' => array(
-                        'string' => 'Value1'
-                    )
-                )
-            )
-        )
-    );
-    $issuerData =  new Google_TypedValue();
-    $issuerData->setField($data,'g_expanded');
     // Source uri of program logo.
     $uriInstance = new Google_Uri();
     $imageInstance = new Google_Image();
@@ -151,7 +84,6 @@ class Loyalty {
     $wobClass->setReviewStatus('underReview');
     $wobClass->setAllowMultipleUsersPerObject(true);
     $wobClass->setLocations($locations);
-    $wobClass->setIssuerData($issuerData);
     return $wobClass;
   }
 
@@ -170,31 +102,67 @@ class Loyalty {
     $barcode->setLabel('User Id');
     $barcode->setType('qrCode');
     $barcode->setValue('28343E3');
-    // Define issuer data.
-    $data = array(
-        'infoModule' => array(
-            'row0' => array(
-                'col0' => array(
-                    'label' => array(
-                        'string' => 'Member Name'
-                    ),
-                    'value' => array(
-                        'string' => 'Jane Doe'
-                    )
+    // Define text module data.
+    $textModuleDatas = new Google_TextModuleDatas();
+    $textModuleDatas->setHeader('Rewards details');
+    $textModuleDatas->setBody('Welcome to Baconrista rewards. For every 5 ' .
+        'coffees purchased you\'ll receive a free bacon fat latte.');
+    // Define links module data. 
+    $linksModuleData = new Google_LinksModuleData();
+    $uriInstance = new Google_Uri();
+    $uriInstance->setUri('http://www.example.com');
+    $uriInstance->setKind('walletobjects#uri');
+    $uriInstance->setDescription('Example');
+    $linksModuleData->setUri($uriInstance);
+    // Define label values.
+    $labelValueRows = array(
+        array(
+            'columns' => array(
+                array(
+                    'label' => 'Member Name',
+                    'value' => 'Joe Smith'
+                ), array(
+                    'label' => 'Next Reward in',
+                    'value' => '2 Coffee'
                 )
-            ),
-            'col1' => array(
-                'label' => array(
-                    'string' => 'Next Reward In'
-                ),
-                'value' => array(
-                    'int' => 2
+            )
+        ),
+        array(
+            'columns' => array(
+                array(
+                    'label' => 'Label 2',
+                    'value' => 'Value 2'
+                ), array(
+                    'label' => 'Lable 3',
+                    'value' => 'Value 3'
                 )
             )
         )
     );
-    $issuerData =  new Google_TypedValue();
-    $issuerData->setField($data,'g_expanded');
+    // Define info module data.
+    $infoModuleData = new Google_InfoModuleData();
+    $infoModuleData->setHexBackgroundColor('#b41515');
+    $infoModuleData->setHexFontColor('#e7e12f');
+    $infoModuleData->setShowLastUpdateTime(true);
+    $infoModuleData->setLabelValueRows($labelValueRows);
+    // Messages to be displayed.
+    $messages = array(array(
+        'actionUri' => array(
+            'kind' => 'walletobjects#uri',
+            'uri' => 'http://baconrista.com'
+        ),
+        'body' => 'Welcome to Banconrista Rewards!',
+        'header' => 'Welcome',
+        'image' => array(
+            'kind' => 'walletobjects#image',
+            'sourceUri' => array(
+                'kind' => 'walletobjects#uri',
+                'uri' => 'https://ssl.gstatic.com/codesite/ph/images/'.
+                'search-48.gif'
+            )
+        ),
+        'kind' => 'walletobjects#walletObjectMessage'
+    ));
     // Reward points a user has.
     $points = new Google_LoyaltyPoints();
     $balance = new Google_LoyaltyPointsBalance();
@@ -209,10 +177,13 @@ class Loyalty {
     $wobObject->setVersion(1);
     $wobObject->setState("active");
     $wobObject->setBarcode($barcode);
+    $wobObject->setInfoModuleData($infoModuleData);
+    $wobObject->setLinksModuleData($linksModuleData);
+    $wobObject->setTextModuleDatas($textModuleDatas);
     $wobObject->setAccountName("Joe Smith");
     $wobObject->setAccountId("1234567890");
     $wobObject->setLoyaltyPoints($points);
-    $wobObject->setIssuerData($issuerData);
+    $wobObject->setMessages($messages);
     return $wobObject;
   }
 }
