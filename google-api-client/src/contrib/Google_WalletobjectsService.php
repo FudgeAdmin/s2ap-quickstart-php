@@ -25,6 +25,7 @@
   class Google_BoardingpassclassServiceResource extends Google_ServiceResource {
 
     /**
+     * Adds a message to the boarding pass class referenced by the given class ID.
      * (boardingpassclass.addmessage)
      *
      * @param string $resourceId
@@ -43,6 +44,7 @@
       }
     }
     /**
+     * Returns the boarding pass class with the given class ID.
      * (boardingpassclass.get)
      *
      * @param string $resourceId
@@ -63,6 +65,7 @@
       }
     }
     /**
+     * Inserts a boarding pass class with the given ID and properties.
      * (boardingpassclass.insert)
      *
      * @param Google_BoardingPassClass $postBody
@@ -80,10 +83,14 @@
       }
     }
     /**
+     * Returns a list of all boarding pass classes for a given issuer ID.
      * (boardingpassclass.list)
      *
      * @param string $issuerId
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
      * @return Google_BoardingPassClassListResponse
      */
     public function listBoardingpassclass($issuerId, $optParams = array()) {
@@ -97,7 +104,8 @@
       }
     }
     /**
-     * (boardingpassclass.patch)
+     * Updates the boarding pass class referenced by the given class ID. This method
+     * supports patch semantics. (boardingpassclass.patch)
      *
      * @param string $resourceId
      * @param Google_BoardingPassClass $postBody
@@ -115,6 +123,7 @@
       }
     }
     /**
+     * Updates the boarding pass class referenced by the given class ID.
      * (boardingpassclass.update)
      *
      * @param string $resourceId
@@ -145,6 +154,7 @@
   class Google_BoardingpassobjectServiceResource extends Google_ServiceResource {
 
     /**
+     * Adds a message to the boarding pass object referenced by the given object ID.
      * (boardingpassobject.addmessage)
      *
      * @param string $resourceId
@@ -163,6 +173,7 @@
       }
     }
     /**
+     * Returns the boarding pass object with the given object ID.
      * (boardingpassobject.get)
      *
      * @param string $resourceId
@@ -180,6 +191,7 @@
       }
     }
     /**
+     * Inserts a boarding pass object with the given ID and properties.
      * (boardingpassobject.insert)
      *
      * @param Google_BoardingPassObject $postBody
@@ -197,10 +209,14 @@
       }
     }
     /**
+     * Returns a list of all boarding pass objects for a given class ID.
      * (boardingpassobject.list)
      *
      * @param string $classId
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
      * @return Google_BoardingPassObjectListResponse
      */
     public function listBoardingpassobject($classId, $optParams = array()) {
@@ -214,7 +230,8 @@
       }
     }
     /**
-     * (boardingpassobject.patch)
+     * Updates the boarding pass object referenced by the given object ID. This
+     * method supports patch semantics. (boardingpassobject.patch)
      *
      * @param string $resourceId
      * @param Google_BoardingPassObject $postBody
@@ -232,6 +249,7 @@
       }
     }
     /**
+     * Updates the boarding pass object referenced by the given object ID.
      * (boardingpassobject.update)
      *
      * @param string $resourceId
@@ -262,6 +280,7 @@
   class Google_GenericclassServiceResource extends Google_ServiceResource {
 
     /**
+     * Adds a message to the generic class referenced by the given class ID.
      * (genericclass.addmessage)
      *
      * @param string $resourceId
@@ -280,7 +299,7 @@
       }
     }
     /**
-     * (genericclass.get)
+     * Returns the generic class with the given class ID. (genericclass.get)
      *
      * @param string $resourceId
      * @param array $optParams Optional parameters.
@@ -300,6 +319,7 @@
       }
     }
     /**
+     * Inserts a generic class with the given ID and properties.
      * (genericclass.insert)
      *
      * @param Google_GenericClass $postBody
@@ -317,10 +337,14 @@
       }
     }
     /**
+     * Returns a list of all generic classes for a given issuer ID.
      * (genericclass.list)
      *
      * @param string $issuerId
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
      * @return Google_GenericClassListResponse
      */
     public function listGenericclass($issuerId, $optParams = array()) {
@@ -334,7 +358,8 @@
       }
     }
     /**
-     * (genericclass.patch)
+     * Updates the generic class referenced by the given class ID. This method
+     * supports patch semantics. (genericclass.patch)
      *
      * @param string $resourceId
      * @param Google_GenericClass $postBody
@@ -352,6 +377,7 @@
       }
     }
     /**
+     * Updates the generic class referenced by the given class ID.
      * (genericclass.update)
      *
      * @param string $resourceId
@@ -382,6 +408,7 @@
   class Google_GenericobjectServiceResource extends Google_ServiceResource {
 
     /**
+     * Adds a message to the generic object referenced by the given object ID.
      * (genericobject.addmessage)
      *
      * @param string $resourceId
@@ -400,7 +427,7 @@
       }
     }
     /**
-     * (genericobject.get)
+     * Returns the generic object with the given object ID. (genericobject.get)
      *
      * @param string $resourceId
      * @param array $optParams Optional parameters.
@@ -417,6 +444,7 @@
       }
     }
     /**
+     * Inserts a generic object with the given ID and properties.
      * (genericobject.insert)
      *
      * @param Google_GenericObject $postBody
@@ -434,10 +462,14 @@
       }
     }
     /**
+     * Returns a list of all generic objects for a given class ID.
      * (genericobject.list)
      *
      * @param string $classId
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
      * @return Google_GenericObjectListResponse
      */
     public function listGenericobject($classId, $optParams = array()) {
@@ -451,7 +483,8 @@
       }
     }
     /**
-     * (genericobject.patch)
+     * Updates the generic object referenced by the given object ID. This method
+     * supports patch semantics. (genericobject.patch)
      *
      * @param string $resourceId
      * @param Google_GenericObject $postBody
@@ -469,6 +502,7 @@
       }
     }
     /**
+     * Updates the generic object referenced by the given object ID.
      * (genericobject.update)
      *
      * @param string $resourceId
@@ -489,6 +523,259 @@
   }
 
   /**
+   * The "giftcardclass" collection of methods.
+   * Typical usage is:
+   *  <code>
+   *   $walletobjectsService = new Google_WalletobjectsService(...);
+   *   $giftcardclass = $walletobjectsService->giftcardclass;
+   *  </code>
+   */
+  class Google_GiftcardclassServiceResource extends Google_ServiceResource {
+
+    /**
+     * Adds a message to the gift card class referenced by the given class ID.
+     * (giftcardclass.addmessage)
+     *
+     * @param string $resourceId
+     * @param Google_GiftCardClassAddMessageRequest $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardClassAddMessageResponse
+     */
+    public function addmessage($resourceId, Google_GiftCardClassAddMessageRequest $postBody, $optParams = array()) {
+      $params = array('resourceId' => $resourceId, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('addmessage', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardClassAddMessageResponse($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Returns the gift card class with the given class ID. (giftcardclass.get)
+     *
+     * @param string $resourceId
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param bool approvedOnly
+     * @opt_param string version
+     * @return Google_GiftCardClass
+     */
+    public function get($resourceId, $optParams = array()) {
+      $params = array('resourceId' => $resourceId);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('get', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardClass($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Inserts a gift card class with the given ID and properties.
+     * (giftcardclass.insert)
+     *
+     * @param Google_GiftCardClass $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardClass
+     */
+    public function insert(Google_GiftCardClass $postBody, $optParams = array()) {
+      $params = array('postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('insert', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardClass($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Returns a list of all gift card classes for a given issuer ID.
+     * (giftcardclass.list)
+     *
+     * @param string $issuerId
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
+     * @return Google_GiftCardClassListResponse
+     */
+    public function listGiftcardclass($issuerId, $optParams = array()) {
+      $params = array('issuerId' => $issuerId);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('list', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardClassListResponse($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Updates the gift card class referenced by the given class ID. This method
+     * supports patch semantics. (giftcardclass.patch)
+     *
+     * @param string $resourceId
+     * @param Google_GiftCardClass $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardClass
+     */
+    public function patch($resourceId, Google_GiftCardClass $postBody, $optParams = array()) {
+      $params = array('resourceId' => $resourceId, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('patch', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardClass($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Updates the gift card class referenced by the given class ID.
+     * (giftcardclass.update)
+     *
+     * @param string $resourceId
+     * @param Google_GiftCardClass $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardClass
+     */
+    public function update($resourceId, Google_GiftCardClass $postBody, $optParams = array()) {
+      $params = array('resourceId' => $resourceId, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('update', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardClass($data);
+      } else {
+        return $data;
+      }
+    }
+  }
+
+  /**
+   * The "giftcardobject" collection of methods.
+   * Typical usage is:
+   *  <code>
+   *   $walletobjectsService = new Google_WalletobjectsService(...);
+   *   $giftcardobject = $walletobjectsService->giftcardobject;
+   *  </code>
+   */
+  class Google_GiftcardobjectServiceResource extends Google_ServiceResource {
+
+    /**
+     * Adds a message to the gift card object referenced by the given object ID.
+     * (giftcardobject.addmessage)
+     *
+     * @param string $resourceId
+     * @param Google_GiftCardObjectAddMessageRequest $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardObjectAddMessageResponse
+     */
+    public function addmessage($resourceId, Google_GiftCardObjectAddMessageRequest $postBody, $optParams = array()) {
+      $params = array('resourceId' => $resourceId, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('addmessage', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardObjectAddMessageResponse($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Returns the gift card object with the given object ID. (giftcardobject.get)
+     *
+     * @param string $resourceId
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardObject
+     */
+    public function get($resourceId, $optParams = array()) {
+      $params = array('resourceId' => $resourceId);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('get', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardObject($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Inserts a gift card object with the given ID and properties.
+     * (giftcardobject.insert)
+     *
+     * @param Google_GiftCardObject $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardObject
+     */
+    public function insert(Google_GiftCardObject $postBody, $optParams = array()) {
+      $params = array('postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('insert', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardObject($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Returns a list of all gift card objects for a given class ID.
+     * (giftcardobject.list)
+     *
+     * @param string $classId
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
+     * @return Google_GiftCardObjectListResponse
+     */
+    public function listGiftcardobject($classId, $optParams = array()) {
+      $params = array('classId' => $classId);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('list', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardObjectListResponse($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Updates the gift card object referenced by the given object ID. This method
+     * supports patch semantics. (giftcardobject.patch)
+     *
+     * @param string $resourceId
+     * @param Google_GiftCardObject $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardObject
+     */
+    public function patch($resourceId, Google_GiftCardObject $postBody, $optParams = array()) {
+      $params = array('resourceId' => $resourceId, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('patch', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardObject($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Updates the gift card object referenced by the given object ID.
+     * (giftcardobject.update)
+     *
+     * @param string $resourceId
+     * @param Google_GiftCardObject $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_GiftCardObject
+     */
+    public function update($resourceId, Google_GiftCardObject $postBody, $optParams = array()) {
+      $params = array('resourceId' => $resourceId, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('update', array($params));
+      if ($this->useObjects()) {
+        return new Google_GiftCardObject($data);
+      } else {
+        return $data;
+      }
+    }
+  }
+
+  /**
    * The "loyaltyclass" collection of methods.
    * Typical usage is:
    *  <code>
@@ -499,6 +786,7 @@
   class Google_LoyaltyclassServiceResource extends Google_ServiceResource {
 
     /**
+     * Adds a message to the loyalty class referenced by the given class ID.
      * (loyaltyclass.addmessage)
      *
      * @param string $resourceId
@@ -517,7 +805,7 @@
       }
     }
     /**
-     * (loyaltyclass.get)
+     * Returns the loyalty class with the given class ID. (loyaltyclass.get)
      *
      * @param string $resourceId
      * @param array $optParams Optional parameters.
@@ -537,6 +825,7 @@
       }
     }
     /**
+     * Inserts a loyalty class with the given ID and properties.
      * (loyaltyclass.insert)
      *
      * @param Google_LoyaltyClass $postBody
@@ -554,10 +843,14 @@
       }
     }
     /**
+     * Returns a list of all loyalty classes for a given issuer ID.
      * (loyaltyclass.list)
      *
      * @param string $issuerId
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
      * @return Google_LoyaltyClassListResponse
      */
     public function listLoyaltyclass($issuerId, $optParams = array()) {
@@ -571,7 +864,8 @@
       }
     }
     /**
-     * (loyaltyclass.patch)
+     * Updates the loyalty class referenced by the given class ID. This method
+     * supports patch semantics. (loyaltyclass.patch)
      *
      * @param string $resourceId
      * @param Google_LoyaltyClass $postBody
@@ -589,6 +883,7 @@
       }
     }
     /**
+     * Updates the loyalty class referenced by the given class ID.
      * (loyaltyclass.update)
      *
      * @param string $resourceId
@@ -619,6 +914,7 @@
   class Google_LoyaltyobjectServiceResource extends Google_ServiceResource {
 
     /**
+     * Adds a message to the loyalty object referenced by the given object ID.
      * (loyaltyobject.addmessage)
      *
      * @param string $resourceId
@@ -637,7 +933,7 @@
       }
     }
     /**
-     * (loyaltyobject.get)
+     * Returns the loyalty object with the given object ID. (loyaltyobject.get)
      *
      * @param string $resourceId
      * @param array $optParams Optional parameters.
@@ -654,6 +950,7 @@
       }
     }
     /**
+     * Inserts a loyalty object with the given ID and properties.
      * (loyaltyobject.insert)
      *
      * @param Google_LoyaltyObject $postBody
@@ -671,10 +968,14 @@
       }
     }
     /**
+     * Returns a list of all loyalty objects for a given class ID.
      * (loyaltyobject.list)
      *
      * @param string $classId
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
      * @return Google_LoyaltyObjectListResponse
      */
     public function listLoyaltyobject($classId, $optParams = array()) {
@@ -688,7 +989,8 @@
       }
     }
     /**
-     * (loyaltyobject.patch)
+     * Updates the loyalty object referenced by the given object ID. This method
+     * supports patch semantics. (loyaltyobject.patch)
      *
      * @param string $resourceId
      * @param Google_LoyaltyObject $postBody
@@ -706,6 +1008,7 @@
       }
     }
     /**
+     * Updates the loyalty object referenced by the given object ID.
      * (loyaltyobject.update)
      *
      * @param string $resourceId
@@ -736,6 +1039,7 @@
   class Google_OfferclassServiceResource extends Google_ServiceResource {
 
     /**
+     * Adds a message to the offer class referenced by the given class ID.
      * (offerclass.addmessage)
      *
      * @param string $resourceId
@@ -754,7 +1058,7 @@
       }
     }
     /**
-     * (offerclass.get)
+     * Returns the offer class with the given class ID. (offerclass.get)
      *
      * @param string $resourceId
      * @param array $optParams Optional parameters.
@@ -774,7 +1078,7 @@
       }
     }
     /**
-     * (offerclass.insert)
+     * Inserts an offer class with the given ID and properties. (offerclass.insert)
      *
      * @param Google_OfferClass $postBody
      * @param array $optParams Optional parameters.
@@ -791,10 +1095,13 @@
       }
     }
     /**
-     * (offerclass.list)
+     * Returns a list of all offer classes for a given issuer ID. (offerclass.list)
      *
      * @param string $issuerId
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
      * @return Google_OfferClassListResponse
      */
     public function listOfferclass($issuerId, $optParams = array()) {
@@ -808,7 +1115,8 @@
       }
     }
     /**
-     * (offerclass.patch)
+     * Updates the offer class referenced by the given class ID. This method
+     * supports patch semantics. (offerclass.patch)
      *
      * @param string $resourceId
      * @param Google_OfferClass $postBody
@@ -826,7 +1134,7 @@
       }
     }
     /**
-     * (offerclass.update)
+     * Updates the offer class referenced by the given class ID. (offerclass.update)
      *
      * @param string $resourceId
      * @param Google_OfferClass $postBody
@@ -856,6 +1164,7 @@
   class Google_OfferobjectServiceResource extends Google_ServiceResource {
 
     /**
+     * Adds a message to the offer object referenced by the given object ID.
      * (offerobject.addmessage)
      *
      * @param string $resourceId
@@ -874,7 +1183,7 @@
       }
     }
     /**
-     * (offerobject.get)
+     * Returns the offer object with the given object ID. (offerobject.get)
      *
      * @param string $resourceId
      * @param array $optParams Optional parameters.
@@ -891,6 +1200,7 @@
       }
     }
     /**
+     * Inserts an offer object with the given ID and properties.
      * (offerobject.insert)
      *
      * @param Google_OfferObject $postBody
@@ -908,10 +1218,13 @@
       }
     }
     /**
-     * (offerobject.list)
+     * Returns a list of all offer objects for a given class ID. (offerobject.list)
      *
      * @param string $classId
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param int maxResults
+     * @opt_param string token
      * @return Google_OfferObjectListResponse
      */
     public function listOfferobject($classId, $optParams = array()) {
@@ -925,7 +1238,8 @@
       }
     }
     /**
-     * (offerobject.patch)
+     * Updates the offer object referenced by the given object ID. This method
+     * supports patch semantics. (offerobject.patch)
      *
      * @param string $resourceId
      * @param Google_OfferObject $postBody
@@ -943,6 +1257,7 @@
       }
     }
     /**
+     * Updates the offer object referenced by the given object ID.
      * (offerobject.update)
      *
      * @param string $resourceId
@@ -966,7 +1281,7 @@
  * Service definition for Google_Walletobjects (v1).
  *
  * <p>
- * This is an API
+ * The Wallet Objects API allows you to connect your business to millions of Google users and showcase your loyalty programs, offers, boarding passes, tickets, and more.
  * </p>
  *
  * <p>
@@ -981,6 +1296,8 @@ class Google_WalletobjectsService extends Google_Service {
   public $boardingpassobject;
   public $genericclass;
   public $genericobject;
+  public $giftcardclass;
+  public $giftcardobject;
   public $loyaltyclass;
   public $loyaltyobject;
   public $offerclass;
@@ -996,14 +1313,16 @@ class Google_WalletobjectsService extends Google_Service {
     $this->serviceName = 'walletobjects';
 
     $client->addService($this->serviceName, $this->version);
-    $this->boardingpassclass = new Google_BoardingpassclassServiceResource($this, $this->serviceName, 'boardingpassclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.boardingpassclass.addmessage", "path": "boardingPassClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassClassAddMessageRequest"}, "response": {"$ref": "BoardingPassClassAddMessageResponse"}}, "get": {"id": "walletobjects.boardingpassclass.get", "path": "boardingPassClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "BoardingPassClassGetRequest"}, "response": {"$ref": "BoardingPassClass"}}, "insert": {"id": "walletobjects.boardingpassclass.insert", "path": "boardingPassClass", "httpMethod": "POST", "request": {"$ref": "BoardingPassClass"}, "response": {"$ref": "BoardingPassClass"}}, "list": {"id": "walletobjects.boardingpassclass.list", "path": "boardingPassClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}}, "request": {"$ref": "BoardingPassClassListRequest"}, "response": {"$ref": "BoardingPassClassListResponse"}}, "patch": {"id": "walletobjects.boardingpassclass.patch", "path": "boardingPassClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassClass"}, "response": {"$ref": "BoardingPassClass"}}, "update": {"id": "walletobjects.boardingpassclass.update", "path": "boardingPassClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassClass"}, "response": {"$ref": "BoardingPassClass"}}}}', true));
-    $this->boardingpassobject = new Google_BoardingpassobjectServiceResource($this, $this->serviceName, 'boardingpassobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.boardingpassobject.addmessage", "path": "boardingPassObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassObjectAddMessageRequest"}, "response": {"$ref": "BoardingPassObjectAddMessageResponse"}}, "get": {"id": "walletobjects.boardingpassobject.get", "path": "boardingPassObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassObjectGetRequest"}, "response": {"$ref": "BoardingPassObject"}}, "insert": {"id": "walletobjects.boardingpassobject.insert", "path": "boardingPassObject", "httpMethod": "POST", "request": {"$ref": "BoardingPassObject"}, "response": {"$ref": "BoardingPassObject"}}, "list": {"id": "walletobjects.boardingpassobject.list", "path": "boardingPassObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}}, "request": {"$ref": "BoardingPassObjectListRequest"}, "response": {"$ref": "BoardingPassObjectListResponse"}}, "patch": {"id": "walletobjects.boardingpassobject.patch", "path": "boardingPassObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassObject"}, "response": {"$ref": "BoardingPassObject"}}, "update": {"id": "walletobjects.boardingpassobject.update", "path": "boardingPassObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassObject"}, "response": {"$ref": "BoardingPassObject"}}}}', true));
-    $this->genericclass = new Google_GenericclassServiceResource($this, $this->serviceName, 'genericclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.genericclass.addmessage", "path": "genericClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericClassAddMessageRequest"}, "response": {"$ref": "GenericClassAddMessageResponse"}}, "get": {"id": "walletobjects.genericclass.get", "path": "genericClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "GenericClassGetRequest"}, "response": {"$ref": "GenericClass"}}, "insert": {"id": "walletobjects.genericclass.insert", "path": "genericClass", "httpMethod": "POST", "request": {"$ref": "GenericClass"}, "response": {"$ref": "GenericClass"}}, "list": {"id": "walletobjects.genericclass.list", "path": "genericClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}}, "request": {"$ref": "GenericClassListRequest"}, "response": {"$ref": "GenericClassListResponse"}}, "patch": {"id": "walletobjects.genericclass.patch", "path": "genericClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericClass"}, "response": {"$ref": "GenericClass"}}, "update": {"id": "walletobjects.genericclass.update", "path": "genericClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericClass"}, "response": {"$ref": "GenericClass"}}}}', true));
-    $this->genericobject = new Google_GenericobjectServiceResource($this, $this->serviceName, 'genericobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.genericobject.addmessage", "path": "genericObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericObjectAddMessageRequest"}, "response": {"$ref": "GenericObjectAddMessageResponse"}}, "get": {"id": "walletobjects.genericobject.get", "path": "genericObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericObjectGetRequest"}, "response": {"$ref": "GenericObject"}}, "insert": {"id": "walletobjects.genericobject.insert", "path": "genericObject", "httpMethod": "POST", "request": {"$ref": "GenericObject"}, "response": {"$ref": "GenericObject"}}, "list": {"id": "walletobjects.genericobject.list", "path": "genericObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}}, "request": {"$ref": "GenericObjectListRequest"}, "response": {"$ref": "GenericObjectListResponse"}}, "patch": {"id": "walletobjects.genericobject.patch", "path": "genericObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericObject"}, "response": {"$ref": "GenericObject"}}, "update": {"id": "walletobjects.genericobject.update", "path": "genericObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericObject"}, "response": {"$ref": "GenericObject"}}}}', true));
-    $this->loyaltyclass = new Google_LoyaltyclassServiceResource($this, $this->serviceName, 'loyaltyclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.loyaltyclass.addmessage", "path": "loyaltyClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyClassAddMessageRequest"}, "response": {"$ref": "LoyaltyClassAddMessageResponse"}}, "get": {"id": "walletobjects.loyaltyclass.get", "path": "loyaltyClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "LoyaltyClassGetRequest"}, "response": {"$ref": "LoyaltyClass"}}, "insert": {"id": "walletobjects.loyaltyclass.insert", "path": "loyaltyClass", "httpMethod": "POST", "request": {"$ref": "LoyaltyClass"}, "response": {"$ref": "LoyaltyClass"}}, "list": {"id": "walletobjects.loyaltyclass.list", "path": "loyaltyClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}}, "request": {"$ref": "LoyaltyClassListRequest"}, "response": {"$ref": "LoyaltyClassListResponse"}}, "patch": {"id": "walletobjects.loyaltyclass.patch", "path": "loyaltyClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyClass"}, "response": {"$ref": "LoyaltyClass"}}, "update": {"id": "walletobjects.loyaltyclass.update", "path": "loyaltyClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyClass"}, "response": {"$ref": "LoyaltyClass"}}}}', true));
-    $this->loyaltyobject = new Google_LoyaltyobjectServiceResource($this, $this->serviceName, 'loyaltyobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.loyaltyobject.addmessage", "path": "loyaltyObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyObjectAddMessageRequest"}, "response": {"$ref": "LoyaltyObjectAddMessageResponse"}}, "get": {"id": "walletobjects.loyaltyobject.get", "path": "loyaltyObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyObjectGetRequest"}, "response": {"$ref": "LoyaltyObject"}}, "insert": {"id": "walletobjects.loyaltyobject.insert", "path": "loyaltyObject", "httpMethod": "POST", "request": {"$ref": "LoyaltyObject"}, "response": {"$ref": "LoyaltyObject"}}, "list": {"id": "walletobjects.loyaltyobject.list", "path": "loyaltyObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}}, "request": {"$ref": "LoyaltyObjectListRequest"}, "response": {"$ref": "LoyaltyObjectListResponse"}}, "patch": {"id": "walletobjects.loyaltyobject.patch", "path": "loyaltyObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyObject"}, "response": {"$ref": "LoyaltyObject"}}, "update": {"id": "walletobjects.loyaltyobject.update", "path": "loyaltyObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyObject"}, "response": {"$ref": "LoyaltyObject"}}}}', true));
-    $this->offerclass = new Google_OfferclassServiceResource($this, $this->serviceName, 'offerclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.offerclass.addmessage", "path": "offerClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferClassAddMessageRequest"}, "response": {"$ref": "OfferClassAddMessageResponse"}}, "get": {"id": "walletobjects.offerclass.get", "path": "offerClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "OfferClassGetRequest"}, "response": {"$ref": "OfferClass"}}, "insert": {"id": "walletobjects.offerclass.insert", "path": "offerClass", "httpMethod": "POST", "request": {"$ref": "OfferClass"}, "response": {"$ref": "OfferClass"}}, "list": {"id": "walletobjects.offerclass.list", "path": "offerClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}}, "request": {"$ref": "OfferClassListRequest"}, "response": {"$ref": "OfferClassListResponse"}}, "patch": {"id": "walletobjects.offerclass.patch", "path": "offerClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferClass"}, "response": {"$ref": "OfferClass"}}, "update": {"id": "walletobjects.offerclass.update", "path": "offerClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferClass"}, "response": {"$ref": "OfferClass"}}}}', true));
-    $this->offerobject = new Google_OfferobjectServiceResource($this, $this->serviceName, 'offerobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.offerobject.addmessage", "path": "offerObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferObjectAddMessageRequest"}, "response": {"$ref": "OfferObjectAddMessageResponse"}}, "get": {"id": "walletobjects.offerobject.get", "path": "offerObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferObjectGetRequest"}, "response": {"$ref": "OfferObject"}}, "insert": {"id": "walletobjects.offerobject.insert", "path": "offerObject", "httpMethod": "POST", "request": {"$ref": "OfferObject"}, "response": {"$ref": "OfferObject"}}, "list": {"id": "walletobjects.offerobject.list", "path": "offerObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}}, "request": {"$ref": "OfferObjectListRequest"}, "response": {"$ref": "OfferObjectListResponse"}}, "patch": {"id": "walletobjects.offerobject.patch", "path": "offerObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferObject"}, "response": {"$ref": "OfferObject"}}, "update": {"id": "walletobjects.offerobject.update", "path": "offerObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferObject"}, "response": {"$ref": "OfferObject"}}}}', true));
+    $this->boardingpassclass = new Google_BoardingpassclassServiceResource($this, $this->serviceName, 'boardingpassclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.boardingpassclass.addmessage", "path": "boardingPassClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassClassAddMessageRequest"}, "response": {"$ref": "BoardingPassClassAddMessageResponse"}}, "get": {"id": "walletobjects.boardingpassclass.get", "path": "boardingPassClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "BoardingPassClassGetRequest"}, "response": {"$ref": "BoardingPassClass"}}, "insert": {"id": "walletobjects.boardingpassclass.insert", "path": "boardingPassClass", "httpMethod": "POST", "request": {"$ref": "BoardingPassClass"}, "response": {"$ref": "BoardingPassClass"}}, "list": {"id": "walletobjects.boardingpassclass.list", "path": "boardingPassClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "BoardingPassClassListRequest"}, "response": {"$ref": "BoardingPassClassListResponse"}}, "patch": {"id": "walletobjects.boardingpassclass.patch", "path": "boardingPassClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassClass"}, "response": {"$ref": "BoardingPassClass"}}, "update": {"id": "walletobjects.boardingpassclass.update", "path": "boardingPassClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassClass"}, "response": {"$ref": "BoardingPassClass"}}}}', true));
+    $this->boardingpassobject = new Google_BoardingpassobjectServiceResource($this, $this->serviceName, 'boardingpassobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.boardingpassobject.addmessage", "path": "boardingPassObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassObjectAddMessageRequest"}, "response": {"$ref": "BoardingPassObjectAddMessageResponse"}}, "get": {"id": "walletobjects.boardingpassobject.get", "path": "boardingPassObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassObjectGetRequest"}, "response": {"$ref": "BoardingPassObject"}}, "insert": {"id": "walletobjects.boardingpassobject.insert", "path": "boardingPassObject", "httpMethod": "POST", "request": {"$ref": "BoardingPassObject"}, "response": {"$ref": "BoardingPassObject"}}, "list": {"id": "walletobjects.boardingpassobject.list", "path": "boardingPassObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "BoardingPassObjectListRequest"}, "response": {"$ref": "BoardingPassObjectListResponse"}}, "patch": {"id": "walletobjects.boardingpassobject.patch", "path": "boardingPassObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassObject"}, "response": {"$ref": "BoardingPassObject"}}, "update": {"id": "walletobjects.boardingpassobject.update", "path": "boardingPassObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "BoardingPassObject"}, "response": {"$ref": "BoardingPassObject"}}}}', true));
+    $this->genericclass = new Google_GenericclassServiceResource($this, $this->serviceName, 'genericclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.genericclass.addmessage", "path": "genericClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericClassAddMessageRequest"}, "response": {"$ref": "GenericClassAddMessageResponse"}}, "get": {"id": "walletobjects.genericclass.get", "path": "genericClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "GenericClassGetRequest"}, "response": {"$ref": "GenericClass"}}, "insert": {"id": "walletobjects.genericclass.insert", "path": "genericClass", "httpMethod": "POST", "request": {"$ref": "GenericClass"}, "response": {"$ref": "GenericClass"}}, "list": {"id": "walletobjects.genericclass.list", "path": "genericClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "GenericClassListRequest"}, "response": {"$ref": "GenericClassListResponse"}}, "patch": {"id": "walletobjects.genericclass.patch", "path": "genericClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericClass"}, "response": {"$ref": "GenericClass"}}, "update": {"id": "walletobjects.genericclass.update", "path": "genericClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericClass"}, "response": {"$ref": "GenericClass"}}}}', true));
+    $this->genericobject = new Google_GenericobjectServiceResource($this, $this->serviceName, 'genericobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.genericobject.addmessage", "path": "genericObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericObjectAddMessageRequest"}, "response": {"$ref": "GenericObjectAddMessageResponse"}}, "get": {"id": "walletobjects.genericobject.get", "path": "genericObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericObjectGetRequest"}, "response": {"$ref": "GenericObject"}}, "insert": {"id": "walletobjects.genericobject.insert", "path": "genericObject", "httpMethod": "POST", "request": {"$ref": "GenericObject"}, "response": {"$ref": "GenericObject"}}, "list": {"id": "walletobjects.genericobject.list", "path": "genericObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "GenericObjectListRequest"}, "response": {"$ref": "GenericObjectListResponse"}}, "patch": {"id": "walletobjects.genericobject.patch", "path": "genericObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericObject"}, "response": {"$ref": "GenericObject"}}, "update": {"id": "walletobjects.genericobject.update", "path": "genericObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GenericObject"}, "response": {"$ref": "GenericObject"}}}}', true));
+    $this->giftcardclass = new Google_GiftcardclassServiceResource($this, $this->serviceName, 'giftcardclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.giftcardclass.addmessage", "path": "giftCardClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GiftCardClassAddMessageRequest"}, "response": {"$ref": "GiftCardClassAddMessageResponse"}}, "get": {"id": "walletobjects.giftcardclass.get", "path": "giftCardClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "GiftCardClassGetRequest"}, "response": {"$ref": "GiftCardClass"}}, "insert": {"id": "walletobjects.giftcardclass.insert", "path": "giftCardClass", "httpMethod": "POST", "request": {"$ref": "GiftCardClass"}, "response": {"$ref": "GiftCardClass"}}, "list": {"id": "walletobjects.giftcardclass.list", "path": "giftCardClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "GiftCardClassListRequest"}, "response": {"$ref": "GiftCardClassListResponse"}}, "patch": {"id": "walletobjects.giftcardclass.patch", "path": "giftCardClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GiftCardClass"}, "response": {"$ref": "GiftCardClass"}}, "update": {"id": "walletobjects.giftcardclass.update", "path": "giftCardClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GiftCardClass"}, "response": {"$ref": "GiftCardClass"}}}}', true));
+    $this->giftcardobject = new Google_GiftcardobjectServiceResource($this, $this->serviceName, 'giftcardobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.giftcardobject.addmessage", "path": "giftCardObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GiftCardObjectAddMessageRequest"}, "response": {"$ref": "GiftCardObjectAddMessageResponse"}}, "get": {"id": "walletobjects.giftcardobject.get", "path": "giftCardObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GiftCardObjectGetRequest"}, "response": {"$ref": "GiftCardObject"}}, "insert": {"id": "walletobjects.giftcardobject.insert", "path": "giftCardObject", "httpMethod": "POST", "request": {"$ref": "GiftCardObject"}, "response": {"$ref": "GiftCardObject"}}, "list": {"id": "walletobjects.giftcardobject.list", "path": "giftCardObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "GiftCardObjectListRequest"}, "response": {"$ref": "GiftCardObjectListResponse"}}, "patch": {"id": "walletobjects.giftcardobject.patch", "path": "giftCardObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GiftCardObject"}, "response": {"$ref": "GiftCardObject"}}, "update": {"id": "walletobjects.giftcardobject.update", "path": "giftCardObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "GiftCardObject"}, "response": {"$ref": "GiftCardObject"}}}}', true));
+    $this->loyaltyclass = new Google_LoyaltyclassServiceResource($this, $this->serviceName, 'loyaltyclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.loyaltyclass.addmessage", "path": "loyaltyClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyClassAddMessageRequest"}, "response": {"$ref": "LoyaltyClassAddMessageResponse"}}, "get": {"id": "walletobjects.loyaltyclass.get", "path": "loyaltyClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "LoyaltyClassGetRequest"}, "response": {"$ref": "LoyaltyClass"}}, "insert": {"id": "walletobjects.loyaltyclass.insert", "path": "loyaltyClass", "httpMethod": "POST", "request": {"$ref": "LoyaltyClass"}, "response": {"$ref": "LoyaltyClass"}}, "list": {"id": "walletobjects.loyaltyclass.list", "path": "loyaltyClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "LoyaltyClassListRequest"}, "response": {"$ref": "LoyaltyClassListResponse"}}, "patch": {"id": "walletobjects.loyaltyclass.patch", "path": "loyaltyClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyClass"}, "response": {"$ref": "LoyaltyClass"}}, "update": {"id": "walletobjects.loyaltyclass.update", "path": "loyaltyClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyClass"}, "response": {"$ref": "LoyaltyClass"}}}}', true));
+    $this->loyaltyobject = new Google_LoyaltyobjectServiceResource($this, $this->serviceName, 'loyaltyobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.loyaltyobject.addmessage", "path": "loyaltyObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyObjectAddMessageRequest"}, "response": {"$ref": "LoyaltyObjectAddMessageResponse"}}, "get": {"id": "walletobjects.loyaltyobject.get", "path": "loyaltyObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyObjectGetRequest"}, "response": {"$ref": "LoyaltyObject"}}, "insert": {"id": "walletobjects.loyaltyobject.insert", "path": "loyaltyObject", "httpMethod": "POST", "request": {"$ref": "LoyaltyObject"}, "response": {"$ref": "LoyaltyObject"}}, "list": {"id": "walletobjects.loyaltyobject.list", "path": "loyaltyObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "LoyaltyObjectListRequest"}, "response": {"$ref": "LoyaltyObjectListResponse"}}, "patch": {"id": "walletobjects.loyaltyobject.patch", "path": "loyaltyObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyObject"}, "response": {"$ref": "LoyaltyObject"}}, "update": {"id": "walletobjects.loyaltyobject.update", "path": "loyaltyObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "LoyaltyObject"}, "response": {"$ref": "LoyaltyObject"}}}}', true));
+    $this->offerclass = new Google_OfferclassServiceResource($this, $this->serviceName, 'offerclass', json_decode('{"methods": {"addmessage": {"id": "walletobjects.offerclass.addmessage", "path": "offerClass/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferClassAddMessageRequest"}, "response": {"$ref": "OfferClassAddMessageResponse"}}, "get": {"id": "walletobjects.offerclass.get", "path": "offerClass/{resourceId}", "httpMethod": "GET", "parameters": {"approvedOnly": {"type": "boolean", "default": "false", "location": "query"}, "resourceId": {"type": "string", "required": true, "location": "path"}, "version": {"type": "string", "format": "int64", "location": "query"}}, "request": {"$ref": "OfferClassGetRequest"}, "response": {"$ref": "OfferClass"}}, "insert": {"id": "walletobjects.offerclass.insert", "path": "offerClass", "httpMethod": "POST", "request": {"$ref": "OfferClass"}, "response": {"$ref": "OfferClass"}}, "list": {"id": "walletobjects.offerclass.list", "path": "offerClass", "httpMethod": "GET", "parameters": {"issuerId": {"type": "string", "required": true, "format": "int64", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "OfferClassListRequest"}, "response": {"$ref": "OfferClassListResponse"}}, "patch": {"id": "walletobjects.offerclass.patch", "path": "offerClass/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferClass"}, "response": {"$ref": "OfferClass"}}, "update": {"id": "walletobjects.offerclass.update", "path": "offerClass/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferClass"}, "response": {"$ref": "OfferClass"}}}}', true));
+    $this->offerobject = new Google_OfferobjectServiceResource($this, $this->serviceName, 'offerobject', json_decode('{"methods": {"addmessage": {"id": "walletobjects.offerobject.addmessage", "path": "offerObject/{resourceId}/addMessage", "httpMethod": "POST", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferObjectAddMessageRequest"}, "response": {"$ref": "OfferObjectAddMessageResponse"}}, "get": {"id": "walletobjects.offerobject.get", "path": "offerObject/{resourceId}", "httpMethod": "GET", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferObjectGetRequest"}, "response": {"$ref": "OfferObject"}}, "insert": {"id": "walletobjects.offerobject.insert", "path": "offerObject", "httpMethod": "POST", "request": {"$ref": "OfferObject"}, "response": {"$ref": "OfferObject"}}, "list": {"id": "walletobjects.offerobject.list", "path": "offerObject", "httpMethod": "GET", "parameters": {"classId": {"type": "string", "required": true, "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "location": "query"}, "token": {"type": "string", "location": "query"}}, "request": {"$ref": "OfferObjectListRequest"}, "response": {"$ref": "OfferObjectListResponse"}}, "patch": {"id": "walletobjects.offerobject.patch", "path": "offerObject/{resourceId}", "httpMethod": "PATCH", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferObject"}, "response": {"$ref": "OfferObject"}}, "update": {"id": "walletobjects.offerobject.update", "path": "offerObject/{resourceId}", "httpMethod": "PUT", "parameters": {"resourceId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "OfferObject"}, "response": {"$ref": "OfferObject"}}}}', true));
 
   }
 }
@@ -1045,64 +1364,6 @@ class Google_Barcode extends Google_Model {
   }
   public function getValue() {
     return $this->value;
-  }
-}
-
-class Google_TextModuleDatas extends Google_Model {
-  public $header;
-  public $body;
-  public function setHeader( $header) {
-    $this->header = $header;
-  }
-  public function getHeader() {
-    return $this->header;
-  }
-  public function setBody( $body) {
-    $this->body = $body;
-  }
-  public function getBody() {
-    return $this->body;
-  }
-}
-
-class Google_LinksModuleData extends Google_Model {
-  public $uri;
-  public function setUri( $uri ) {
-    $this->uri = $uri;
-  }
-  public function getUri() {
-    return $this->uri;
-  }
-}
-
-class Google_InfoModuleData extends Google_Model {
-  public $hexFontColor;
-  public $hexBackgroundColor;
-  public $labelValueRows;
-  public $showLastUpdateTime;
-  public function setHexFontColor( $hexFontColor ) {
-    $this->hexFontColor = $hexFontColor;
-  }
-  public function getHexBackgroundColor() {
-    return $this->hexBackgroundColor;
-  }
-  public function setHexBackgroundColor( $hexBackgroundColor ) {
-    $this->hexBackgroundColor = $hexBackgroundColor;
-  }
-  public function getHexFontColor() {
-    return $this->hexFontColor;
-  }
-  public function setLabelValueRows( $labelValueRows ) {
-    $this->labelValueRows = $labelValueRows;
-  }
-  public function getLabelValueRows() {
-    return $this->labelValueRows;
-  }
-  public function setShowLastUpdateTime( $showLastUpdateTime ) {
-    $this->showLastUpdateTime = $showLastUpdateTime;
-  }
-  public function getShowLastUpdateTime() {
-    return $this->showLastUpdateTime;
   }
 }
 
@@ -1433,18 +1694,9 @@ class Google_BoardingPassClassGetRequest extends Google_Model {
 }
 
 class Google_BoardingPassClassListRequest extends Google_Model {
-  protected $__pageSelectionType = 'Google_PageSelection';
-  protected $__pageSelectionDataType = '';
-  public $pageSelection;
   protected $__resultMaskType = 'Google_BoardingPassClassMask';
   protected $__resultMaskDataType = '';
   public $resultMask;
-  public function setPageSelection(Google_PageSelection $pageSelection) {
-    $this->pageSelection = $pageSelection;
-  }
-  public function getPageSelection() {
-    return $this->pageSelection;
-  }
   public function setResultMask(Google_BoardingPassClassMask $resultMask) {
     $this->resultMask = $resultMask;
   }
@@ -1454,20 +1706,17 @@ class Google_BoardingPassClassListRequest extends Google_Model {
 }
 
 class Google_BoardingPassClassListResponse extends Google_Model {
-  protected $__pageInfoType = 'Google_PageInfo';
-  protected $__pageInfoDataType = '';
-  public $pageInfo;
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
   protected $__resourcesType = 'Google_BoardingPassClass';
   protected $__resourcesDataType = 'array';
   public $resources;
-  protected $__tokenPaginationType = 'Google_TokenPagination';
-  protected $__tokenPaginationDataType = '';
-  public $tokenPagination;
-  public function setPageInfo(Google_PageInfo $pageInfo) {
-    $this->pageInfo = $pageInfo;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
   }
-  public function getPageInfo() {
-    return $this->pageInfo;
+  public function getPagination() {
+    return $this->pagination;
   }
   public function setResources(/* array(Google_BoardingPassClass) */ $resources) {
     $this->assertIsArray($resources, 'Google_BoardingPassClass', __METHOD__);
@@ -1475,12 +1724,6 @@ class Google_BoardingPassClassListResponse extends Google_Model {
   }
   public function getResources() {
     return $this->resources;
-  }
-  public function setTokenPagination(Google_TokenPagination $tokenPagination) {
-    $this->tokenPagination = $tokenPagination;
-  }
-  public function getTokenPagination() {
-    return $this->tokenPagination;
   }
 }
 
@@ -1515,7 +1758,9 @@ class Google_BoardingPassObject extends Google_Model {
   public $classReference;
   public $electronicTicket;
   public $freqFlierAccountId;
+  public $freqFlierProgramName;
   public $freqFlierTierLevel;
+  public $holderCount;
   public $id;
   protected $__issuerDataType = 'Google_TypedValue';
   protected $__issuerDataDataType = '';
@@ -1579,11 +1824,23 @@ class Google_BoardingPassObject extends Google_Model {
   public function getFreqFlierAccountId() {
     return $this->freqFlierAccountId;
   }
+  public function setFreqFlierProgramName( $freqFlierProgramName) {
+    $this->freqFlierProgramName = $freqFlierProgramName;
+  }
+  public function getFreqFlierProgramName() {
+    return $this->freqFlierProgramName;
+  }
   public function setFreqFlierTierLevel( $freqFlierTierLevel) {
     $this->freqFlierTierLevel = $freqFlierTierLevel;
   }
   public function getFreqFlierTierLevel() {
     return $this->freqFlierTierLevel;
+  }
+  public function setHolderCount( $holderCount) {
+    $this->holderCount = $holderCount;
+  }
+  public function getHolderCount() {
+    return $this->holderCount;
   }
   public function setId( $id) {
     $this->id = $id;
@@ -1731,18 +1988,9 @@ class Google_BoardingPassObjectGetRequest extends Google_Model {
 }
 
 class Google_BoardingPassObjectListRequest extends Google_Model {
-  protected $__pageSelectionType = 'Google_PageSelection';
-  protected $__pageSelectionDataType = '';
-  public $pageSelection;
   protected $__resultMaskType = 'Google_BoardingPassObjectMask';
   protected $__resultMaskDataType = '';
   public $resultMask;
-  public function setPageSelection(Google_PageSelection $pageSelection) {
-    $this->pageSelection = $pageSelection;
-  }
-  public function getPageSelection() {
-    return $this->pageSelection;
-  }
   public function setResultMask(Google_BoardingPassObjectMask $resultMask) {
     $this->resultMask = $resultMask;
   }
@@ -1752,20 +2000,17 @@ class Google_BoardingPassObjectListRequest extends Google_Model {
 }
 
 class Google_BoardingPassObjectListResponse extends Google_Model {
-  protected $__pageInfoType = 'Google_PageInfo';
-  protected $__pageInfoDataType = '';
-  public $pageInfo;
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
   protected $__resourcesType = 'Google_BoardingPassObject';
   protected $__resourcesDataType = 'array';
   public $resources;
-  protected $__tokenPaginationType = 'Google_TokenPagination';
-  protected $__tokenPaginationDataType = '';
-  public $tokenPagination;
-  public function setPageInfo(Google_PageInfo $pageInfo) {
-    $this->pageInfo = $pageInfo;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
   }
-  public function getPageInfo() {
-    return $this->pageInfo;
+  public function getPagination() {
+    return $this->pagination;
   }
   public function setResources(/* array(Google_BoardingPassObject) */ $resources) {
     $this->assertIsArray($resources, 'Google_BoardingPassObject', __METHOD__);
@@ -1773,12 +2018,6 @@ class Google_BoardingPassObjectListResponse extends Google_Model {
   }
   public function getResources() {
     return $this->resources;
-  }
-  public function setTokenPagination(Google_TokenPagination $tokenPagination) {
-    $this->tokenPagination = $tokenPagination;
-  }
-  public function getTokenPagination() {
-    return $this->tokenPagination;
   }
 }
 
@@ -2011,18 +2250,9 @@ class Google_GenericClassGetRequest extends Google_Model {
 }
 
 class Google_GenericClassListRequest extends Google_Model {
-  protected $__pageSelectionType = 'Google_PageSelection';
-  protected $__pageSelectionDataType = '';
-  public $pageSelection;
   protected $__resultMaskType = 'Google_GenericClassMask';
   protected $__resultMaskDataType = '';
   public $resultMask;
-  public function setPageSelection(Google_PageSelection $pageSelection) {
-    $this->pageSelection = $pageSelection;
-  }
-  public function getPageSelection() {
-    return $this->pageSelection;
-  }
   public function setResultMask(Google_GenericClassMask $resultMask) {
     $this->resultMask = $resultMask;
   }
@@ -2032,20 +2262,17 @@ class Google_GenericClassListRequest extends Google_Model {
 }
 
 class Google_GenericClassListResponse extends Google_Model {
-  protected $__pageInfoType = 'Google_PageInfo';
-  protected $__pageInfoDataType = '';
-  public $pageInfo;
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
   protected $__resourcesType = 'Google_GenericClass';
   protected $__resourcesDataType = 'array';
   public $resources;
-  protected $__tokenPaginationType = 'Google_TokenPagination';
-  protected $__tokenPaginationDataType = '';
-  public $tokenPagination;
-  public function setPageInfo(Google_PageInfo $pageInfo) {
-    $this->pageInfo = $pageInfo;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
   }
-  public function getPageInfo() {
-    return $this->pageInfo;
+  public function getPagination() {
+    return $this->pagination;
   }
   public function setResources(/* array(Google_GenericClass) */ $resources) {
     $this->assertIsArray($resources, 'Google_GenericClass', __METHOD__);
@@ -2053,12 +2280,6 @@ class Google_GenericClassListResponse extends Google_Model {
   }
   public function getResources() {
     return $this->resources;
-  }
-  public function setTokenPagination(Google_TokenPagination $tokenPagination) {
-    $this->tokenPagination = $tokenPagination;
-  }
-  public function getTokenPagination() {
-    return $this->tokenPagination;
   }
 }
 
@@ -2090,6 +2311,7 @@ class Google_GenericObject extends Google_Model {
   protected $__classReferenceType = 'Google_GenericClass';
   protected $__classReferenceDataType = '';
   public $classReference;
+  public $holderCount;
   public $id;
   protected $__issuerDataType = 'Google_TypedValue';
   protected $__issuerDataDataType = '';
@@ -2123,6 +2345,12 @@ class Google_GenericObject extends Google_Model {
   }
   public function getClassReference() {
     return $this->classReference;
+  }
+  public function setHolderCount( $holderCount) {
+    $this->holderCount = $holderCount;
+  }
+  public function getHolderCount() {
+    return $this->holderCount;
   }
   public function setId( $id) {
     $this->id = $id;
@@ -2213,18 +2441,9 @@ class Google_GenericObjectGetRequest extends Google_Model {
 }
 
 class Google_GenericObjectListRequest extends Google_Model {
-  protected $__pageSelectionType = 'Google_PageSelection';
-  protected $__pageSelectionDataType = '';
-  public $pageSelection;
   protected $__resultMaskType = 'Google_GenericObjectMask';
   protected $__resultMaskDataType = '';
   public $resultMask;
-  public function setPageSelection(Google_PageSelection $pageSelection) {
-    $this->pageSelection = $pageSelection;
-  }
-  public function getPageSelection() {
-    return $this->pageSelection;
-  }
   public function setResultMask(Google_GenericObjectMask $resultMask) {
     $this->resultMask = $resultMask;
   }
@@ -2234,20 +2453,17 @@ class Google_GenericObjectListRequest extends Google_Model {
 }
 
 class Google_GenericObjectListResponse extends Google_Model {
-  protected $__pageInfoType = 'Google_PageInfo';
-  protected $__pageInfoDataType = '';
-  public $pageInfo;
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
   protected $__resourcesType = 'Google_GenericObject';
   protected $__resourcesDataType = 'array';
   public $resources;
-  protected $__tokenPaginationType = 'Google_TokenPagination';
-  protected $__tokenPaginationDataType = '';
-  public $tokenPagination;
-  public function setPageInfo(Google_PageInfo $pageInfo) {
-    $this->pageInfo = $pageInfo;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
   }
-  public function getPageInfo() {
-    return $this->pageInfo;
+  public function getPagination() {
+    return $this->pagination;
   }
   public function setResources(/* array(Google_GenericObject) */ $resources) {
     $this->assertIsArray($resources, 'Google_GenericObject', __METHOD__);
@@ -2256,15 +2472,429 @@ class Google_GenericObjectListResponse extends Google_Model {
   public function getResources() {
     return $this->resources;
   }
-  public function setTokenPagination(Google_TokenPagination $tokenPagination) {
-    $this->tokenPagination = $tokenPagination;
-  }
-  public function getTokenPagination() {
-    return $this->tokenPagination;
-  }
 }
 
 class Google_GenericObjectMask extends Google_Model {
+  protected $__fieldsType = 'Google_FieldMask';
+  protected $__fieldsDataType = 'array';
+  public $fields;
+  public $projection;
+  public function setFields(/* array(Google_FieldMask) */ $fields) {
+    $this->assertIsArray($fields, 'Google_FieldMask', __METHOD__);
+    $this->fields = $fields;
+  }
+  public function getFields() {
+    return $this->fields;
+  }
+  public function setProjection( $projection) {
+    $this->projection = $projection;
+  }
+  public function getProjection() {
+    return $this->projection;
+  }
+}
+
+class Google_GiftCardClass extends Google_Model {
+  public $allowMultipleUsersPerObject;
+  protected $__homepageUriType = 'Google_Uri';
+  protected $__homepageUriDataType = '';
+  public $homepageUri;
+  public $id;
+  protected $__issuerDataType = 'Google_TypedValue';
+  protected $__issuerDataDataType = '';
+  public $issuerData;
+  public $issuerName;
+  public $kind;
+  protected $__locationsType = 'Google_LatLongPoint';
+  protected $__locationsDataType = 'array';
+  public $locations;
+  public $merchantName;
+  protected $__messagesType = 'Google_WalletObjectMessage';
+  protected $__messagesDataType = 'array';
+  public $messages;
+  protected $__programLogoType = 'Google_Image';
+  protected $__programLogoDataType = '';
+  public $programLogo;
+  protected $__renderSpecsType = 'Google_RenderSpec';
+  protected $__renderSpecsDataType = 'array';
+  public $renderSpecs;
+  protected $__reviewType = 'Google_CommonWalletObjectClassReview';
+  protected $__reviewDataType = '';
+  public $review;
+  public $reviewStatus;
+  public $version;
+  public function setAllowMultipleUsersPerObject( $allowMultipleUsersPerObject) {
+    $this->allowMultipleUsersPerObject = $allowMultipleUsersPerObject;
+  }
+  public function getAllowMultipleUsersPerObject() {
+    return $this->allowMultipleUsersPerObject;
+  }
+  public function setHomepageUri(Google_Uri $homepageUri) {
+    $this->homepageUri = $homepageUri;
+  }
+  public function getHomepageUri() {
+    return $this->homepageUri;
+  }
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setIssuerData(Google_TypedValue $issuerData) {
+    $this->issuerData = $issuerData;
+  }
+  public function getIssuerData() {
+    return $this->issuerData;
+  }
+  public function setIssuerName( $issuerName) {
+    $this->issuerName = $issuerName;
+  }
+  public function getIssuerName() {
+    return $this->issuerName;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setLocations(/* array(Google_LatLongPoint) */ $locations) {
+    $this->assertIsArray($locations, 'Google_LatLongPoint', __METHOD__);
+    $this->locations = $locations;
+  }
+  public function getLocations() {
+    return $this->locations;
+  }
+  public function setMerchantName( $merchantName) {
+    $this->merchantName = $merchantName;
+  }
+  public function getMerchantName() {
+    return $this->merchantName;
+  }
+  public function setMessages(/* array(Google_WalletObjectMessage) */ $messages) {
+    $this->assertIsArray($messages, 'Google_WalletObjectMessage', __METHOD__);
+    $this->messages = $messages;
+  }
+  public function getMessages() {
+    return $this->messages;
+  }
+  public function setProgramLogo(Google_Image $programLogo) {
+    $this->programLogo = $programLogo;
+  }
+  public function getProgramLogo() {
+    return $this->programLogo;
+  }
+  public function setRenderSpecs(/* array(Google_RenderSpec) */ $renderSpecs) {
+    $this->assertIsArray($renderSpecs, 'Google_RenderSpec', __METHOD__);
+    $this->renderSpecs = $renderSpecs;
+  }
+  public function getRenderSpecs() {
+    return $this->renderSpecs;
+  }
+  public function setReview(Google_CommonWalletObjectClassReview $review) {
+    $this->review = $review;
+  }
+  public function getReview() {
+    return $this->review;
+  }
+  public function setReviewStatus( $reviewStatus) {
+    $this->reviewStatus = $reviewStatus;
+  }
+  public function getReviewStatus() {
+    return $this->reviewStatus;
+  }
+  public function setVersion( $version) {
+    $this->version = $version;
+  }
+  public function getVersion() {
+    return $this->version;
+  }
+}
+
+class Google_GiftCardClassAddMessageRequest extends Google_Model {
+  protected $__messageType = 'Google_WalletObjectMessage';
+  protected $__messageDataType = '';
+  public $message;
+  public $reviewStatus;
+  public function setMessage(Google_WalletObjectMessage $message) {
+    $this->message = $message;
+  }
+  public function getMessage() {
+    return $this->message;
+  }
+  public function setReviewStatus( $reviewStatus) {
+    $this->reviewStatus = $reviewStatus;
+  }
+  public function getReviewStatus() {
+    return $this->reviewStatus;
+  }
+}
+
+class Google_GiftCardClassAddMessageResponse extends Google_Model {
+  protected $__resourceType = 'Google_GiftCardClass';
+  protected $__resourceDataType = '';
+  public $resource;
+  public function setResource(Google_GiftCardClass $resource) {
+    $this->resource = $resource;
+  }
+  public function getResource() {
+    return $this->resource;
+  }
+}
+
+class Google_GiftCardClassGetRequest extends Google_Model {
+  protected $__resultMaskType = 'Google_GiftCardClassMask';
+  protected $__resultMaskDataType = '';
+  public $resultMask;
+  public function setResultMask(Google_GiftCardClassMask $resultMask) {
+    $this->resultMask = $resultMask;
+  }
+  public function getResultMask() {
+    return $this->resultMask;
+  }
+}
+
+class Google_GiftCardClassListRequest extends Google_Model {
+  protected $__resultMaskType = 'Google_GiftCardClassMask';
+  protected $__resultMaskDataType = '';
+  public $resultMask;
+  public function setResultMask(Google_GiftCardClassMask $resultMask) {
+    $this->resultMask = $resultMask;
+  }
+  public function getResultMask() {
+    return $this->resultMask;
+  }
+}
+
+class Google_GiftCardClassListResponse extends Google_Model {
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
+  protected $__resourcesType = 'Google_GiftCardClass';
+  protected $__resourcesDataType = 'array';
+  public $resources;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
+  }
+  public function getPagination() {
+    return $this->pagination;
+  }
+  public function setResources(/* array(Google_GiftCardClass) */ $resources) {
+    $this->assertIsArray($resources, 'Google_GiftCardClass', __METHOD__);
+    $this->resources = $resources;
+  }
+  public function getResources() {
+    return $this->resources;
+  }
+}
+
+class Google_GiftCardClassMask extends Google_Model {
+  protected $__fieldsType = 'Google_FieldMask';
+  protected $__fieldsDataType = 'array';
+  public $fields;
+  public $projection;
+  public function setFields(/* array(Google_FieldMask) */ $fields) {
+    $this->assertIsArray($fields, 'Google_FieldMask', __METHOD__);
+    $this->fields = $fields;
+  }
+  public function getFields() {
+    return $this->fields;
+  }
+  public function setProjection( $projection) {
+    $this->projection = $projection;
+  }
+  public function getProjection() {
+    return $this->projection;
+  }
+}
+
+class Google_GiftCardObject extends Google_Model {
+  protected $__barcodeType = 'Google_Barcode';
+  protected $__barcodeDataType = '';
+  public $barcode;
+  public $cardNumber;
+  public $classId;
+  protected $__classReferenceType = 'Google_GiftCardClass';
+  protected $__classReferenceDataType = '';
+  public $classReference;
+  public $holderCount;
+  public $id;
+  protected $__issuerDataType = 'Google_TypedValue';
+  protected $__issuerDataDataType = '';
+  public $issuerData;
+  public $kind;
+  protected $__locationsType = 'Google_LatLongPoint';
+  protected $__locationsDataType = 'array';
+  public $locations;
+  protected $__messagesType = 'Google_WalletObjectMessage';
+  protected $__messagesDataType = 'array';
+  public $messages;
+  public $pin;
+  public $state;
+  protected $__validTimeIntervalType = 'Google_TimeInterval';
+  protected $__validTimeIntervalDataType = '';
+  public $validTimeInterval;
+  public $version;
+  public function setBarcode(Google_Barcode $barcode) {
+    $this->barcode = $barcode;
+  }
+  public function getBarcode() {
+    return $this->barcode;
+  }
+  public function setCardNumber( $cardNumber) {
+    $this->cardNumber = $cardNumber;
+  }
+  public function getCardNumber() {
+    return $this->cardNumber;
+  }
+  public function setClassId( $classId) {
+    $this->classId = $classId;
+  }
+  public function getClassId() {
+    return $this->classId;
+  }
+  public function setClassReference(Google_GiftCardClass $classReference) {
+    $this->classReference = $classReference;
+  }
+  public function getClassReference() {
+    return $this->classReference;
+  }
+  public function setHolderCount( $holderCount) {
+    $this->holderCount = $holderCount;
+  }
+  public function getHolderCount() {
+    return $this->holderCount;
+  }
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setIssuerData(Google_TypedValue $issuerData) {
+    $this->issuerData = $issuerData;
+  }
+  public function getIssuerData() {
+    return $this->issuerData;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setLocations(/* array(Google_LatLongPoint) */ $locations) {
+    $this->assertIsArray($locations, 'Google_LatLongPoint', __METHOD__);
+    $this->locations = $locations;
+  }
+  public function getLocations() {
+    return $this->locations;
+  }
+  public function setMessages(/* array(Google_WalletObjectMessage) */ $messages) {
+    $this->assertIsArray($messages, 'Google_WalletObjectMessage', __METHOD__);
+    $this->messages = $messages;
+  }
+  public function getMessages() {
+    return $this->messages;
+  }
+  public function setPin( $pin) {
+    $this->pin = $pin;
+  }
+  public function getPin() {
+    return $this->pin;
+  }
+  public function setState( $state) {
+    $this->state = $state;
+  }
+  public function getState() {
+    return $this->state;
+  }
+  public function setValidTimeInterval(Google_TimeInterval $validTimeInterval) {
+    $this->validTimeInterval = $validTimeInterval;
+  }
+  public function getValidTimeInterval() {
+    return $this->validTimeInterval;
+  }
+  public function setVersion( $version) {
+    $this->version = $version;
+  }
+  public function getVersion() {
+    return $this->version;
+  }
+}
+
+class Google_GiftCardObjectAddMessageRequest extends Google_Model {
+  protected $__messageType = 'Google_WalletObjectMessage';
+  protected $__messageDataType = '';
+  public $message;
+  public function setMessage(Google_WalletObjectMessage $message) {
+    $this->message = $message;
+  }
+  public function getMessage() {
+    return $this->message;
+  }
+}
+
+class Google_GiftCardObjectAddMessageResponse extends Google_Model {
+  protected $__resourceType = 'Google_GiftCardObject';
+  protected $__resourceDataType = '';
+  public $resource;
+  public function setResource(Google_GiftCardObject $resource) {
+    $this->resource = $resource;
+  }
+  public function getResource() {
+    return $this->resource;
+  }
+}
+
+class Google_GiftCardObjectGetRequest extends Google_Model {
+  protected $__resultMaskType = 'Google_GiftCardObjectMask';
+  protected $__resultMaskDataType = '';
+  public $resultMask;
+  public function setResultMask(Google_GiftCardObjectMask $resultMask) {
+    $this->resultMask = $resultMask;
+  }
+  public function getResultMask() {
+    return $this->resultMask;
+  }
+}
+
+class Google_GiftCardObjectListRequest extends Google_Model {
+  protected $__resultMaskType = 'Google_GiftCardObjectMask';
+  protected $__resultMaskDataType = '';
+  public $resultMask;
+  public function setResultMask(Google_GiftCardObjectMask $resultMask) {
+    $this->resultMask = $resultMask;
+  }
+  public function getResultMask() {
+    return $this->resultMask;
+  }
+}
+
+class Google_GiftCardObjectListResponse extends Google_Model {
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
+  protected $__resourcesType = 'Google_GiftCardObject';
+  protected $__resourcesDataType = 'array';
+  public $resources;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
+  }
+  public function getPagination() {
+    return $this->pagination;
+  }
+  public function setResources(/* array(Google_GiftCardObject) */ $resources) {
+    $this->assertIsArray($resources, 'Google_GiftCardObject', __METHOD__);
+    $this->resources = $resources;
+  }
+  public function getResources() {
+    return $this->resources;
+  }
+}
+
+class Google_GiftCardObjectMask extends Google_Model {
   protected $__fieldsType = 'Google_FieldMask';
   protected $__fieldsDataType = 'array';
   public $fields;
@@ -2303,6 +2933,96 @@ class Google_Image extends Google_Model {
   }
 }
 
+class Google_ImageModuleData extends Google_Model {
+  protected $__mainImageType = 'Google_Image';
+  protected $__mainImageDataType = '';
+  public $mainImage;
+  public function setMainImage(Google_Image $mainImage) {
+    $this->mainImage = $mainImage;
+  }
+  public function getMainImage() {
+    return $this->mainImage;
+  }
+}
+
+class Google_InfoModuleData extends Google_Model {
+  public $hexBackgroundColor;
+  public $hexFontColor;
+  protected $__labelValueRowsType = 'Google_LabelValueRow';
+  protected $__labelValueRowsDataType = 'array';
+  public $labelValueRows;
+  public $showLastUpdateTime;
+  public function setHexBackgroundColor( $hexBackgroundColor) {
+    $this->hexBackgroundColor = $hexBackgroundColor;
+  }
+  public function getHexBackgroundColor() {
+    return $this->hexBackgroundColor;
+  }
+  public function setHexFontColor( $hexFontColor) {
+    $this->hexFontColor = $hexFontColor;
+  }
+  public function getHexFontColor() {
+    return $this->hexFontColor;
+  }
+  public function setLabelValueRows(/* array(Google_LabelValueRow) */ $labelValueRows) {
+    $this->assertIsArray($labelValueRows, 'Google_LabelValueRow', __METHOD__);
+    $this->labelValueRows = $labelValueRows;
+  }
+  public function getLabelValueRows() {
+    return $this->labelValueRows;
+  }
+  public function setShowLastUpdateTime( $showLastUpdateTime) {
+    $this->showLastUpdateTime = $showLastUpdateTime;
+  }
+  public function getShowLastUpdateTime() {
+    return $this->showLastUpdateTime;
+  }
+}
+
+class Google_LabelValue extends Google_Model {
+  public $label;
+  public $value;
+  public function setLabel( $label) {
+    $this->label = $label;
+  }
+  public function getLabel() {
+    return $this->label;
+  }
+  public function setValue( $value) {
+    $this->value = $value;
+  }
+  public function getValue() {
+    return $this->value;
+  }
+}
+
+class Google_LabelValueRow extends Google_Model {
+  protected $__columnsType = 'Google_LabelValue';
+  protected $__columnsDataType = 'array';
+  public $columns;
+  public $hexBackgroundColor;
+  public $hexFontColor;
+  public function setColumns(/* array(Google_LabelValue) */ $columns) {
+    $this->assertIsArray($columns, 'Google_LabelValue', __METHOD__);
+    $this->columns = $columns;
+  }
+  public function getColumns() {
+    return $this->columns;
+  }
+  public function setHexBackgroundColor( $hexBackgroundColor) {
+    $this->hexBackgroundColor = $hexBackgroundColor;
+  }
+  public function getHexBackgroundColor() {
+    return $this->hexBackgroundColor;
+  }
+  public function setHexFontColor( $hexFontColor) {
+    $this->hexFontColor = $hexFontColor;
+  }
+  public function getHexFontColor() {
+    return $this->hexFontColor;
+  }
+}
+
 class Google_LatLongPoint extends Google_Model {
   public $kind;
   public $latitude;
@@ -2327,6 +3047,19 @@ class Google_LatLongPoint extends Google_Model {
   }
 }
 
+class Google_LinksModuleData extends Google_Model {
+  protected $__urisType = 'Google_Uri';
+  protected $__urisDataType = 'array';
+  public $uris;
+  public function setUris(/* array(Google_Uri) */ $uris) {
+    $this->assertIsArray($uris, 'Google_Uri', __METHOD__);
+    $this->uris = $uris;
+  }
+  public function getUris() {
+    return $this->uris;
+  }
+}
+
 class Google_LoyaltyClass extends Google_Model {
   public $accountIdLabel;
   public $accountNameLabel;
@@ -2346,7 +3079,6 @@ class Google_LoyaltyClass extends Google_Model {
   protected $__messagesType = 'Google_WalletObjectMessage';
   protected $__messagesDataType = 'array';
   public $messages;
-  public $programDetails;
   protected $__programLogoType = 'Google_Image';
   protected $__programLogoDataType = '';
   public $programLogo;
@@ -2422,12 +3154,6 @@ class Google_LoyaltyClass extends Google_Model {
   }
   public function getMessages() {
     return $this->messages;
-  }
-  public function setProgramDetails( $programDetails) {
-    $this->programDetails = $programDetails;
-  }
-  public function getProgramDetails() {
-    return $this->programDetails;
   }
   public function setProgramLogo(Google_Image $programLogo) {
     $this->programLogo = $programLogo;
@@ -2524,18 +3250,9 @@ class Google_LoyaltyClassGetRequest extends Google_Model {
 }
 
 class Google_LoyaltyClassListRequest extends Google_Model {
-  protected $__pageSelectionType = 'Google_PageSelection';
-  protected $__pageSelectionDataType = '';
-  public $pageSelection;
   protected $__resultMaskType = 'Google_LoyaltyClassMask';
   protected $__resultMaskDataType = '';
   public $resultMask;
-  public function setPageSelection(Google_PageSelection $pageSelection) {
-    $this->pageSelection = $pageSelection;
-  }
-  public function getPageSelection() {
-    return $this->pageSelection;
-  }
   public function setResultMask(Google_LoyaltyClassMask $resultMask) {
     $this->resultMask = $resultMask;
   }
@@ -2545,20 +3262,17 @@ class Google_LoyaltyClassListRequest extends Google_Model {
 }
 
 class Google_LoyaltyClassListResponse extends Google_Model {
-  protected $__pageInfoType = 'Google_PageInfo';
-  protected $__pageInfoDataType = '';
-  public $pageInfo;
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
   protected $__resourcesType = 'Google_LoyaltyClass';
   protected $__resourcesDataType = 'array';
   public $resources;
-  protected $__tokenPaginationType = 'Google_TokenPagination';
-  protected $__tokenPaginationDataType = '';
-  public $tokenPagination;
-  public function setPageInfo(Google_PageInfo $pageInfo) {
-    $this->pageInfo = $pageInfo;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
   }
-  public function getPageInfo() {
-    return $this->pageInfo;
+  public function getPagination() {
+    return $this->pagination;
   }
   public function setResources(/* array(Google_LoyaltyClass) */ $resources) {
     $this->assertIsArray($resources, 'Google_LoyaltyClass', __METHOD__);
@@ -2566,12 +3280,6 @@ class Google_LoyaltyClassListResponse extends Google_Model {
   }
   public function getResources() {
     return $this->resources;
-  }
-  public function setTokenPagination(Google_TokenPagination $tokenPagination) {
-    $this->tokenPagination = $tokenPagination;
-  }
-  public function getTokenPagination() {
-    return $this->tokenPagination;
   }
 }
 
@@ -2601,18 +3309,25 @@ class Google_LoyaltyObject extends Google_Model {
   protected $__barcodeType = 'Google_Barcode';
   protected $__barcodeDataType = '';
   public $barcode;
-  public $textModuleDatas;
-  public $linksModuleData;
-  public $infoModuleData;
   public $classId;
   protected $__classReferenceType = 'Google_LoyaltyClass';
   protected $__classReferenceDataType = '';
   public $classReference;
+  public $holderCount;
   public $id;
+  protected $__imageModulesDataType = 'Google_ImageModuleData';
+  protected $__imageModulesDataDataType = 'array';
+  public $imageModulesData;
+  protected $__infoModuleDataType = 'Google_InfoModuleData';
+  protected $__infoModuleDataDataType = '';
+  public $infoModuleData;
   protected $__issuerDataType = 'Google_TypedValue';
   protected $__issuerDataDataType = '';
   public $issuerData;
   public $kind;
+  protected $__linksModuleDataType = 'Google_LinksModuleData';
+  protected $__linksModuleDataDataType = '';
+  public $linksModuleData;
   protected $__locationsType = 'Google_LatLongPoint';
   protected $__locationsDataType = 'array';
   public $locations;
@@ -2623,6 +3338,9 @@ class Google_LoyaltyObject extends Google_Model {
   protected $__messagesDataType = 'array';
   public $messages;
   public $state;
+  protected $__textModulesDataType = 'Google_TextModuleData';
+  protected $__textModulesDataDataType = 'array';
+  public $textModulesData;
   protected $__validTimeIntervalType = 'Google_TimeInterval';
   protected $__validTimeIntervalDataType = '';
   public $validTimeInterval;
@@ -2645,24 +3363,6 @@ class Google_LoyaltyObject extends Google_Model {
   public function getBarcode() {
     return $this->barcode;
   }
-  public function setTextModuleDatas(Google_TextModuleDatas $textModuleDatas) {
-    $this->textModuleDatas = $textModuleDatas;
-  }
-  public function getTextModuleDatas() {
-    return $this->textModuleDatas;
-  }
-  public function setLinksModuleData(Google_LinksModuleData $linksModuleData) {
-    $this->linksModuleData = $linksModuleData;
-  }
-  public function getLinksModuleData() {
-    return $this->linksModuleData;
-  }
-  public function setInfoModuleData(Google_InfoModuleData $infoModuleData) {
-    $this->infoModuleData = $infoModuleData;
-  }
-  public function getInfoModuleData() {
-    return $this->infoModuleData;
-  }
   public function setClassId( $classId) {
     $this->classId = $classId;
   }
@@ -2675,11 +3375,30 @@ class Google_LoyaltyObject extends Google_Model {
   public function getClassReference() {
     return $this->classReference;
   }
+  public function setHolderCount( $holderCount) {
+    $this->holderCount = $holderCount;
+  }
+  public function getHolderCount() {
+    return $this->holderCount;
+  }
   public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
+  }
+  public function setImageModulesData(/* array(Google_ImageModuleData) */ $imageModulesData) {
+    $this->assertIsArray($imageModulesData, 'Google_ImageModuleData', __METHOD__);
+    $this->imageModulesData = $imageModulesData;
+  }
+  public function getImageModulesData() {
+    return $this->imageModulesData;
+  }
+  public function setInfoModuleData(Google_InfoModuleData $infoModuleData) {
+    $this->infoModuleData = $infoModuleData;
+  }
+  public function getInfoModuleData() {
+    return $this->infoModuleData;
   }
   public function setIssuerData(Google_TypedValue $issuerData) {
     $this->issuerData = $issuerData;
@@ -2692,6 +3411,12 @@ class Google_LoyaltyObject extends Google_Model {
   }
   public function getKind() {
     return $this->kind;
+  }
+  public function setLinksModuleData(Google_LinksModuleData $linksModuleData) {
+    $this->linksModuleData = $linksModuleData;
+  }
+  public function getLinksModuleData() {
+    return $this->linksModuleData;
   }
   public function setLocations(/* array(Google_LatLongPoint) */ $locations) {
     $this->assertIsArray($locations, 'Google_LatLongPoint', __METHOD__);
@@ -2718,6 +3443,13 @@ class Google_LoyaltyObject extends Google_Model {
   }
   public function getState() {
     return $this->state;
+  }
+  public function setTextModulesData(/* array(Google_TextModuleData) */ $textModulesData) {
+    $this->assertIsArray($textModulesData, 'Google_TextModuleData', __METHOD__);
+    $this->textModulesData = $textModulesData;
+  }
+  public function getTextModulesData() {
+    return $this->textModulesData;
   }
   public function setValidTimeInterval(Google_TimeInterval $validTimeInterval) {
     $this->validTimeInterval = $validTimeInterval;
@@ -2770,18 +3502,9 @@ class Google_LoyaltyObjectGetRequest extends Google_Model {
 }
 
 class Google_LoyaltyObjectListRequest extends Google_Model {
-  protected $__pageSelectionType = 'Google_PageSelection';
-  protected $__pageSelectionDataType = '';
-  public $pageSelection;
   protected $__resultMaskType = 'Google_LoyaltyObjectMask';
   protected $__resultMaskDataType = '';
   public $resultMask;
-  public function setPageSelection(Google_PageSelection $pageSelection) {
-    $this->pageSelection = $pageSelection;
-  }
-  public function getPageSelection() {
-    return $this->pageSelection;
-  }
   public function setResultMask(Google_LoyaltyObjectMask $resultMask) {
     $this->resultMask = $resultMask;
   }
@@ -2791,20 +3514,17 @@ class Google_LoyaltyObjectListRequest extends Google_Model {
 }
 
 class Google_LoyaltyObjectListResponse extends Google_Model {
-  protected $__pageInfoType = 'Google_PageInfo';
-  protected $__pageInfoDataType = '';
-  public $pageInfo;
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
   protected $__resourcesType = 'Google_LoyaltyObject';
   protected $__resourcesDataType = 'array';
   public $resources;
-  protected $__tokenPaginationType = 'Google_TokenPagination';
-  protected $__tokenPaginationDataType = '';
-  public $tokenPagination;
-  public function setPageInfo(Google_PageInfo $pageInfo) {
-    $this->pageInfo = $pageInfo;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
   }
-  public function getPageInfo() {
-    return $this->pageInfo;
+  public function getPagination() {
+    return $this->pagination;
   }
   public function setResources(/* array(Google_LoyaltyObject) */ $resources) {
     $this->assertIsArray($resources, 'Google_LoyaltyObject', __METHOD__);
@@ -2812,12 +3532,6 @@ class Google_LoyaltyObjectListResponse extends Google_Model {
   }
   public function getResources() {
     return $this->resources;
-  }
-  public function setTokenPagination(Google_TokenPagination $tokenPagination) {
-    $this->tokenPagination = $tokenPagination;
-  }
-  public function getTokenPagination() {
-    return $this->tokenPagination;
   }
 }
 
@@ -3141,18 +3855,9 @@ class Google_OfferClassGetRequest extends Google_Model {
 }
 
 class Google_OfferClassListRequest extends Google_Model {
-  protected $__pageSelectionType = 'Google_PageSelection';
-  protected $__pageSelectionDataType = '';
-  public $pageSelection;
   protected $__resultMaskType = 'Google_OfferClassMask';
   protected $__resultMaskDataType = '';
   public $resultMask;
-  public function setPageSelection(Google_PageSelection $pageSelection) {
-    $this->pageSelection = $pageSelection;
-  }
-  public function getPageSelection() {
-    return $this->pageSelection;
-  }
   public function setResultMask(Google_OfferClassMask $resultMask) {
     $this->resultMask = $resultMask;
   }
@@ -3162,20 +3867,17 @@ class Google_OfferClassListRequest extends Google_Model {
 }
 
 class Google_OfferClassListResponse extends Google_Model {
-  protected $__pageInfoType = 'Google_PageInfo';
-  protected $__pageInfoDataType = '';
-  public $pageInfo;
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
   protected $__resourcesType = 'Google_OfferClass';
   protected $__resourcesDataType = 'array';
   public $resources;
-  protected $__tokenPaginationType = 'Google_TokenPagination';
-  protected $__tokenPaginationDataType = '';
-  public $tokenPagination;
-  public function setPageInfo(Google_PageInfo $pageInfo) {
-    $this->pageInfo = $pageInfo;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
   }
-  public function getPageInfo() {
-    return $this->pageInfo;
+  public function getPagination() {
+    return $this->pagination;
   }
   public function setResources(/* array(Google_OfferClass) */ $resources) {
     $this->assertIsArray($resources, 'Google_OfferClass', __METHOD__);
@@ -3183,12 +3885,6 @@ class Google_OfferClassListResponse extends Google_Model {
   }
   public function getResources() {
     return $this->resources;
-  }
-  public function setTokenPagination(Google_TokenPagination $tokenPagination) {
-    $this->tokenPagination = $tokenPagination;
-  }
-  public function getTokenPagination() {
-    return $this->tokenPagination;
   }
 }
 
@@ -3220,6 +3916,7 @@ class Google_OfferObject extends Google_Model {
   protected $__classReferenceType = 'Google_OfferClass';
   protected $__classReferenceDataType = '';
   public $classReference;
+  public $holderCount;
   public $id;
   protected $__issuerDataType = 'Google_TypedValue';
   protected $__issuerDataDataType = '';
@@ -3253,6 +3950,12 @@ class Google_OfferObject extends Google_Model {
   }
   public function getClassReference() {
     return $this->classReference;
+  }
+  public function setHolderCount( $holderCount) {
+    $this->holderCount = $holderCount;
+  }
+  public function getHolderCount() {
+    return $this->holderCount;
   }
   public function setId( $id) {
     $this->id = $id;
@@ -3343,18 +4046,9 @@ class Google_OfferObjectGetRequest extends Google_Model {
 }
 
 class Google_OfferObjectListRequest extends Google_Model {
-  protected $__pageSelectionType = 'Google_PageSelection';
-  protected $__pageSelectionDataType = '';
-  public $pageSelection;
   protected $__resultMaskType = 'Google_OfferObjectMask';
   protected $__resultMaskDataType = '';
   public $resultMask;
-  public function setPageSelection(Google_PageSelection $pageSelection) {
-    $this->pageSelection = $pageSelection;
-  }
-  public function getPageSelection() {
-    return $this->pageSelection;
-  }
   public function setResultMask(Google_OfferObjectMask $resultMask) {
     $this->resultMask = $resultMask;
   }
@@ -3364,20 +4058,17 @@ class Google_OfferObjectListRequest extends Google_Model {
 }
 
 class Google_OfferObjectListResponse extends Google_Model {
-  protected $__pageInfoType = 'Google_PageInfo';
-  protected $__pageInfoDataType = '';
-  public $pageInfo;
+  protected $__paginationType = 'Google_Pagination';
+  protected $__paginationDataType = '';
+  public $pagination;
   protected $__resourcesType = 'Google_OfferObject';
   protected $__resourcesDataType = 'array';
   public $resources;
-  protected $__tokenPaginationType = 'Google_TokenPagination';
-  protected $__tokenPaginationDataType = '';
-  public $tokenPagination;
-  public function setPageInfo(Google_PageInfo $pageInfo) {
-    $this->pageInfo = $pageInfo;
+  public function setPagination(Google_Pagination $pagination) {
+    $this->pagination = $pagination;
   }
-  public function getPageInfo() {
-    return $this->pageInfo;
+  public function getPagination() {
+    return $this->pagination;
   }
   public function setResources(/* array(Google_OfferObject) */ $resources) {
     $this->assertIsArray($resources, 'Google_OfferObject', __METHOD__);
@@ -3385,12 +4076,6 @@ class Google_OfferObjectListResponse extends Google_Model {
   }
   public function getResources() {
     return $this->resources;
-  }
-  public function setTokenPagination(Google_TokenPagination $tokenPagination) {
-    $this->tokenPagination = $tokenPagination;
-  }
-  public function getTokenPagination() {
-    return $this->tokenPagination;
   }
 }
 
@@ -3414,51 +4099,27 @@ class Google_OfferObjectMask extends Google_Model {
   }
 }
 
-class Google_PageInfo extends Google_Model {
-  public $resultPerPage;
-  public $startIndex;
-  public $totalResults;
-  public function setResultPerPage( $resultPerPage) {
-    $this->resultPerPage = $resultPerPage;
+class Google_Pagination extends Google_Model {
+  public $kind;
+  public $nextPageToken;
+  public $resultsPerPage;
+  public function setKind( $kind) {
+    $this->kind = $kind;
   }
-  public function getResultPerPage() {
-    return $this->resultPerPage;
+  public function getKind() {
+    return $this->kind;
   }
-  public function setStartIndex( $startIndex) {
-    $this->startIndex = $startIndex;
+  public function setNextPageToken( $nextPageToken) {
+    $this->nextPageToken = $nextPageToken;
   }
-  public function getStartIndex() {
-    return $this->startIndex;
+  public function getNextPageToken() {
+    return $this->nextPageToken;
   }
-  public function setTotalResults( $totalResults) {
-    $this->totalResults = $totalResults;
+  public function setResultsPerPage( $resultsPerPage) {
+    $this->resultsPerPage = $resultsPerPage;
   }
-  public function getTotalResults() {
-    return $this->totalResults;
-  }
-}
-
-class Google_PageSelection extends Google_Model {
-  public $maxResults;
-  public $startIndex;
-  public $token;
-  public function setMaxResults( $maxResults) {
-    $this->maxResults = $maxResults;
-  }
-  public function getMaxResults() {
-    return $this->maxResults;
-  }
-  public function setStartIndex( $startIndex) {
-    $this->startIndex = $startIndex;
-  }
-  public function getStartIndex() {
-    return $this->startIndex;
-  }
-  public function setToken( $token) {
-    $this->token = $token;
-  }
-  public function getToken() {
-    return $this->token;
+  public function getResultsPerPage() {
+    return $this->resultsPerPage;
   }
 }
 
@@ -3517,6 +4178,23 @@ class Google_RenderSpec extends Google_Model {
   }
 }
 
+class Google_TextModuleData extends Google_Model {
+  public $body;
+  public $header;
+  public function setBody( $body) {
+    $this->body = $body;
+  }
+  public function getBody() {
+    return $this->body;
+  }
+  public function setHeader( $header) {
+    $this->header = $header;
+  }
+  public function getHeader() {
+    return $this->header;
+  }
+}
+
 class Google_TimeInterval extends Google_Model {
   protected $__endType = 'Google_DateTime';
   protected $__endDataType = '';
@@ -3542,23 +4220,6 @@ class Google_TimeInterval extends Google_Model {
   }
   public function getStart() {
     return $this->start;
-  }
-}
-
-class Google_TokenPagination extends Google_Model {
-  public $nextPageToken;
-  public $previousPageToken;
-  public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
-  }
-  public function getNextPageToken() {
-    return $this->nextPageToken;
-  }
-  public function setPreviousPageToken( $previousPageToken) {
-    $this->previousPageToken = $previousPageToken;
-  }
-  public function getPreviousPageToken() {
-    return $this->previousPageToken;
   }
 }
 
@@ -3610,10 +4271,6 @@ class Google_TypedValue extends Google_Model {
   public function setList(/* array(Google_TypedValue) */ $list) {
     $this->assertIsArray($list, 'Google_TypedValue', __METHOD__);
     $this->list = $list;
-  }
-  public function setField(/* array(Google_TypedValue) */ $list, $field) {
-    $this->assertIsArray($list, 'Google_TypedValue', __METHOD__);
-    $this->$field = $list;
   }
   public function getList() {
     return $this->list;

@@ -103,17 +103,18 @@ class Loyalty {
     $barcode->setType('qrCode');
     $barcode->setValue('28343E3');
     // Define text module data.
-    $textModuleDatas = new Google_TextModuleDatas();
-    $textModuleDatas->setHeader('Rewards details');
-    $textModuleDatas->setBody('Welcome to Baconrista rewards. For every 5 ' .
-        'coffees purchased you\'ll receive a free bacon fat latte.');
-    // Define links module data. 
+    $textModulesData = array(
+        'header' => 'Rewards details',
+        'body' => 'Welcome to Baconrista rewards. For every 5 ' .
+            'coffees purchased you\'ll receive a free bacon fat latte.');
+    // Define links module data.
     $linksModuleData = new Google_LinksModuleData();
-    $uriInstance = new Google_Uri();
-    $uriInstance->setUri('http://www.example.com');
-    $uriInstance->setKind('walletobjects#uri');
-    $uriInstance->setDescription('Example');
-    $linksModuleData->setUri($uriInstance);
+    $uris = array (
+        'uri' => 'http://www.example.com',
+        'kind' => 'walletobjecs#uri',
+        'description' => 'Example'
+    );
+    $linksModuleData->setUris($uris);
     // Define label values.
     $labelValueRows = array(
         array(
@@ -179,7 +180,7 @@ class Loyalty {
     $wobObject->setBarcode($barcode);
     $wobObject->setInfoModuleData($infoModuleData);
     $wobObject->setLinksModuleData($linksModuleData);
-    $wobObject->setTextModuleDatas($textModuleDatas);
+    $wobObject->setTextModulesData($textModulesData);
     $wobObject->setAccountName("Joe Smith");
     $wobObject->setAccountId("1234567890");
     $wobObject->setLoyaltyPoints($points);
