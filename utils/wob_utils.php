@@ -15,21 +15,10 @@
  * limitations under the License.
  */
 
-/**
- * Set WalletUser object containing data about the user requesting loyalty
- * account linking.
- */
 require_once 'webservice/webservice_wallet_user.php';
-
-/**
- * Set web service request parameters object.
- */
 require_once 'webservice/webservice_params.php';
-
-/**
- * Set web service request.
- */
 require_once 'webservice/webservice_request.php';
+require_once 'google-api-client/src/Google/Utils.php';
 
 class WobUtils {
 
@@ -138,5 +127,19 @@ class WobUtils {
       $this->responseBody['payload']['loyaltyObjects'][] = $loyaltyObject;
     }
     return $this->responseBody;
+  }
+  // Creates a signed JWT.
+  public function makeSignedJwt($payload,$cred) {
+    $header = array("typ" => "JWT", "alg" => "RS256");
+    $segments = array();
+    $segments[] = Google_Utils::urlSafeB64Encode(json_encode($header));
+    $segments[] = Google_Utils::urlSafeB64Encode(json_encode($payload));
+    $signing_input = implode(".", $segments);
+
+    $signer = new Google_Signer_P12($cred->privateKey, $cred->privateKeyPassword);
+    $signature = $signer->sign($signing_input);
+    $segments[] = Google_Utils::urlSafeB64Encode($signature);
+
+    return implode(".", $segments);
   }
 }

@@ -19,6 +19,11 @@
  * Set access token and include all required classes in the application.
  */
 require_once 'header.php';
+/**
+ * This class contains utility functions to create request/response objects for
+ * webservice api.
+ */
+require_once 'utils/wob_utils.php';
 
 $wobPayload = new WobPayload($ORIGINS);
 
@@ -36,4 +41,6 @@ switch($_REQUEST['type']) {
 }
 // Save to wallet request body.
 $requestBody = $wobPayload->getSaveToWalletRequest();
-echo $jwt = $assertObj->makeSignedJwt($requestBody);
+// Create the response JWT.
+$utils = new WobUtils();
+echo $jwt = $utils->makeSignedJwt($requestBody, $cred);

@@ -53,23 +53,23 @@ class Offer {
         )
     );
     // Source uri of home page.
-    $uriHomePageInstance = new Google_Uri();
-    $imageHomePageInstance = new Google_Image();
+    $uriHomePageInstance = new Google_Service_Walletobjects_Uri();
+    $imageHomePageInstance = new Google_Service_Walletobjects_Image();
     $uriHomePageInstance->setUri(
         'http://www.google.com/landing/chrome/ugc/chrome-icon.jpg'
     );
     $uriHomePageInstance->setDescription('Website');
     $imageHomePageInstance->setSourceUri($uriHomePageInstance);
     // Source uri of title image.
-    $uriTitleImageInstance = new Google_Uri();
-    $imageTitleImageInstance = new Google_Image();
+    $uriTitleImageInstance = new Google_Service_Walletobjects_Uri();
+    $imageTitleImageInstance = new Google_Service_Walletobjects_Image();
     $uriTitleImageInstance->setUri(
         'http://3.bp.blogspot.com/-AvC1agljv9Y/TirbDXOBIPI/AAAAAAAACK0/'.
         'hR2gs5h2H6A/s1600/Bacon%2BWallpaper.png'
     );
     $imageTitleImageInstance->setSourceUri($uriTitleImageInstance);
     // Create wallet class.
-    $wobClass = new Google_OfferClass();
+    $wobClass = new Google_Service_Walletobjects_OfferClass();
     $wobClass->setId($issuerId.'.'.$classId);
     $wobClass->setVersion(1);
     $wobClass->setIssuerName('Baconrista Coffee');
@@ -96,13 +96,13 @@ class Offer {
    */
   public static function generateOfferObject($issuerId, $classId, $objectId) {
     // Define barcode type and value.
-    $barcode = new Google_Barcode();
+    $barcode = new Google_Service_Walletobjects_Barcode();
     $barcode->setType('upcA');
     $barcode->setValue('123456789012');
     $barcode->setAlternateText('12345');
     $barcode->setLabel('User Id');
     // Create wallet object.
-    $wobObject = new Google_OfferObject();
+    $wobObject = new Google_Service_Walletobjects_OfferObject();
     $wobObject->setClassId($issuerId.'.'.$classId);
     $wobObject->setId($issuerId.'.'.$objectId);
     $wobObject->setVersion(1);
