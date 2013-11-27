@@ -47,8 +47,6 @@ function __autoload($class_name) {
 $client = new Google_Client();
 // Set application name.
 $client->setApplicationName(APPLICATION_NAME);
-// Set service account client id.
-$client->setClientId(CLIENT_ID);
 // Set Api scopes.
 $client->setScopes(array(SCOPES));
 // Set your cached access token. Remember to replace $_SESSION with a
@@ -59,10 +57,10 @@ if (isset($_SESSION['token'])) {
 }
 // Load the key in PKCS 12 format (you need to download this from the
 // Google API Console when the service account was created.
-$key = file_get_contents(KEY_FILE);
+$key = file_get_contents(SERVICE_ACCOUNT_PRIVATE_KEY);
 
 $assertObj = new Google_AssertionCredentials(
-    SERVICE_ACCOUNT_NAME, SCOPES, $key
+    SERVICE_ACCOUNT_EMAIL_ADDRESS, SCOPES, $key
 );
 $client->setAssertionCredentials($assertObj);
 if($client->getAuth()->isAccessTokenExpired()) {

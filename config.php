@@ -15,29 +15,21 @@
  * limitations under the License.
  */
 
-define('APPLICATION_NAME', 'Wallet Object API Demo');
-// Set your client id, service account name, and the path to your private key.
-define('SERVICE_ACCOUNT_NAME', 'SERVICE_ACCOUNT_EMAIL_ADDRESS');
-define('CLIENT_ID', 'OAUTH_CLIENT_ID');
-// Make sure you keep your key.p12 file in a secure location, and isn't
-// readable by others.
-define('KEY_FILE', 'PRIVATE_KEY_FILE_PATH');
-// Merchant account id.
-define('ISSUER_ID', 'ISSUER_ID');
+define('SERVICE_ACCOUNT_EMAIL_ADDRESS', 'ServiceAccountEmail@developer.gserviceaccount.com');
+define('ISSUER_ID', 'IssuerId');
+define('SERVICE_ACCOUNT_PRIVATE_KEY', 'wobs-privatekey.p12');
+define('APPLICATION_NAME', 'Wallet Objects Demo');
+// Application origins for save to wallet button.
+$ORIGINS = array('http://localhost:8080');
+// Type of request.
+define('SAVE_TO_WALLET', 'savetowallet');
+define('LOYALTY_WEB', 'loyaltywebservice');
 // Api scopes url.
 define('SCOPES', 'https://www.googleapis.com/auth/wallet_object.issuer');
 //Target audience for JWT.
 define('AUDIENCE', 'google');
-// Application origins.
-$ORIGINS = array('ORIGINS');
-
-// Type of request.
-define('SAVE_TO_WALLET', 'savetowallet');
-define('LOYALTY_WEB', 'loyaltywebservice');
-
 // Wallet objects API classes and objects ids.
 define('LOYALTY_CLASS_ID', 'LoyaltyClass');
 define('LOYALTY_OBJECT_ID', 'LoyaltyObject');
 define('OFFER_CLASS_ID', 'OfferClass');
 define('OFFER_OBJECT_ID', 'OfferObject');
-

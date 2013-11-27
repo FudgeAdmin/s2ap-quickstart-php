@@ -62,7 +62,7 @@ class WobUtils {
    * Initializes Google credentials sent in response body.
    */
   function __construct() {
-    $this->iss = SERVICE_ACCOUNT_NAME;
+    $this->iss = SERVICE_ACCOUNT_EMAIL_ADDRESS;
     $this->audience = AUDIENCE;
     $this->type = LOYALTY_WEB;
     $this->iat = time();

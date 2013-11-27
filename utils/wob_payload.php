@@ -60,7 +60,7 @@ class WobPayload {
    * Initializes Google credentials sent in request body.
    */
   function __construct($origins) {
-    $this->iss = SERVICE_ACCOUNT_NAME;
+    $this->iss = SERVICE_ACCOUNT_EMAIL_ADDRESS;
     $this->audience = AUDIENCE;
     $this->type = SAVE_TO_WALLET;
     $this->iat = time();
