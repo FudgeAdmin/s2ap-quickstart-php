@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+set_include_path(get_include_path() . PATH_SEPARATOR . 'google-api-client/src');
 /**
  * Configuration file.
  */
@@ -23,12 +24,12 @@ require_once 'config.php';
 /**
  * Google client library class.
  */
-require_once 'google-api-client/src/Google_Client.php';
+require_once 'google-api-client/src/Google/Client.php';
 
 /**
- * Google wallet object service resouce.
+ * Google wallet object service.
  */
-require_once 'google-api-client/src/contrib/Google_WalletobjectsService.php';
+require_once 'google-api-client/src/Google/Service/Walletobjects.php';
 
 /**
  * Generates wob payload.
@@ -52,21 +53,23 @@ $client->setScopes(array(SCOPES));
 // Set your cached access token. Remember to replace $_SESSION with a
 // real database or memcached.
 session_start();
-if (isset($_SESSION['token'])) {
-  $client->setAccessToken($_SESSION['token']);
+
+if (isset($_SESSION['service_token'])) {
+  $client->setAccessToken($_SESSION['service_token']);
 }
 // Load the key in PKCS 12 format (you need to download this from the
 // Google API Console when the service account was created.
 $key = file_get_contents(SERVICE_ACCOUNT_PRIVATE_KEY);
-
-$assertObj = new Google_AssertionCredentials(
-    SERVICE_ACCOUNT_EMAIL_ADDRESS, SCOPES, $key
+$cred = new Google_Auth_AssertionCredentials(
+    SERVICE_ACCOUNT_EMAIL_ADDRESS,
+    array(SCOPES),
+    $key
 );
-$client->setAssertionCredentials($assertObj);
+$client->setAssertionCredentials($cred);
 if($client->getAuth()->isAccessTokenExpired()) {
-  $client->getAuth()->refreshTokenWithAssertion();
+  $client->getAuth()->refreshTokenWithAssertion($cred);
 }
-$_SESSION['token'] = $client->getAccessToken();
+$_SESSION['service_token'] = $client->getAccessToken();
 
 // Wallet object service instance.
-$service = new Google_WalletobjectsService($client);
+$service = new Google_Service_Walletobjects($client);

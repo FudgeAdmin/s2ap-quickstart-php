@@ -61,14 +61,14 @@ class Loyalty {
         )
     );
     // Source uri of program logo.
-    $uriInstance = new Google_Uri();
-    $imageInstance = new Google_Image();
+    $uriInstance = new Google_Service_Walletobjects_Uri();
+    $imageInstance = new Google_Service_Walletobjects_Image();
     $uriInstance->setUri(
         'http://www.google.com/landing/chrome/ugc/chrome-icon.jpg'
     );
     $imageInstance->setSourceUri($uriInstance);
     // Create wallet class.
-    $wobClass = new Google_LoyaltyClass();
+    $wobClass = new Google_Service_Walletobjects_LoyaltyClass();
     $wobClass->setId($issuerId.'.'.$classId);
     $wobClass->setVersion(1);
     $wobClass->setIssuerName('Baconrista');
@@ -97,7 +97,7 @@ class Loyalty {
    */
   public static function generateLoyaltyObject($issuerId, $classId, $objectId) {
     // Define barcode type and value.
-    $barcode = new Google_Barcode();
+    $barcode = new Google_Service_Walletobjects_Barcode();
     $barcode->setAlternateText('12345');
     $barcode->setLabel('User Id');
     $barcode->setType('qrCode');
@@ -108,7 +108,7 @@ class Loyalty {
         'body' => 'Welcome to Baconrista rewards. For every 5 ' .
             'coffees purchased you\'ll receive a free bacon fat latte.');
     // Define links module data.
-    $linksModuleData = new Google_LinksModuleData();
+    $linksModuleData = new Google_Service_Walletobjects_LinksModuleData();
     $uris = array (
         'uri' => 'http://www.example.com',
         'kind' => 'walletobjecs#uri',
@@ -141,7 +141,7 @@ class Loyalty {
         )
     );
     // Define info module data.
-    $infoModuleData = new Google_InfoModuleData();
+    $infoModuleData = new Google_Service_Walletobjects_InfoModuleData();
     $infoModuleData->setHexBackgroundColor('#b41515');
     $infoModuleData->setHexFontColor('#e7e12f');
     $infoModuleData->setShowLastUpdateTime(true);
@@ -165,14 +165,14 @@ class Loyalty {
         'kind' => 'walletobjects#walletObjectMessage'
     ));
     // Reward points a user has.
-    $points = new Google_LoyaltyPoints();
-    $balance = new Google_LoyaltyPointsBalance();
+    $points = new Google_Service_Walletobjects_LoyaltyPoints();
+    $balance = new Google_Service_Walletobjects_LoyaltyPointsBalance();
     $balance->setString('500');
     $points->setBalance($balance);
     $points->setLabel('Points');
     $points->setPointsType('rewards');
     // Create wallet object.
-    $wobObject = new Google_LoyaltyObject();
+    $wobObject = new Google_Service_Walletobjects_LoyaltyObject();
     $wobObject->setClassId($issuerId.".".$classId);
     $wobObject->setId($issuerId.".".$objectId);
     $wobObject->setVersion(1);

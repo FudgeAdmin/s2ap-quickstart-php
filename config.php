@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-define('SERVICE_ACCOUNT_EMAIL_ADDRESS', 'ServiceAccountEmail@developer.gserviceaccount.com');
-define('ISSUER_ID', 'IssuerId');
+define('SERVICE_ACCOUNT_EMAIL_ADDRESS', '177146692044@developer.gserviceaccount.com');
+define('ISSUER_ID', '2956054058108947698');
 define('SERVICE_ACCOUNT_PRIVATE_KEY', 'wobs-privatekey.p12');
 define('APPLICATION_NAME', 'Wallet Objects Demo');
 // Application origins for save to wallet button.
@@ -29,7 +29,7 @@ define('SCOPES', 'https://www.googleapis.com/auth/wallet_object.issuer');
 //Target audience for JWT.
 define('AUDIENCE', 'google');
 // Wallet objects API classes and objects ids.
-define('LOYALTY_CLASS_ID', 'LoyaltyClass');
-define('LOYALTY_OBJECT_ID', 'LoyaltyObject');
-define('OFFER_CLASS_ID', 'OfferClass');
-define('OFFER_OBJECT_ID', 'OfferObject');
+define('LOYALTY_CLASS_ID', 'LoyaltyClassPHP10');
+define('LOYALTY_OBJECT_ID', 'LoyaltyObjectPHP10');
+define('OFFER_CLASS_ID', 'OfferClassPHP10');
+define('OFFER_OBJECT_ID', 'OfferObjectPHP10');

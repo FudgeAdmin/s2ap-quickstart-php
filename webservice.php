@@ -68,4 +68,4 @@ if(is_object($loyaltyObject)) {
 }
 
 // Create the response JWT.
-echo $jwt = $assertObj->makeSignedJwt($responseBody);
+echo $jwt = $utils->makeSignedJwt($responseBody, $cred);
