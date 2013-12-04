@@ -122,10 +122,10 @@ class WobUtils {
     $this->responseBody['aud'] = $this->audience;
     $this->responseBody['typ'] = $this->type;
     $this->responseBody['iat'] = $this->iat;
-    $this->responseBody['payload']['webserviceResponse'] = $webResponse;
     if(is_object($loyaltyObject) && !empty($loyaltyObject)) {
       $this->responseBody['payload']['loyaltyObjects'][] = $loyaltyObject;
     }
+    $this->responseBody['payload']['webserviceResponse'] = $webResponse;
     return $this->responseBody;
   }
   // Creates a signed JWT.

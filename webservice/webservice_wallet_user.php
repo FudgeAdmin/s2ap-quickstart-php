@@ -26,19 +26,24 @@ class WebserviceWalletUser {
   private $firstName;
 
   /**
-   * @var String $middleName The user's middle name..
-   */
-  private $middleName;
-
-  /**
    * @var String $lastName The user's last name.
    */
   private $lastName;
 
   /**
-   * @var String $streetAddress The user's street address.
+   * @var String $addressLine1 The user's address line1.
    */
-  private $streetAddress;
+  private $addressLine1;
+
+  /**
+   * @var String $addressLine1 The user's address line2.
+   */
+  private $addressLine2;
+
+  /**
+   * @var String $addressLine1 The user's address line3.
+   */
+  private $addressLine3;
 
   /**
    * @var String $city The user's city.
@@ -97,20 +102,6 @@ class WebserviceWalletUser {
   }
 
   /**
-   * @return String user's middleName .
-   */
-  public function getMiddleName() {
-    return $this->middleName;
-  }
-
-  /**
-   * @param String $middleName set user's middle name.
-   */
-  public function setMiddleName($middleName) {
-    $this->middleName = $middleName;
-  }
-
-  /**
    * @return String lastName user's last name.
    */
   public function getLastName() {
@@ -125,17 +116,45 @@ class WebserviceWalletUser {
   }
 
   /**
-   * @return String StreetAddress user's street address.
+   * @return String addressLine1 user's address line1.
    */
-  public function getStreetAddress() {
-    return $this->streetAddress;
+  public function getAddressLine1() {
+    return $this->addressLine1;
   }
 
   /**
-   * @param String $streetAddress set user's street address.
+   * @param String $addressLine1 set user's address line1.
    */
-  public function setStreetAddress($streetAddress) {
-    $this->streetAddress = $streetAddress;
+  public function setAddressLine1($addressLine1) {
+    $this->addressLine1 = $addressLine1;
+  }
+
+  /**
+   * @return String addressLine2 user's address line2.
+   */
+  public function getAddressLine2() {
+    return $this->addressLine2;
+  }
+
+  /**
+   * @param String $addressLine2 set user's address line2.
+   */
+  public function setAddressLine2($addressLine2) {
+    $this->addressLine2 = $addressLine2;
+  }
+
+  /**
+   * @return String addressLine3 user's address line3.
+   */
+  public function getAddressLine3() {
+    return $this->addressLine3;
+  }
+
+  /**
+   * @param String $addressLine3 set user's address line3.
+   */
+  public function setAddressLine3($addressLine3) {
+    $this->addressLine3 = $addressLine3;
   }
 
   /**

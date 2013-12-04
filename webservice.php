@@ -50,21 +50,27 @@ $loyaltyObjectId = ($linkId != NULL) ? $linkId : LOYALTY_OBJECT_ID;
 $loyaltyObject = Loyalty::generateLoyaltyObject(ISSUER_ID, LOYALTY_CLASS_ID,
     $loyaltyObjectId);
 
+$firstName = $requestObject->getParams()->getWalletUser()->getFirstName();
+$returnCode = strtoupper($firstName);
+
 if(is_object($loyaltyObject)) {
   // Handle signup and linking.
-  $webResponse = new WebserviceResponse('Nice! You have added your program' ,
-      'approved');
-  // Generate Web Service Response Body.
-  $responseBody = $utils->generateWebserviceResponse($loyaltyObject,
-      $webResponse, $apiVersion);
-} else {
-  $errorAction = ($linkId != NULL) ? "link" : "signup";
-  // For rejected sign-up/linking.
-  $webResponse = new WebserviceResponse(
-      'Sorry we can\'t complete this #{'.$errorAction.'}' , 'rejected');
-  // Generate Web Service Response Body.
-  $responseBody = $utils->generateWebserviceResponse('', $webResponse,
-      $apiVersion);
+  $webResponse = new WebserviceResponse($returnCode);
+  if(strpos($webResponse->getStatus(), ResponseCode::SUCCESS) !== false) {
+    // Generate Web Service Response Body.
+    $responseBody = $utils->generateWebserviceResponse($loyaltyObject,
+        $webResponse, $apiVersion);
+  }
+  else {
+    $errorAction = ($linkId != NULL) ? ResponseCode::ERROR_INVALID_LINKING_ID : ResponseCode::ERROR_ACCOUNT_ALREADY_LINKED;
+    // For rejected sign-up/linking.
+    $webResponse = new WebserviceResponse($errorAction);
+    $invalidFields = array('zipcode', 'phone');
+    $webResponse->setInvalidField($invalidFields);
+    // Generate Web Service Response Body.
+    $responseBody = $utils->generateWebserviceResponse('', $webResponse,
+        $apiVersion);
+  }
 }
 
 // Create the response JWT.

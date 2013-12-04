@@ -21,49 +21,77 @@
 class WebserviceResponse {
 
   /**
-   * @var String message of webservice response.
+   * @var String invalidField of webservice response.
    */
-  public $message;
+  public $invalid_field;
 
   /**
-   * @var String result of webservice response.
+   * @var String status of webservice response.
    */
-  public $result;
+  public $status;
 
   /**
-   * Initialize webservice message and result.
+   * Initialize webservice status.
    */
-  public function __construct($message, $result) {
-    $this->setMessage($message);
-    $this->setResult($result);
+  public function __construct($status) {
+    if($this->isValid($status))
+      $this->setStatus($status);
+    else
+      $this->setStatus(ResponseCode::SUCCESS);
+    $this->invalid_field = array();
   }
 
   /**
-   * @return String webservice response message.
+   * @return String webservice response status.
    */
-  public function getMessage() {
-    return $this->message;
+  public function getStatus() {
+    return $this->status;
   }
 
   /**
-   * @param String message set webservice response message.
+   * @param String status set webservice response status.
    */
-  public function setMessage($message) {
-    $this->message = $message;
+  public function setStatus($status) {
+    $this->status = $status;
   }
 
   /**
    * @return String webservice response result.
    */
-  public function getResult() {
-    return $this->result;
+  public function getinvalidField() {
+    return $this->invalidField;
   }
 
   /**
-   * @param String webservice response result, possible values are approved or
-   * declined .
+   * @param String webservice response invalidField
    */
-  public function setResult($result) {
-    $this->result = $result;
+  public function setinvalidField($invalid_field) {
+    $this->invalid_field = $invalid_field;
   }
+
+  /**
+   * @param String responseCode to validate
+   */
+  public function isValid($responseCode) {
+    return ($responseCode == ResponseCode::ERROR_INVALID_DATA_FORMAT
+      || $responseCode == ResponseCode::ERROR_DATA_ON_MERCHANT_RECORD_DIFFERENT
+      || $responseCode == ResponseCode::ERROR_INVALID_LINKING_ID
+      || $responseCode == ResponseCode::ERROR_PREEXISTING_ACCOUNT_REQUIRES_LINKING
+      || $responseCode == ResponseCode::ERROR_ACCOUNT_ALREADY_LINKED
+      || $responseCode == ResponseCode::SUCCESS
+      || $responseCode == ResponseCode::SUCCESS_ACCOUNT_ALREADY_CREATED
+      || $responseCode == ResponseCode::SUCCESS_ACCOUNT_ALREADY_LINKED);
+  }
+}
+
+final class ResponseCode
+{
+  const ERROR_INVALID_DATA_FORMAT = 'ERROR_INVALID_DATA_FORMAT';
+  const ERROR_DATA_ON_MERCHANT_RECORD_DIFFERENT = 'ERROR_DATA_ON_MERCHANT_RECORD_DIFFERENT';
+  const ERROR_INVALID_LINKING_ID = 'ERROR_INVALID_LINKING_ID';
+  const ERROR_PREEXISTING_ACCOUNT_REQUIRES_LINKING = 'ERROR_PREEXISTING_ACCOUNT_REQUIRES_LINKING';
+  const ERROR_ACCOUNT_ALREADY_LINKED = 'ERROR_ACCOUNT_ALREADY_LINKED';
+  const SUCCESS = 'SUCCESS';
+  const SUCCESS_ACCOUNT_ALREADY_CREATED = 'SUCCESS_ACCOUNT_ALREADY_CREATED';
+  const SUCCESS_ACCOUNT_ALREADY_LINKED = 'SUCCESS_ACCOUNT_ALREADY_LINKED';
 }
