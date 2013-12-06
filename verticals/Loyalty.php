@@ -34,20 +34,43 @@ class Loyalty {
             'viewName' => 'g_list'),
         array('templateFamily' => '1.loyaltyCard1_expanded',
             'viewName' => 'g_expanded'));
+    // Define text module data.
+    $textModulesData = array(
+        array(
+            'header' => 'Rewards details',
+            'body' => 'Welcome to Baconrista rewards. For every 5 ' .
+                'coffees purchased you will receive a free bacon fat latte.'
+        )
+    );
+    // Define links module data.
+    $linksModuleData = new Google_Service_Walletobjects_LinksModuleData();
+    $uris = array (
+        array(
+            'uri' => 'http://www.baconrista.com',
+            'kind' => 'walletobjecs#uri',
+            'description' => 'Baconrista'
+        )
+    );
+    $linksModuleData->setUris($uris);
+    // Define info module data.
+    $infoModuleData = new Google_Service_Walletobjects_InfoModuleData();
+    $infoModuleData->setHexBackgroundColor('#ABABAB');
+    $infoModuleData->setHexFontColor('#FF3300');
+
     // Messages to be displayed to all users of Wallet Objects.
     $messages = array(array(
         'actionUri' => array(
             'kind' => 'walletobjects#uri',
             'uri' => 'http://baconrista.com'
         ),
-        'body' => 'Welcome to Banconrista Rewards!',
-        'header' => 'Welcome',
+        'header' => 'Welcome to Banconrista Rewards!',
+        'body' => 'Featuring our new bacon donuts.',
         'image' => array(
             'kind' => 'walletobjects#image',
             'sourceUri' => array(
                 'kind' => 'walletobjects#uri',
-                'uri' => 'https://ssl.gstatic.com/codesite/ph/images/'.
-                'search-48.gif'
+                'uri' => 'http://farm8.staticflickr.com/7302/'.
+                '11177240353_115daa5729_o.jpg'
             )
         ),
         'kind' => 'walletobjects#walletObjectMessage'
@@ -64,7 +87,7 @@ class Loyalty {
     $uriInstance = new Google_Service_Walletobjects_Uri();
     $imageInstance = new Google_Service_Walletobjects_Image();
     $uriInstance->setUri(
-        'http://www.google.com/landing/chrome/ugc/chrome-icon.jpg'
+        'http://farm8.staticflickr.com/7340/11177041185_a61a7f2139_o.jpg'
     );
     $imageInstance->setSourceUri($uriInstance);
     // Create wallet class.
@@ -80,6 +103,9 @@ class Loyalty {
     $wobClass->setAccountNameLabel('Member Name');
     $wobClass->setAccountIdLabel('Member Id');
     $wobClass->setRenderSpecs($renderSpecs);
+    $wobClass->setInfoModuleData($infoModuleData);
+    $wobClass->setLinksModuleData($linksModuleData);
+    $wobClass->setTextModulesData($textModulesData);
     $wobClass->setMessages($messages);
     $wobClass->setReviewStatus('underReview');
     $wobClass->setAllowMultipleUsersPerObject(true);
@@ -104,46 +130,55 @@ class Loyalty {
     $barcode->setValue('28343E3');
     // Define text module data.
     $textModulesData = array(
-        'header' => 'Rewards details',
-        'body' => 'Welcome to Baconrista rewards. For every 5 ' .
-            'coffees purchased you\'ll receive a free bacon fat latte.');
+        array(
+            'header' => 'Janes Baconrista Rewards',
+            'body' => 'You are 5 coffees away from receiving a free '.
+                      'bacon fat latte'
+        )
+    );
     // Define links module data.
     $linksModuleData = new Google_Service_Walletobjects_LinksModuleData();
     $uris = array (
-        'uri' => 'http://www.example.com',
-        'kind' => 'walletobjecs#uri',
-        'description' => 'Example'
+        array(
+            'uri' => 'http://www.baconrista.com/myaccount?id=1234567890',
+            'kind' => 'walletobjecs#uri',
+            'description' => 'My Baconrista Account'
+        )
     );
     $linksModuleData->setUris($uris);
     // Define label values.
     $labelValueRows = array(
         array(
+            'hexFontColor' => '#000000',
+            'hexBackgroundColor' => '#BBCCFC',
             'columns' => array(
                 array(
                     'label' => 'Member Name',
-                    'value' => 'Joe Smith'
+                    'value' => 'Jane Doe'
                 ), array(
-                    'label' => 'Next Reward in',
-                    'value' => '2 Coffee'
+                    'label' => 'Membership #',
+                    'value' => '1234567890'
                 )
             )
         ),
         array(
+            'hexFontColor' => '#EDEDDD',
+            'hexBackgroundColor' => '#FFFB00',
             'columns' => array(
                 array(
-                    'label' => 'Label 2',
-                    'value' => 'Value 2'
+                    'label' => 'Next Reward in',
+                    'value' => '2 coffees'
                 ), array(
-                    'label' => 'Lable 3',
-                    'value' => 'Value 3'
+                    'label' => 'Member Since',
+                    'value' => '01/15/2013'
                 )
             )
         )
     );
     // Define info module data.
     $infoModuleData = new Google_Service_Walletobjects_InfoModuleData();
-    $infoModuleData->setHexBackgroundColor('#b41515');
-    $infoModuleData->setHexFontColor('#e7e12f');
+    $infoModuleData->setHexBackgroundColor('#FC058C');
+    $infoModuleData->setHexFontColor('#FFFFFF');
     $infoModuleData->setShowLastUpdateTime(true);
     $infoModuleData->setLabelValueRows($labelValueRows);
     // Messages to be displayed.
@@ -152,14 +187,15 @@ class Loyalty {
             'kind' => 'walletobjects#uri',
             'uri' => 'http://baconrista.com'
         ),
-        'body' => 'Welcome to Banconrista Rewards!',
-        'header' => 'Welcome',
+        'header' => 'Jane, welcome to Banconrista Rewards!',
+        'body' => 'Thanks for joining our program. Show this message to '.
+                  'our barista for your first free coffee on us!',
         'image' => array(
             'kind' => 'walletobjects#image',
             'sourceUri' => array(
                 'kind' => 'walletobjects#uri',
-                'uri' => 'https://ssl.gstatic.com/codesite/ph/images/'.
-                'search-48.gif'
+                'uri' => 'http://farm4.staticflickr.com/3723/'.
+                '11177041115_6e6a3b6f49_o.jpg'
             )
         ),
         'kind' => 'walletobjects#walletObjectMessage'
@@ -170,19 +206,19 @@ class Loyalty {
     $balance->setString('500');
     $points->setBalance($balance);
     $points->setLabel('Points');
-    $points->setPointsType('rewards');
+    $points->setPointsType('points');
     // Create wallet object.
     $wobObject = new Google_Service_Walletobjects_LoyaltyObject();
     $wobObject->setClassId($issuerId.".".$classId);
     $wobObject->setId($issuerId.".".$objectId);
     $wobObject->setVersion(1);
-    $wobObject->setState("active");
+    $wobObject->setState('active');
     $wobObject->setBarcode($barcode);
     $wobObject->setInfoModuleData($infoModuleData);
     $wobObject->setLinksModuleData($linksModuleData);
     $wobObject->setTextModulesData($textModulesData);
-    $wobObject->setAccountName("Joe Smith");
-    $wobObject->setAccountId("1234567890");
+    $wobObject->setAccountName('Jane Doe');
+    $wobObject->setAccountId('1234567890');
     $wobObject->setLoyaltyPoints($points);
     $wobObject->setMessages($messages);
     return $wobObject;
