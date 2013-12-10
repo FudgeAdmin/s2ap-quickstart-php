@@ -23,7 +23,7 @@ class WebserviceResponse {
   /**
    * @var String invalidField of webservice response.
    */
-  public $invalid_field;
+  public $invalidField;
 
   /**
    * @var String status of webservice response.
@@ -38,7 +38,7 @@ class WebserviceResponse {
       $this->setStatus($status);
     else
       $this->setStatus(ResponseCode::SUCCESS);
-    $this->invalid_field = array();
+    $this->invalidField = array();
   }
 
   /**
@@ -65,8 +65,8 @@ class WebserviceResponse {
   /**
    * @param String webservice response invalidField
    */
-  public function setinvalidField($invalid_field) {
-    $this->invalid_field = $invalid_field;
+  public function setinvalidField($invalidField) {
+    $this->invalidField = $invalidField;
   }
 
   /**
