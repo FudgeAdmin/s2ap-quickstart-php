@@ -96,7 +96,6 @@ class Loyalty {
     $wobClass->setVersion(1);
     $wobClass->setIssuerName('Baconrista');
     $wobClass->setProgramName('Baconrista Rewards');
-    $wobClass->setHomepageUri($uriInstance);
     $wobClass->setProgramLogo($imageInstance);
     $wobClass->setRewardsTierLabel('Tier');
     $wobClass->setRewardsTier('Gold');
