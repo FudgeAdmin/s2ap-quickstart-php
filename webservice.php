@@ -65,8 +65,8 @@ if(is_object($loyaltyObject)) {
     $errorAction = ($linkId != NULL) ? ResponseCode::ERROR_INVALID_LINKING_ID : ResponseCode::ERROR_ACCOUNT_ALREADY_LINKED;
     // For rejected sign-up/linking.
     $webResponse = new WebserviceResponse($errorAction);
-    $invalidFields = array('zipcode', 'phone');
-    $webResponse->setInvalidField($invalidFields);
+    $invalidWalletUserFields = array('zipcode', 'phone');
+    $webResponse->setInvalidWalletUserFields($invalidWalletUserFields);
     // Generate Web Service Response Body.
     $responseBody = $utils->generateWebserviceResponse('', $webResponse,
         $apiVersion);

@@ -21,9 +21,9 @@
 class WebserviceResponse {
 
   /**
-   * @var String invalidField of webservice response.
+   * @var String invalidWalletUserFields of webservice response.
    */
-  public $invalidField;
+  public $invalidWalletUserFields;
 
   /**
    * @var String status of webservice response.
@@ -38,7 +38,7 @@ class WebserviceResponse {
       $this->setStatus($status);
     else
       $this->setStatus(ResponseCode::SUCCESS);
-    $this->invalidField = array();
+    $this->invalidWalletUserFields = array();
   }
 
   /**
@@ -56,17 +56,17 @@ class WebserviceResponse {
   }
 
   /**
-   * @return String webservice response result.
+   * @return String webservice response invalidWalletUserFields.
    */
-  public function getinvalidField() {
-    return $this->invalidField;
+  public function getInvalidWalletUserFields() {
+    return $this->invalidWalletUserFields;
   }
 
   /**
-   * @param String webservice response invalidField
+   * @param String webservice set response invalidWalletUserFields
    */
-  public function setinvalidField($invalidField) {
-    $this->invalidField = $invalidField;
+  public function setInvalidWalletUserFields($invalidWalletUserFields) {
+    $this->invalidWalletUserFields = $invalidWalletUserFields;
   }
 
   /**
