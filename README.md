@@ -20,3 +20,5 @@ Save to Wallet is handled on both the client and server. The index.html file is 
 
 ## Webservice API
 The Webservice API handler is webservice.php. This script handles Webservice requests, generates Loyalty Objects, converts Loyalty Objects to JWTs, and responds with the JWT. You can configure your discoverable to point to the URL handled by the webservice.php.
+
+[![Analytics](https://ga-beacon.appspot.com/UA-46956809-1/walletobjects-quickstart-php/README.md)](https://github.com/igrigorik/ga-beacon)
