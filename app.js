@@ -19,24 +19,18 @@ function init() {
   // Bind click event for 'Insert Loyalty Class' button.
   document.getElementById('loyalty').addEventListener('click', function() {
     $.get('insert?type=loyalty', function(data) {
-      // The following errors can be returned from a web service.
-      // Error code (400): At least one entrypoint mapping for [g_list] should
-      // be specified.
-      // Error code (400): Issuer name cannot be empty.
-      // Error code (409): Class already exist.
-      // Error code (503): Backend Error.
       console.log(data);
     });
   });
   // Bind click event for 'Insert Offer Class' button.
   document.getElementById('offer').addEventListener('click', function() {
     $.get('insert?type=offer', function(data) {
-      // The following errors can be returned from a web service.
-      // Error code (400): At least one entrypoint mapping for [g_list] should
-      // be specified.
-      // Error code (400): Issuer name cannot be empty.
-      // Error code (409): Class already exist.
-      // Error code (503): Backend Error.
+      console.log(data);
+    });
+  });
+  // Bind click event for 'Insert Gift Card Class' button.
+  document.getElementById('giftcard').addEventListener('click', function() {
+    $.get('insert?type=giftcard', function(data) {
       console.log(data);
     });
   });
@@ -58,6 +52,15 @@ function init() {
       saveToWallet.setAttribute('onsuccess', 'successHandler');
       saveToWallet.setAttribute('onfailure', 'failureHandler');
       document.querySelector('#offersave').appendChild(saveToWallet);
+      }
+    ),
+    // Get jwt of giftcard object and render 'Get Gift Card' wallet button.
+    $.get('jwt?type=giftcard', function(data) {
+      saveToWallet = document.createElement('g:savetowallet');
+      saveToWallet.setAttribute('jwt', data);
+      saveToWallet.setAttribute('onsuccess', 'successHandler');
+      saveToWallet.setAttribute('onfailure', 'failureHandler');
+      document.querySelector('#giftcardsave').appendChild(saveToWallet);
       }
     )
     ).done(function() {

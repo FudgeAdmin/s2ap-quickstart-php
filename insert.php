@@ -29,4 +29,8 @@ switch($_REQUEST['type']) {
     $service->offerclass->insert(
       Offer::generateOfferClass(ISSUER_ID, OFFER_CLASS_ID));
     break;
+  case 'giftcard' :
+    echo $service->giftcardclass->insert(
+      GiftCard::generateGiftCardClass(ISSUER_ID, GIFTCARD_CLASS_ID));
+    break;
 }

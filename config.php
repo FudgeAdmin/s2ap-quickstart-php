@@ -33,3 +33,5 @@ define('LOYALTY_CLASS_ID', 'LoyaltyClass');
 define('LOYALTY_OBJECT_ID', 'LoyaltyObject');
 define('OFFER_CLASS_ID', 'OfferClass');
 define('OFFER_OBJECT_ID', 'OfferObject');
+define('GIFTCARD_CLASS_ID', 'GiftCardClass');
+define('GIFTCARD_OBJECT_ID', 'GiftCardObject');

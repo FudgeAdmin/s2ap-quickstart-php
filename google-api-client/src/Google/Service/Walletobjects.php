@@ -31,6 +31,8 @@
  */
 class Google_Service_Walletobjects extends Google_Service
 {
+
+
   public $boardingpassclass;
   public $boardingpassobject;
   public $genericclass;
@@ -53,774 +55,767 @@ class Google_Service_Walletobjects extends Google_Service
     parent::__construct($client);
     $this->servicePath = 'walletobjects/v1/';
     $this->version = 'v1';
-    
     $this->serviceName = 'walletobjects';
-
-    $client->addService(
-        $this->serviceName,
-        $this->version,
-        $this->availableScopes
-    );
 
     $this->boardingpassclass = new Google_Service_Walletobjects_Boardingpassclass_Resource(
         $this,
         $this->serviceName,
         'boardingpassclass',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "boardingPassClass/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'boardingPassClass/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "boardingPassClass/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'boardingPassClass/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'version' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'approvedOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
-                "version" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "approvedOnly" => array(
-                  "location" => "query",
-                  "type" => "boolean",
-              ),
-              ),
-          ),"insert" => array(
-            'path' => "boardingPassClass",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "boardingPassClass",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "issuerId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'boardingPassClass',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'boardingPassClass',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'issuerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "boardingPassClass/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'boardingPassClass/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "boardingPassClass/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'boardingPassClass/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->boardingpassobject = new Google_Service_Walletobjects_Boardingpassobject_Resource(
         $this,
         $this->serviceName,
         'boardingpassobject',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "boardingPassObject/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'boardingPassObject/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "boardingPassObject/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'boardingPassObject/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"insert" => array(
-            'path' => "boardingPassObject",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "boardingPassObject",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "classId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'boardingPassObject',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'boardingPassObject',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'classId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "boardingPassObject/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'boardingPassObject/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "boardingPassObject/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'boardingPassObject/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->genericclass = new Google_Service_Walletobjects_Genericclass_Resource(
         $this,
         $this->serviceName,
         'genericclass',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "genericClass/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'genericClass/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "genericClass/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'genericClass/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'version' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'approvedOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
-                "version" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "approvedOnly" => array(
-                  "location" => "query",
-                  "type" => "boolean",
-              ),
-              ),
-          ),"insert" => array(
-            'path' => "genericClass",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "genericClass",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "issuerId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'genericClass',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'genericClass',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'issuerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "genericClass/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'genericClass/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "genericClass/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'genericClass/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->genericobject = new Google_Service_Walletobjects_Genericobject_Resource(
         $this,
         $this->serviceName,
         'genericobject',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "genericObject/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'genericObject/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "genericObject/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'genericObject/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"insert" => array(
-            'path' => "genericObject",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "genericObject",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "classId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'genericObject',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'genericObject',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'classId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "genericObject/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'genericObject/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "genericObject/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'genericObject/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->giftcardclass = new Google_Service_Walletobjects_Giftcardclass_Resource(
         $this,
         $this->serviceName,
         'giftcardclass',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "giftCardClass/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'giftCardClass/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "giftCardClass/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'giftCardClass/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'version' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'approvedOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
-                "version" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "approvedOnly" => array(
-                  "location" => "query",
-                  "type" => "boolean",
-              ),
-              ),
-          ),"insert" => array(
-            'path' => "giftCardClass",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "giftCardClass",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "issuerId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'giftCardClass',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'giftCardClass',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'issuerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "giftCardClass/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'giftCardClass/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "giftCardClass/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'giftCardClass/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->giftcardobject = new Google_Service_Walletobjects_Giftcardobject_Resource(
         $this,
         $this->serviceName,
         'giftcardobject',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "giftCardObject/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'giftCardObject/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "giftCardObject/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'giftCardObject/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"insert" => array(
-            'path' => "giftCardObject",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "giftCardObject",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "classId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'giftCardObject',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'giftCardObject',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'classId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "giftCardObject/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'giftCardObject/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "giftCardObject/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'giftCardObject/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->loyaltyclass = new Google_Service_Walletobjects_Loyaltyclass_Resource(
         $this,
         $this->serviceName,
         'loyaltyclass',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "loyaltyClass/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'loyaltyClass/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "loyaltyClass/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'loyaltyClass/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'version' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'approvedOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
-                "version" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "approvedOnly" => array(
-                  "location" => "query",
-                  "type" => "boolean",
-              ),
-              ),
-          ),"insert" => array(
-            'path' => "loyaltyClass",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "loyaltyClass",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "issuerId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'loyaltyClass',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'loyaltyClass',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'issuerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "loyaltyClass/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'loyaltyClass/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "loyaltyClass/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'loyaltyClass/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->loyaltyobject = new Google_Service_Walletobjects_Loyaltyobject_Resource(
         $this,
         $this->serviceName,
         'loyaltyobject',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "loyaltyObject/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'loyaltyObject/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "loyaltyObject/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'loyaltyObject/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"insert" => array(
-            'path' => "loyaltyObject",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "loyaltyObject",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "classId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'loyaltyObject',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'loyaltyObject',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'classId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "loyaltyObject/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'loyaltyObject/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "loyaltyObject/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'loyaltyObject/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->offerclass = new Google_Service_Walletobjects_Offerclass_Resource(
         $this,
         $this->serviceName,
         'offerclass',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "offerClass/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'offerClass/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "offerClass/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'offerClass/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'version' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'approvedOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
-                "version" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "approvedOnly" => array(
-                  "location" => "query",
-                  "type" => "boolean",
-              ),
-              ),
-          ),"insert" => array(
-            'path' => "offerClass",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "offerClass",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "issuerId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'offerClass',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'offerClass',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'issuerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "offerClass/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'offerClass/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "offerClass/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'offerClass/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
     $this->offerobject = new Google_Service_Walletobjects_Offerobject_Resource(
         $this,
         $this->serviceName,
         'offerobject',
         array(
-    'methods' => array(
-          "addmessage" => array(
-            'path' => "offerObject/{resourceId}/addMessage",
-            'httpMethod' => "POST",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+          'methods' => array(
+            'addmessage' => array(
+              'path' => 'offerObject/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"get" => array(
-            'path' => "offerObject/{resourceId}",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'get' => array(
+              'path' => 'offerObject/{resourceId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"insert" => array(
-            'path' => "offerObject",
-            'httpMethod' => "POST",
-            'parameters' => array(  ),
-          ),"list" => array(
-            'path' => "offerObject",
-            'httpMethod' => "GET",
-            'parameters' => array(
-                "classId" => array(
-                  "location" => "query",
-                  "type" => "string",
+            ),'insert' => array(
+              'path' => 'offerObject',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'list' => array(
+              'path' => 'offerObject',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'classId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                   'required' => true,
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
-                "token" => array(
-                  "location" => "query",
-                  "type" => "string",
-              ),
-                "maxResults" => array(
-                  "location" => "query",
-                  "type" => "integer",
-              ),
-              ),
-          ),"patch" => array(
-            'path' => "offerObject/{resourceId}",
-            'httpMethod' => "PATCH",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'patch' => array(
+              'path' => 'offerObject/{resourceId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),"update" => array(
-            'path' => "offerObject/{resourceId}",
-            'httpMethod' => "PUT",
-            'parameters' => array(
-                "resourceId" => array(
-                  "location" => "path",
-                  "type" => "string",
+            ),'update' => array(
+              'path' => 'offerObject/{resourceId}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'resourceId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
                   'required' => true,
+                ),
               ),
-              ),
-          ),
+            ),
+          )
         )
-    )
     );
   }
 }
@@ -891,7 +886,7 @@ class Google_Service_Walletobjects_Boardingpassclass_Resource extends Google_Ser
   }
   /**
    * Returns a list of all boarding pass classes for a given issuer ID.
-   * (boardingpassclass.list)
+   * (boardingpassclass.listBoardingpassclass)
    *
    * @param string $issuerId
    * The ID of the issuer authorized to list classes. No type field, as that is implicate in the type
@@ -1006,7 +1001,7 @@ class Google_Service_Walletobjects_Boardingpassobject_Resource extends Google_Se
   }
   /**
    * Returns a list of all boarding pass objects for a given class ID.
-   * (boardingpassobject.list)
+   * (boardingpassobject.listBoardingpassobject)
    *
    * @param string $classId
    * The ID of the class whose objects will be listed.
@@ -1126,7 +1121,7 @@ class Google_Service_Walletobjects_Genericclass_Resource extends Google_Service_
   }
   /**
    * Returns a list of all generic classes for a given issuer ID.
-   * (genericclass.list)
+   * (genericclass.listGenericclass)
    *
    * @param string $issuerId
    * The ID of the issuer authorized to list classes. No type field, as that is implicate in the type
@@ -1240,7 +1235,7 @@ class Google_Service_Walletobjects_Genericobject_Resource extends Google_Service
   }
   /**
    * Returns a list of all generic objects for a given class ID.
-   * (genericobject.list)
+   * (genericobject.listGenericobject)
    *
    * @param string $classId
    * The ID of the class whose objects will be listed.
@@ -1358,7 +1353,7 @@ class Google_Service_Walletobjects_Giftcardclass_Resource extends Google_Service
   }
   /**
    * Returns a list of all gift card classes for a given issuer ID.
-   * (giftcardclass.list)
+   * (giftcardclass.listGiftcardclass)
    *
    * @param string $issuerId
    *
@@ -1467,7 +1462,7 @@ class Google_Service_Walletobjects_Giftcardobject_Resource extends Google_Servic
   }
   /**
    * Returns a list of all gift card objects for a given class ID.
-   * (giftcardobject.list)
+   * (giftcardobject.listGiftcardobject)
    *
    * @param string $classId
    *
@@ -1583,7 +1578,7 @@ class Google_Service_Walletobjects_Loyaltyclass_Resource extends Google_Service_
   }
   /**
    * Returns a list of all loyalty classes for a given issuer ID.
-   * (loyaltyclass.list)
+   * (loyaltyclass.listLoyaltyclass)
    *
    * @param string $issuerId
    * The ID of the issuer authorized to list classes.
@@ -1698,7 +1693,7 @@ class Google_Service_Walletobjects_Loyaltyobject_Resource extends Google_Service
   }
   /**
    * Returns a list of all loyalty objects for a given class ID.
-   * (loyaltyobject.list)
+   * (loyaltyobject.listLoyaltyobject)
    *
    * @param string $classId
    * The ID of the class whose objects will be listed.
@@ -1816,7 +1811,8 @@ class Google_Service_Walletobjects_Offerclass_Resource extends Google_Service_Re
     return $this->call('insert', array($params), "Google_Service_Walletobjects_OfferClass");
   }
   /**
-   * Returns a list of all offer classes for a given issuer ID. (offerclass.list)
+   * Returns a list of all offer classes for a given issuer ID.
+   * (offerclass.listOfferclass)
    *
    * @param string $issuerId
    * The ID of the issuer authorized to list classes. No type field, as that is implicate in the type
@@ -1928,7 +1924,8 @@ class Google_Service_Walletobjects_Offerobject_Resource extends Google_Service_R
     return $this->call('insert', array($params), "Google_Service_Walletobjects_OfferObject");
   }
   /**
-   * Returns a list of all offer objects for a given class ID. (offerobject.list)
+   * Returns a list of all offer objects for a given class ID.
+   * (offerobject.listOfferobject)
    *
    * @param string $classId
    * The ID of the class whose objects will be listed.
@@ -2004,7 +2001,7 @@ class Google_Service_Walletobjects_Barcode extends Google_Model
   {
     return $this->alternateText;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -2014,7 +2011,7 @@ class Google_Service_Walletobjects_Barcode extends Google_Model
   {
     return $this->kind;
   }
-  
+
   public function setLabel($label)
   {
     $this->label = $label;
@@ -2024,7 +2021,7 @@ class Google_Service_Walletobjects_Barcode extends Google_Model
   {
     return $this->label;
   }
-  
+
   public function setType($type)
   {
     $this->type = $type;
@@ -2034,7 +2031,7 @@ class Google_Service_Walletobjects_Barcode extends Google_Model
   {
     return $this->type;
   }
-  
+
   public function setValue($value)
   {
     $this->value = $value;
@@ -2044,7 +2041,6 @@ class Google_Service_Walletobjects_Barcode extends Google_Model
   {
     return $this->value;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
@@ -2115,7 +2111,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->aircraftType;
   }
-  
+
   public function setAllowMultipleUsersPerObject($allowMultipleUsersPerObject)
   {
     $this->allowMultipleUsersPerObject = $allowMultipleUsersPerObject;
@@ -2125,7 +2121,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->allowMultipleUsersPerObject;
   }
-  
+
   public function setArrivalAirportCode($arrivalAirportCode)
   {
     $this->arrivalAirportCode = $arrivalAirportCode;
@@ -2135,7 +2131,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->arrivalAirportCode;
   }
-  
+
   public function setArrivalCityName($arrivalCityName)
   {
     $this->arrivalCityName = $arrivalCityName;
@@ -2145,7 +2141,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->arrivalCityName;
   }
-  
+
   public function setArrivalDateTimeActual(Google_Service_Walletobjects_DateTime $arrivalDateTimeActual)
   {
     $this->arrivalDateTimeActual = $arrivalDateTimeActual;
@@ -2155,7 +2151,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->arrivalDateTimeActual;
   }
-  
+
   public function setArrivalDateTimeScheduled(Google_Service_Walletobjects_DateTime $arrivalDateTimeScheduled)
   {
     $this->arrivalDateTimeScheduled = $arrivalDateTimeScheduled;
@@ -2165,7 +2161,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->arrivalDateTimeScheduled;
   }
-  
+
   public function setArrivalGate($arrivalGate)
   {
     $this->arrivalGate = $arrivalGate;
@@ -2175,7 +2171,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->arrivalGate;
   }
-  
+
   public function setArrivalTerminal($arrivalTerminal)
   {
     $this->arrivalTerminal = $arrivalTerminal;
@@ -2185,7 +2181,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->arrivalTerminal;
   }
-  
+
   public function setArrivalTimeZone($arrivalTimeZone)
   {
     $this->arrivalTimeZone = $arrivalTimeZone;
@@ -2195,7 +2191,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->arrivalTimeZone;
   }
-  
+
   public function setBoardingDateTime(Google_Service_Walletobjects_DateTime $boardingDateTime)
   {
     $this->boardingDateTime = $boardingDateTime;
@@ -2205,7 +2201,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->boardingDateTime;
   }
-  
+
   public function setCarrierCode($carrierCode)
   {
     $this->carrierCode = $carrierCode;
@@ -2215,7 +2211,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->carrierCode;
   }
-  
+
   public function setCarrierLogoImage(Google_Service_Walletobjects_Image $carrierLogoImage)
   {
     $this->carrierLogoImage = $carrierLogoImage;
@@ -2225,7 +2221,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->carrierLogoImage;
   }
-  
+
   public function setCarrierName($carrierName)
   {
     $this->carrierName = $carrierName;
@@ -2235,7 +2231,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->carrierName;
   }
-  
+
   public function setDepartureAirportCode($departureAirportCode)
   {
     $this->departureAirportCode = $departureAirportCode;
@@ -2245,7 +2241,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->departureAirportCode;
   }
-  
+
   public function setDepartureCityName($departureCityName)
   {
     $this->departureCityName = $departureCityName;
@@ -2255,7 +2251,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->departureCityName;
   }
-  
+
   public function setDepartureDateTimeActual(Google_Service_Walletobjects_DateTime $departureDateTimeActual)
   {
     $this->departureDateTimeActual = $departureDateTimeActual;
@@ -2265,7 +2261,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->departureDateTimeActual;
   }
-  
+
   public function setDepartureDateTimeScheduled(Google_Service_Walletobjects_DateTime $departureDateTimeScheduled)
   {
     $this->departureDateTimeScheduled = $departureDateTimeScheduled;
@@ -2275,7 +2271,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->departureDateTimeScheduled;
   }
-  
+
   public function setDepartureGate($departureGate)
   {
     $this->departureGate = $departureGate;
@@ -2285,7 +2281,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->departureGate;
   }
-  
+
   public function setDepartureTerminal($departureTerminal)
   {
     $this->departureTerminal = $departureTerminal;
@@ -2295,7 +2291,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->departureTerminal;
   }
-  
+
   public function setDepartureTimeZone($departureTimeZone)
   {
     $this->departureTimeZone = $departureTimeZone;
@@ -2305,7 +2301,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->departureTimeZone;
   }
-  
+
   public function setFlightNumber($flightNumber)
   {
     $this->flightNumber = $flightNumber;
@@ -2315,7 +2311,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->flightNumber;
   }
-  
+
   public function setHomepageUri(Google_Service_Walletobjects_Uri $homepageUri)
   {
     $this->homepageUri = $homepageUri;
@@ -2325,7 +2321,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->homepageUri;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -2335,7 +2331,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -2345,7 +2341,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -2355,7 +2351,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -2365,7 +2361,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setIssuerName($issuerName)
   {
     $this->issuerName = $issuerName;
@@ -2375,7 +2371,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->issuerName;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -2385,7 +2381,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -2395,7 +2391,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -2405,7 +2401,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setOnboardServices($onboardServices)
   {
     $this->onboardServices = $onboardServices;
@@ -2415,7 +2411,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->onboardServices;
   }
-  
+
   public function setOperatingCarrierCode($operatingCarrierCode)
   {
     $this->operatingCarrierCode = $operatingCarrierCode;
@@ -2425,7 +2421,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->operatingCarrierCode;
   }
-  
+
   public function setOperatingCarrierName($operatingCarrierName)
   {
     $this->operatingCarrierName = $operatingCarrierName;
@@ -2435,7 +2431,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->operatingCarrierName;
   }
-  
+
   public function setOperatingFlightNumber($operatingFlightNumber)
   {
     $this->operatingFlightNumber = $operatingFlightNumber;
@@ -2445,7 +2441,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->operatingFlightNumber;
   }
-  
+
   public function setRenderSpecs($renderSpecs)
   {
     $this->renderSpecs = $renderSpecs;
@@ -2455,7 +2451,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->renderSpecs;
   }
-  
+
   public function setReview(Google_Service_Walletobjects_CommonWalletObjectClassReview $review)
   {
     $this->review = $review;
@@ -2465,7 +2461,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->review;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -2475,7 +2471,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->reviewStatus;
   }
-  
+
   public function setStatusCode($statusCode)
   {
     $this->statusCode = $statusCode;
@@ -2485,7 +2481,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->statusCode;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -2495,7 +2491,7 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -2505,7 +2501,6 @@ class Google_Service_Walletobjects_BoardingPassClass extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassClassAddMessageRequest extends Google_Model
@@ -2523,7 +2518,7 @@ class Google_Service_Walletobjects_BoardingPassClassAddMessageRequest extends Go
   {
     return $this->message;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -2533,7 +2528,6 @@ class Google_Service_Walletobjects_BoardingPassClassAddMessageRequest extends Go
   {
     return $this->reviewStatus;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassClassAddMessageResponse extends Google_Model
@@ -2550,7 +2544,6 @@ class Google_Service_Walletobjects_BoardingPassClassAddMessageResponse extends G
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassClassGetRequest extends Google_Model
@@ -2567,7 +2560,6 @@ class Google_Service_Walletobjects_BoardingPassClassGetRequest extends Google_Mo
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassClassListRequest extends Google_Model
@@ -2584,7 +2576,6 @@ class Google_Service_Walletobjects_BoardingPassClassListRequest extends Google_M
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassClassListResponse extends Google_Collection
@@ -2603,7 +2594,7 @@ class Google_Service_Walletobjects_BoardingPassClassListResponse extends Google_
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -2613,7 +2604,6 @@ class Google_Service_Walletobjects_BoardingPassClassListResponse extends Google_
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassClassMask extends Google_Collection
@@ -2631,7 +2621,7 @@ class Google_Service_Walletobjects_BoardingPassClassMask extends Google_Collecti
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -2641,7 +2631,6 @@ class Google_Service_Walletobjects_BoardingPassClassMask extends Google_Collecti
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
@@ -2699,7 +2688,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->barcode;
   }
-  
+
   public function setBoardingZone($boardingZone)
   {
     $this->boardingZone = $boardingZone;
@@ -2709,7 +2698,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->boardingZone;
   }
-  
+
   public function setClassId($classId)
   {
     $this->classId = $classId;
@@ -2719,7 +2708,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->classId;
   }
-  
+
   public function setClassReference(Google_Service_Walletobjects_BoardingPassClass $classReference)
   {
     $this->classReference = $classReference;
@@ -2729,7 +2718,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->classReference;
   }
-  
+
   public function setElectronicTicket($electronicTicket)
   {
     $this->electronicTicket = $electronicTicket;
@@ -2739,7 +2728,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->electronicTicket;
   }
-  
+
   public function setFreqFlierAccountId($freqFlierAccountId)
   {
     $this->freqFlierAccountId = $freqFlierAccountId;
@@ -2749,7 +2738,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->freqFlierAccountId;
   }
-  
+
   public function setFreqFlierProgramName($freqFlierProgramName)
   {
     $this->freqFlierProgramName = $freqFlierProgramName;
@@ -2759,7 +2748,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->freqFlierProgramName;
   }
-  
+
   public function setFreqFlierTierLevel($freqFlierTierLevel)
   {
     $this->freqFlierTierLevel = $freqFlierTierLevel;
@@ -2769,7 +2758,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->freqFlierTierLevel;
   }
-  
+
   public function setHasUsers($hasUsers)
   {
     $this->hasUsers = $hasUsers;
@@ -2779,7 +2768,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->hasUsers;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -2789,7 +2778,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -2799,7 +2788,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -2809,7 +2798,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -2819,7 +2808,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -2829,7 +2818,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -2839,7 +2828,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -2849,7 +2838,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setPassengerName(Google_Service_Walletobjects_PassengerName $passengerName)
   {
     $this->passengerName = $passengerName;
@@ -2859,7 +2848,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->passengerName;
   }
-  
+
   public function setPassengerStatus($passengerStatus)
   {
     $this->passengerStatus = $passengerStatus;
@@ -2869,7 +2858,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->passengerStatus;
   }
-  
+
   public function setPrecheckLogo(Google_Service_Walletobjects_Image $precheckLogo)
   {
     $this->precheckLogo = $precheckLogo;
@@ -2879,7 +2868,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->precheckLogo;
   }
-  
+
   public function setRecordLocator($recordLocator)
   {
     $this->recordLocator = $recordLocator;
@@ -2889,7 +2878,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->recordLocator;
   }
-  
+
   public function setSeat($seat)
   {
     $this->seat = $seat;
@@ -2899,7 +2888,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->seat;
   }
-  
+
   public function setSeatClass($seatClass)
   {
     $this->seatClass = $seatClass;
@@ -2909,7 +2898,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->seatClass;
   }
-  
+
   public function setSeatDescriptions($seatDescriptions)
   {
     $this->seatDescriptions = $seatDescriptions;
@@ -2919,7 +2908,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->seatDescriptions;
   }
-  
+
   public function setSecuritySelecteeStatus($securitySelecteeStatus)
   {
     $this->securitySelecteeStatus = $securitySelecteeStatus;
@@ -2929,7 +2918,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->securitySelecteeStatus;
   }
-  
+
   public function setSequenceNumber($sequenceNumber)
   {
     $this->sequenceNumber = $sequenceNumber;
@@ -2939,7 +2928,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->sequenceNumber;
   }
-  
+
   public function setSpecialServiceCodes($specialServiceCodes)
   {
     $this->specialServiceCodes = $specialServiceCodes;
@@ -2949,7 +2938,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->specialServiceCodes;
   }
-  
+
   public function setState($state)
   {
     $this->state = $state;
@@ -2959,7 +2948,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->state;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -2969,7 +2958,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setTicketNumber($ticketNumber)
   {
     $this->ticketNumber = $ticketNumber;
@@ -2979,7 +2968,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->ticketNumber;
   }
-  
+
   public function setValidTimeInterval(Google_Service_Walletobjects_TimeInterval $validTimeInterval)
   {
     $this->validTimeInterval = $validTimeInterval;
@@ -2989,7 +2978,7 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->validTimeInterval;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -2999,7 +2988,6 @@ class Google_Service_Walletobjects_BoardingPassObject extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassObjectAddMessageRequest extends Google_Model
@@ -3016,7 +3004,6 @@ class Google_Service_Walletobjects_BoardingPassObjectAddMessageRequest extends G
   {
     return $this->message;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassObjectAddMessageResponse extends Google_Model
@@ -3033,7 +3020,6 @@ class Google_Service_Walletobjects_BoardingPassObjectAddMessageResponse extends 
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassObjectGetRequest extends Google_Model
@@ -3050,7 +3036,6 @@ class Google_Service_Walletobjects_BoardingPassObjectGetRequest extends Google_M
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassObjectListRequest extends Google_Model
@@ -3067,7 +3052,6 @@ class Google_Service_Walletobjects_BoardingPassObjectListRequest extends Google_
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassObjectListResponse extends Google_Collection
@@ -3086,7 +3070,7 @@ class Google_Service_Walletobjects_BoardingPassObjectListResponse extends Google
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -3096,7 +3080,6 @@ class Google_Service_Walletobjects_BoardingPassObjectListResponse extends Google
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_BoardingPassObjectMask extends Google_Collection
@@ -3114,7 +3097,7 @@ class Google_Service_Walletobjects_BoardingPassObjectMask extends Google_Collect
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -3124,7 +3107,6 @@ class Google_Service_Walletobjects_BoardingPassObjectMask extends Google_Collect
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_CommonWalletObjectClassReview extends Google_Model
@@ -3140,7 +3122,6 @@ class Google_Service_Walletobjects_CommonWalletObjectClassReview extends Google_
   {
     return $this->comments;
   }
-  
 }
 
 class Google_Service_Walletobjects_DateTime extends Google_Model
@@ -3156,7 +3137,6 @@ class Google_Service_Walletobjects_DateTime extends Google_Model
   {
     return $this->date;
   }
-  
 }
 
 class Google_Service_Walletobjects_FieldMask extends Google_Collection
@@ -3174,7 +3154,7 @@ class Google_Service_Walletobjects_FieldMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -3184,7 +3164,6 @@ class Google_Service_Walletobjects_FieldMask extends Google_Collection
   {
     return $this->id;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericClass extends Google_Collection
@@ -3229,7 +3208,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->allowMultipleUsersPerObject;
   }
-  
+
   public function setDescription($description)
   {
     $this->description = $description;
@@ -3239,7 +3218,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->description;
   }
-  
+
   public function setHomepageUri(Google_Service_Walletobjects_Uri $homepageUri)
   {
     $this->homepageUri = $homepageUri;
@@ -3249,7 +3228,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->homepageUri;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -3259,7 +3238,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -3269,7 +3248,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -3279,7 +3258,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -3289,7 +3268,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setIssuerName($issuerName)
   {
     $this->issuerName = $issuerName;
@@ -3299,7 +3278,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->issuerName;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -3309,7 +3288,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -3319,7 +3298,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -3329,7 +3308,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -3339,7 +3318,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setRenderSpecs($renderSpecs)
   {
     $this->renderSpecs = $renderSpecs;
@@ -3349,7 +3328,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->renderSpecs;
   }
-  
+
   public function setReview(Google_Service_Walletobjects_CommonWalletObjectClassReview $review)
   {
     $this->review = $review;
@@ -3359,7 +3338,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->review;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -3369,7 +3348,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->reviewStatus;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -3379,7 +3358,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setTitle($title)
   {
     $this->title = $title;
@@ -3389,7 +3368,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->title;
   }
-  
+
   public function setTitleImage(Google_Service_Walletobjects_Image $titleImage)
   {
     $this->titleImage = $titleImage;
@@ -3399,7 +3378,7 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->titleImage;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -3409,7 +3388,6 @@ class Google_Service_Walletobjects_GenericClass extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericClassAddMessageRequest extends Google_Model
@@ -3427,7 +3405,7 @@ class Google_Service_Walletobjects_GenericClassAddMessageRequest extends Google_
   {
     return $this->message;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -3437,7 +3415,6 @@ class Google_Service_Walletobjects_GenericClassAddMessageRequest extends Google_
   {
     return $this->reviewStatus;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericClassAddMessageResponse extends Google_Model
@@ -3454,7 +3431,6 @@ class Google_Service_Walletobjects_GenericClassAddMessageResponse extends Google
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericClassGetRequest extends Google_Model
@@ -3471,7 +3447,6 @@ class Google_Service_Walletobjects_GenericClassGetRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericClassListRequest extends Google_Model
@@ -3488,7 +3463,6 @@ class Google_Service_Walletobjects_GenericClassListRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericClassListResponse extends Google_Collection
@@ -3507,7 +3481,7 @@ class Google_Service_Walletobjects_GenericClassListResponse extends Google_Colle
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -3517,7 +3491,6 @@ class Google_Service_Walletobjects_GenericClassListResponse extends Google_Colle
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericClassMask extends Google_Collection
@@ -3535,7 +3508,7 @@ class Google_Service_Walletobjects_GenericClassMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -3545,7 +3518,6 @@ class Google_Service_Walletobjects_GenericClassMask extends Google_Collection
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericObject extends Google_Collection
@@ -3586,7 +3558,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->barcode;
   }
-  
+
   public function setClassId($classId)
   {
     $this->classId = $classId;
@@ -3596,7 +3568,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->classId;
   }
-  
+
   public function setClassReference(Google_Service_Walletobjects_GenericClass $classReference)
   {
     $this->classReference = $classReference;
@@ -3606,7 +3578,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->classReference;
   }
-  
+
   public function setHasUsers($hasUsers)
   {
     $this->hasUsers = $hasUsers;
@@ -3616,7 +3588,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->hasUsers;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -3626,7 +3598,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -3636,7 +3608,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -3646,7 +3618,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -3656,7 +3628,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -3666,7 +3638,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -3676,7 +3648,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -3686,7 +3658,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -3696,7 +3668,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setState($state)
   {
     $this->state = $state;
@@ -3706,7 +3678,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->state;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -3716,7 +3688,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setValidTimeInterval(Google_Service_Walletobjects_TimeInterval $validTimeInterval)
   {
     $this->validTimeInterval = $validTimeInterval;
@@ -3726,7 +3698,7 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->validTimeInterval;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -3736,7 +3708,6 @@ class Google_Service_Walletobjects_GenericObject extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericObjectAddMessageRequest extends Google_Model
@@ -3753,7 +3724,6 @@ class Google_Service_Walletobjects_GenericObjectAddMessageRequest extends Google
   {
     return $this->message;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericObjectAddMessageResponse extends Google_Model
@@ -3770,7 +3740,6 @@ class Google_Service_Walletobjects_GenericObjectAddMessageResponse extends Googl
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericObjectGetRequest extends Google_Model
@@ -3787,7 +3756,6 @@ class Google_Service_Walletobjects_GenericObjectGetRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericObjectListRequest extends Google_Model
@@ -3804,7 +3772,6 @@ class Google_Service_Walletobjects_GenericObjectListRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericObjectListResponse extends Google_Collection
@@ -3823,7 +3790,7 @@ class Google_Service_Walletobjects_GenericObjectListResponse extends Google_Coll
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -3833,7 +3800,6 @@ class Google_Service_Walletobjects_GenericObjectListResponse extends Google_Coll
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_GenericObjectMask extends Google_Collection
@@ -3851,7 +3817,7 @@ class Google_Service_Walletobjects_GenericObjectMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -3861,12 +3827,18 @@ class Google_Service_Walletobjects_GenericObjectMask extends Google_Collection
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
 {
+  public $allowBarcodeRedemption;
   public $allowMultipleUsersPerObject;
+  public $cardNumberLabel;
+  public $consentToBalanceInquiry;
+  public $eventNumberLabel;
+  protected $generatedBarcodePartsType = 'Google_Service_Walletobjects_GiftCardClassGeneratedBarcodePart';
+  protected $generatedBarcodePartsDataType = 'array';
+  public $generatedBarcodeType;
   protected $homepageUriType = 'Google_Service_Walletobjects_Uri';
   protected $homepageUriDataType = '';
   public $id;
@@ -3885,6 +3857,9 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   public $merchantName;
   protected $messagesType = 'Google_Service_Walletobjects_WalletObjectMessage';
   protected $messagesDataType = 'array';
+  public $pinLabel;
+  public $plasticCardRequiredForRedemption;
+  public $productLineId;
   protected $programLogoType = 'Google_Service_Walletobjects_Image';
   protected $programLogoDataType = '';
   protected $renderSpecsType = 'Google_Service_Walletobjects_RenderSpec';
@@ -3892,9 +3867,20 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   protected $reviewType = 'Google_Service_Walletobjects_CommonWalletObjectClassReview';
   protected $reviewDataType = '';
   public $reviewStatus;
+  public $supportedCapabilitys;
   protected $textModulesDataType = 'Google_Service_Walletobjects_TextModuleData';
   protected $textModulesDataDataType = 'array';
   public $version;
+
+  public function setAllowBarcodeRedemption($allowBarcodeRedemption)
+  {
+    $this->allowBarcodeRedemption = $allowBarcodeRedemption;
+  }
+
+  public function getAllowBarcodeRedemption()
+  {
+    return $this->allowBarcodeRedemption;
+  }
 
   public function setAllowMultipleUsersPerObject($allowMultipleUsersPerObject)
   {
@@ -3905,7 +3891,57 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->allowMultipleUsersPerObject;
   }
-  
+
+  public function setCardNumberLabel($cardNumberLabel)
+  {
+    $this->cardNumberLabel = $cardNumberLabel;
+  }
+
+  public function getCardNumberLabel()
+  {
+    return $this->cardNumberLabel;
+  }
+
+  public function setConsentToBalanceInquiry($consentToBalanceInquiry)
+  {
+    $this->consentToBalanceInquiry = $consentToBalanceInquiry;
+  }
+
+  public function getConsentToBalanceInquiry()
+  {
+    return $this->consentToBalanceInquiry;
+  }
+
+  public function setEventNumberLabel($eventNumberLabel)
+  {
+    $this->eventNumberLabel = $eventNumberLabel;
+  }
+
+  public function getEventNumberLabel()
+  {
+    return $this->eventNumberLabel;
+  }
+
+  public function setGeneratedBarcodeParts($generatedBarcodeParts)
+  {
+    $this->generatedBarcodeParts = $generatedBarcodeParts;
+  }
+
+  public function getGeneratedBarcodeParts()
+  {
+    return $this->generatedBarcodeParts;
+  }
+
+  public function setGeneratedBarcodeType($generatedBarcodeType)
+  {
+    $this->generatedBarcodeType = $generatedBarcodeType;
+  }
+
+  public function getGeneratedBarcodeType()
+  {
+    return $this->generatedBarcodeType;
+  }
+
   public function setHomepageUri(Google_Service_Walletobjects_Uri $homepageUri)
   {
     $this->homepageUri = $homepageUri;
@@ -3915,7 +3951,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->homepageUri;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -3925,7 +3961,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -3935,7 +3971,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -3945,7 +3981,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -3955,7 +3991,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setIssuerName($issuerName)
   {
     $this->issuerName = $issuerName;
@@ -3965,7 +4001,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->issuerName;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -3975,7 +4011,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -3985,7 +4021,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -3995,7 +4031,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMerchantName($merchantName)
   {
     $this->merchantName = $merchantName;
@@ -4005,7 +4041,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->merchantName;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -4015,7 +4051,37 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->messages;
   }
-  
+
+  public function setPinLabel($pinLabel)
+  {
+    $this->pinLabel = $pinLabel;
+  }
+
+  public function getPinLabel()
+  {
+    return $this->pinLabel;
+  }
+
+  public function setPlasticCardRequiredForRedemption($plasticCardRequiredForRedemption)
+  {
+    $this->plasticCardRequiredForRedemption = $plasticCardRequiredForRedemption;
+  }
+
+  public function getPlasticCardRequiredForRedemption()
+  {
+    return $this->plasticCardRequiredForRedemption;
+  }
+
+  public function setProductLineId($productLineId)
+  {
+    $this->productLineId = $productLineId;
+  }
+
+  public function getProductLineId()
+  {
+    return $this->productLineId;
+  }
+
   public function setProgramLogo(Google_Service_Walletobjects_Image $programLogo)
   {
     $this->programLogo = $programLogo;
@@ -4025,7 +4091,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->programLogo;
   }
-  
+
   public function setRenderSpecs($renderSpecs)
   {
     $this->renderSpecs = $renderSpecs;
@@ -4035,7 +4101,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->renderSpecs;
   }
-  
+
   public function setReview(Google_Service_Walletobjects_CommonWalletObjectClassReview $review)
   {
     $this->review = $review;
@@ -4045,7 +4111,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->review;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -4055,7 +4121,17 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->reviewStatus;
   }
-  
+
+  public function setSupportedCapabilitys($supportedCapabilitys)
+  {
+    $this->supportedCapabilitys = $supportedCapabilitys;
+  }
+
+  public function getSupportedCapabilitys()
+  {
+    return $this->supportedCapabilitys;
+  }
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -4065,7 +4141,7 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -4075,7 +4151,6 @@ class Google_Service_Walletobjects_GiftCardClass extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardClassAddMessageRequest extends Google_Model
@@ -4093,7 +4168,7 @@ class Google_Service_Walletobjects_GiftCardClassAddMessageRequest extends Google
   {
     return $this->message;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -4103,7 +4178,6 @@ class Google_Service_Walletobjects_GiftCardClassAddMessageRequest extends Google
   {
     return $this->reviewStatus;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardClassAddMessageResponse extends Google_Model
@@ -4120,7 +4194,21 @@ class Google_Service_Walletobjects_GiftCardClassAddMessageResponse extends Googl
   {
     return $this->resource;
   }
-  
+}
+
+class Google_Service_Walletobjects_GiftCardClassGeneratedBarcodePart extends Google_Model
+{
+  public $field;
+
+  public function setField($field)
+  {
+    $this->field = $field;
+  }
+
+  public function getField()
+  {
+    return $this->field;
+  }
 }
 
 class Google_Service_Walletobjects_GiftCardClassGetRequest extends Google_Model
@@ -4137,7 +4225,6 @@ class Google_Service_Walletobjects_GiftCardClassGetRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardClassListRequest extends Google_Model
@@ -4154,7 +4241,6 @@ class Google_Service_Walletobjects_GiftCardClassListRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardClassListResponse extends Google_Collection
@@ -4173,7 +4259,7 @@ class Google_Service_Walletobjects_GiftCardClassListResponse extends Google_Coll
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -4183,7 +4269,6 @@ class Google_Service_Walletobjects_GiftCardClassListResponse extends Google_Coll
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardClassMask extends Google_Collection
@@ -4201,7 +4286,7 @@ class Google_Service_Walletobjects_GiftCardClassMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -4211,7 +4296,6 @@ class Google_Service_Walletobjects_GiftCardClassMask extends Google_Collection
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
@@ -4222,6 +4306,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   protected $balanceUpdateTimeDataType = '';
   protected $barcodeType = 'Google_Service_Walletobjects_Barcode';
   protected $barcodeDataType = '';
+  public $cardIdentifier;
   public $cardNumber;
   public $classId;
   protected $classReferenceType = 'Google_Service_Walletobjects_GiftCardClass';
@@ -4259,7 +4344,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->balance;
   }
-  
+
   public function setBalanceUpdateTime(Google_Service_Walletobjects_DateTime $balanceUpdateTime)
   {
     $this->balanceUpdateTime = $balanceUpdateTime;
@@ -4269,7 +4354,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->balanceUpdateTime;
   }
-  
+
   public function setBarcode(Google_Service_Walletobjects_Barcode $barcode)
   {
     $this->barcode = $barcode;
@@ -4279,7 +4364,17 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->barcode;
   }
-  
+
+  public function setCardIdentifier($cardIdentifier)
+  {
+    $this->cardIdentifier = $cardIdentifier;
+  }
+
+  public function getCardIdentifier()
+  {
+    return $this->cardIdentifier;
+  }
+
   public function setCardNumber($cardNumber)
   {
     $this->cardNumber = $cardNumber;
@@ -4289,7 +4384,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->cardNumber;
   }
-  
+
   public function setClassId($classId)
   {
     $this->classId = $classId;
@@ -4299,7 +4394,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->classId;
   }
-  
+
   public function setClassReference(Google_Service_Walletobjects_GiftCardClass $classReference)
   {
     $this->classReference = $classReference;
@@ -4309,7 +4404,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->classReference;
   }
-  
+
   public function setEventNumber($eventNumber)
   {
     $this->eventNumber = $eventNumber;
@@ -4319,7 +4414,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->eventNumber;
   }
-  
+
   public function setHasUsers($hasUsers)
   {
     $this->hasUsers = $hasUsers;
@@ -4329,7 +4424,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->hasUsers;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -4339,7 +4434,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -4349,7 +4444,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -4359,7 +4454,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -4369,7 +4464,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -4379,7 +4474,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -4389,7 +4484,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -4399,7 +4494,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -4409,7 +4504,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setPin($pin)
   {
     $this->pin = $pin;
@@ -4419,7 +4514,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->pin;
   }
-  
+
   public function setState($state)
   {
     $this->state = $state;
@@ -4429,7 +4524,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->state;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -4439,7 +4534,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setValidTimeInterval(Google_Service_Walletobjects_TimeInterval $validTimeInterval)
   {
     $this->validTimeInterval = $validTimeInterval;
@@ -4449,7 +4544,7 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->validTimeInterval;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -4459,7 +4554,6 @@ class Google_Service_Walletobjects_GiftCardObject extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardObjectAddMessageRequest extends Google_Model
@@ -4476,7 +4570,6 @@ class Google_Service_Walletobjects_GiftCardObjectAddMessageRequest extends Googl
   {
     return $this->message;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardObjectAddMessageResponse extends Google_Model
@@ -4493,7 +4586,6 @@ class Google_Service_Walletobjects_GiftCardObjectAddMessageResponse extends Goog
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardObjectGetRequest extends Google_Model
@@ -4510,7 +4602,6 @@ class Google_Service_Walletobjects_GiftCardObjectGetRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardObjectListRequest extends Google_Model
@@ -4527,7 +4618,6 @@ class Google_Service_Walletobjects_GiftCardObjectListRequest extends Google_Mode
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardObjectListResponse extends Google_Collection
@@ -4546,7 +4636,7 @@ class Google_Service_Walletobjects_GiftCardObjectListResponse extends Google_Col
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -4556,7 +4646,6 @@ class Google_Service_Walletobjects_GiftCardObjectListResponse extends Google_Col
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_GiftCardObjectMask extends Google_Collection
@@ -4574,7 +4663,7 @@ class Google_Service_Walletobjects_GiftCardObjectMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -4584,7 +4673,32 @@ class Google_Service_Walletobjects_GiftCardObjectMask extends Google_Collection
   {
     return $this->projection;
   }
-  
+}
+
+class Google_Service_Walletobjects_IconBody extends Google_Collection
+{
+  public $bodys;
+  public $icon;
+
+  public function setBodys($bodys)
+  {
+    $this->bodys = $bodys;
+  }
+
+  public function getBodys()
+  {
+    return $this->bodys;
+  }
+
+  public function setIcon($icon)
+  {
+    $this->icon = $icon;
+  }
+
+  public function getIcon()
+  {
+    return $this->icon;
+  }
 }
 
 class Google_Service_Walletobjects_Image extends Google_Model
@@ -4602,7 +4716,7 @@ class Google_Service_Walletobjects_Image extends Google_Model
   {
     return $this->kind;
   }
-  
+
   public function setSourceUri(Google_Service_Walletobjects_Uri $sourceUri)
   {
     $this->sourceUri = $sourceUri;
@@ -4612,7 +4726,6 @@ class Google_Service_Walletobjects_Image extends Google_Model
   {
     return $this->sourceUri;
   }
-  
 }
 
 class Google_Service_Walletobjects_ImageModuleData extends Google_Model
@@ -4629,7 +4742,6 @@ class Google_Service_Walletobjects_ImageModuleData extends Google_Model
   {
     return $this->mainImage;
   }
-  
 }
 
 class Google_Service_Walletobjects_InfoModuleData extends Google_Collection
@@ -4649,7 +4761,7 @@ class Google_Service_Walletobjects_InfoModuleData extends Google_Collection
   {
     return $this->hexBackgroundColor;
   }
-  
+
   public function setHexFontColor($hexFontColor)
   {
     $this->hexFontColor = $hexFontColor;
@@ -4659,7 +4771,7 @@ class Google_Service_Walletobjects_InfoModuleData extends Google_Collection
   {
     return $this->hexFontColor;
   }
-  
+
   public function setLabelValueRows($labelValueRows)
   {
     $this->labelValueRows = $labelValueRows;
@@ -4669,7 +4781,7 @@ class Google_Service_Walletobjects_InfoModuleData extends Google_Collection
   {
     return $this->labelValueRows;
   }
-  
+
   public function setShowLastUpdateTime($showLastUpdateTime)
   {
     $this->showLastUpdateTime = $showLastUpdateTime;
@@ -4679,7 +4791,6 @@ class Google_Service_Walletobjects_InfoModuleData extends Google_Collection
   {
     return $this->showLastUpdateTime;
   }
-  
 }
 
 class Google_Service_Walletobjects_LabelValue extends Google_Model
@@ -4696,7 +4807,7 @@ class Google_Service_Walletobjects_LabelValue extends Google_Model
   {
     return $this->label;
   }
-  
+
   public function setValue($value)
   {
     $this->value = $value;
@@ -4706,7 +4817,6 @@ class Google_Service_Walletobjects_LabelValue extends Google_Model
   {
     return $this->value;
   }
-  
 }
 
 class Google_Service_Walletobjects_LabelValueRow extends Google_Collection
@@ -4725,7 +4835,7 @@ class Google_Service_Walletobjects_LabelValueRow extends Google_Collection
   {
     return $this->columns;
   }
-  
+
   public function setHexBackgroundColor($hexBackgroundColor)
   {
     $this->hexBackgroundColor = $hexBackgroundColor;
@@ -4735,7 +4845,7 @@ class Google_Service_Walletobjects_LabelValueRow extends Google_Collection
   {
     return $this->hexBackgroundColor;
   }
-  
+
   public function setHexFontColor($hexFontColor)
   {
     $this->hexFontColor = $hexFontColor;
@@ -4745,7 +4855,6 @@ class Google_Service_Walletobjects_LabelValueRow extends Google_Collection
   {
     return $this->hexFontColor;
   }
-  
 }
 
 class Google_Service_Walletobjects_LatLongPoint extends Google_Model
@@ -4763,7 +4872,7 @@ class Google_Service_Walletobjects_LatLongPoint extends Google_Model
   {
     return $this->kind;
   }
-  
+
   public function setLatitude($latitude)
   {
     $this->latitude = $latitude;
@@ -4773,7 +4882,7 @@ class Google_Service_Walletobjects_LatLongPoint extends Google_Model
   {
     return $this->latitude;
   }
-  
+
   public function setLongitude($longitude)
   {
     $this->longitude = $longitude;
@@ -4783,7 +4892,6 @@ class Google_Service_Walletobjects_LatLongPoint extends Google_Model
   {
     return $this->longitude;
   }
-  
 }
 
 class Google_Service_Walletobjects_LinksModuleData extends Google_Collection
@@ -4800,7 +4908,6 @@ class Google_Service_Walletobjects_LinksModuleData extends Google_Collection
   {
     return $this->uris;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
@@ -4848,7 +4955,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->accountIdLabel;
   }
-  
+
   public function setAccountNameLabel($accountNameLabel)
   {
     $this->accountNameLabel = $accountNameLabel;
@@ -4858,7 +4965,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->accountNameLabel;
   }
-  
+
   public function setAllowMultipleUsersPerObject($allowMultipleUsersPerObject)
   {
     $this->allowMultipleUsersPerObject = $allowMultipleUsersPerObject;
@@ -4868,7 +4975,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->allowMultipleUsersPerObject;
   }
-  
+
   public function setHomepageUri(Google_Service_Walletobjects_Uri $homepageUri)
   {
     $this->homepageUri = $homepageUri;
@@ -4878,7 +4985,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->homepageUri;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -4888,7 +4995,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -4898,7 +5005,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -4908,7 +5015,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -4918,7 +5025,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setIssuerName($issuerName)
   {
     $this->issuerName = $issuerName;
@@ -4928,7 +5035,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->issuerName;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -4938,7 +5045,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -4948,7 +5055,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -4958,7 +5065,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -4968,7 +5075,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setProgramLogo(Google_Service_Walletobjects_Image $programLogo)
   {
     $this->programLogo = $programLogo;
@@ -4978,7 +5085,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->programLogo;
   }
-  
+
   public function setProgramName($programName)
   {
     $this->programName = $programName;
@@ -4988,7 +5095,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->programName;
   }
-  
+
   public function setRenderSpecs($renderSpecs)
   {
     $this->renderSpecs = $renderSpecs;
@@ -4998,7 +5105,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->renderSpecs;
   }
-  
+
   public function setReview(Google_Service_Walletobjects_CommonWalletObjectClassReview $review)
   {
     $this->review = $review;
@@ -5008,7 +5115,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->review;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -5018,7 +5125,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->reviewStatus;
   }
-  
+
   public function setRewardsTier($rewardsTier)
   {
     $this->rewardsTier = $rewardsTier;
@@ -5028,7 +5135,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->rewardsTier;
   }
-  
+
   public function setRewardsTierLabel($rewardsTierLabel)
   {
     $this->rewardsTierLabel = $rewardsTierLabel;
@@ -5038,7 +5145,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->rewardsTierLabel;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -5048,7 +5155,7 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -5058,7 +5165,6 @@ class Google_Service_Walletobjects_LoyaltyClass extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyClassAddMessageRequest extends Google_Model
@@ -5076,7 +5182,7 @@ class Google_Service_Walletobjects_LoyaltyClassAddMessageRequest extends Google_
   {
     return $this->message;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -5086,7 +5192,6 @@ class Google_Service_Walletobjects_LoyaltyClassAddMessageRequest extends Google_
   {
     return $this->reviewStatus;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyClassAddMessageResponse extends Google_Model
@@ -5103,7 +5208,6 @@ class Google_Service_Walletobjects_LoyaltyClassAddMessageResponse extends Google
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyClassGetRequest extends Google_Model
@@ -5120,7 +5224,6 @@ class Google_Service_Walletobjects_LoyaltyClassGetRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyClassListRequest extends Google_Model
@@ -5137,7 +5240,6 @@ class Google_Service_Walletobjects_LoyaltyClassListRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyClassListResponse extends Google_Collection
@@ -5156,7 +5258,7 @@ class Google_Service_Walletobjects_LoyaltyClassListResponse extends Google_Colle
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -5166,7 +5268,6 @@ class Google_Service_Walletobjects_LoyaltyClassListResponse extends Google_Colle
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyClassMask extends Google_Collection
@@ -5184,7 +5285,7 @@ class Google_Service_Walletobjects_LoyaltyClassMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -5194,7 +5295,6 @@ class Google_Service_Walletobjects_LoyaltyClassMask extends Google_Collection
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
@@ -5239,7 +5339,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->accountId;
   }
-  
+
   public function setAccountName($accountName)
   {
     $this->accountName = $accountName;
@@ -5249,7 +5349,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->accountName;
   }
-  
+
   public function setBarcode(Google_Service_Walletobjects_Barcode $barcode)
   {
     $this->barcode = $barcode;
@@ -5259,7 +5359,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->barcode;
   }
-  
+
   public function setClassId($classId)
   {
     $this->classId = $classId;
@@ -5269,7 +5369,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->classId;
   }
-  
+
   public function setClassReference(Google_Service_Walletobjects_LoyaltyClass $classReference)
   {
     $this->classReference = $classReference;
@@ -5279,7 +5379,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->classReference;
   }
-  
+
   public function setHasUsers($hasUsers)
   {
     $this->hasUsers = $hasUsers;
@@ -5289,7 +5389,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->hasUsers;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -5299,7 +5399,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -5309,7 +5409,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -5319,7 +5419,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -5329,7 +5429,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -5339,7 +5439,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -5349,7 +5449,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -5359,7 +5459,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setLoyaltyPoints(Google_Service_Walletobjects_LoyaltyPoints $loyaltyPoints)
   {
     $this->loyaltyPoints = $loyaltyPoints;
@@ -5369,7 +5469,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->loyaltyPoints;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -5379,7 +5479,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setState($state)
   {
     $this->state = $state;
@@ -5389,7 +5489,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->state;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -5399,7 +5499,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setValidTimeInterval(Google_Service_Walletobjects_TimeInterval $validTimeInterval)
   {
     $this->validTimeInterval = $validTimeInterval;
@@ -5409,7 +5509,7 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->validTimeInterval;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -5419,7 +5519,6 @@ class Google_Service_Walletobjects_LoyaltyObject extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyObjectAddMessageRequest extends Google_Model
@@ -5436,7 +5535,6 @@ class Google_Service_Walletobjects_LoyaltyObjectAddMessageRequest extends Google
   {
     return $this->message;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyObjectAddMessageResponse extends Google_Model
@@ -5453,7 +5551,6 @@ class Google_Service_Walletobjects_LoyaltyObjectAddMessageResponse extends Googl
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyObjectGetRequest extends Google_Model
@@ -5470,7 +5567,6 @@ class Google_Service_Walletobjects_LoyaltyObjectGetRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyObjectListRequest extends Google_Model
@@ -5487,7 +5583,6 @@ class Google_Service_Walletobjects_LoyaltyObjectListRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyObjectListResponse extends Google_Collection
@@ -5506,7 +5601,7 @@ class Google_Service_Walletobjects_LoyaltyObjectListResponse extends Google_Coll
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -5516,7 +5611,6 @@ class Google_Service_Walletobjects_LoyaltyObjectListResponse extends Google_Coll
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyObjectMask extends Google_Collection
@@ -5534,7 +5628,7 @@ class Google_Service_Walletobjects_LoyaltyObjectMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -5544,7 +5638,6 @@ class Google_Service_Walletobjects_LoyaltyObjectMask extends Google_Collection
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyPoints extends Google_Model
@@ -5565,7 +5658,7 @@ class Google_Service_Walletobjects_LoyaltyPoints extends Google_Model
   {
     return $this->balance;
   }
-  
+
   public function setLabel($label)
   {
     $this->label = $label;
@@ -5575,7 +5668,7 @@ class Google_Service_Walletobjects_LoyaltyPoints extends Google_Model
   {
     return $this->label;
   }
-  
+
   public function setPointsType($pointsType)
   {
     $this->pointsType = $pointsType;
@@ -5585,7 +5678,7 @@ class Google_Service_Walletobjects_LoyaltyPoints extends Google_Model
   {
     return $this->pointsType;
   }
-  
+
   public function setPointsValidInterval(Google_Service_Walletobjects_TimeInterval $pointsValidInterval)
   {
     $this->pointsValidInterval = $pointsValidInterval;
@@ -5595,7 +5688,6 @@ class Google_Service_Walletobjects_LoyaltyPoints extends Google_Model
   {
     return $this->pointsValidInterval;
   }
-  
 }
 
 class Google_Service_Walletobjects_LoyaltyPointsBalance extends Google_Model
@@ -5615,7 +5707,7 @@ class Google_Service_Walletobjects_LoyaltyPointsBalance extends Google_Model
   {
     return $this->double;
   }
-  
+
   public function setInt($int)
   {
     $this->int = $int;
@@ -5625,7 +5717,7 @@ class Google_Service_Walletobjects_LoyaltyPointsBalance extends Google_Model
   {
     return $this->int;
   }
-  
+
   public function setMoney(Google_Service_Walletobjects_Money $money)
   {
     $this->money = $money;
@@ -5635,7 +5727,7 @@ class Google_Service_Walletobjects_LoyaltyPointsBalance extends Google_Model
   {
     return $this->money;
   }
-  
+
   public function setString($string)
   {
     $this->string = $string;
@@ -5645,7 +5737,6 @@ class Google_Service_Walletobjects_LoyaltyPointsBalance extends Google_Model
   {
     return $this->string;
   }
-  
 }
 
 class Google_Service_Walletobjects_Money extends Google_Model
@@ -5663,7 +5754,7 @@ class Google_Service_Walletobjects_Money extends Google_Model
   {
     return $this->currencyCode;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -5673,7 +5764,7 @@ class Google_Service_Walletobjects_Money extends Google_Model
   {
     return $this->kind;
   }
-  
+
   public function setMicros($micros)
   {
     $this->micros = $micros;
@@ -5683,7 +5774,6 @@ class Google_Service_Walletobjects_Money extends Google_Model
   {
     return $this->micros;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferClass extends Google_Collection
@@ -5735,7 +5825,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->allowMultipleUsersPerObject;
   }
-  
+
   public function setDetails($details)
   {
     $this->details = $details;
@@ -5745,7 +5835,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->details;
   }
-  
+
   public function setDistributionTimeInterval(Google_Service_Walletobjects_TimeInterval $distributionTimeInterval)
   {
     $this->distributionTimeInterval = $distributionTimeInterval;
@@ -5755,7 +5845,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->distributionTimeInterval;
   }
-  
+
   public function setFinePrint($finePrint)
   {
     $this->finePrint = $finePrint;
@@ -5765,7 +5855,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->finePrint;
   }
-  
+
   public function setHelpUri(Google_Service_Walletobjects_Uri $helpUri)
   {
     $this->helpUri = $helpUri;
@@ -5775,7 +5865,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->helpUri;
   }
-  
+
   public function setHomepageUri(Google_Service_Walletobjects_Uri $homepageUri)
   {
     $this->homepageUri = $homepageUri;
@@ -5785,7 +5875,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->homepageUri;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -5795,7 +5885,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -5805,7 +5895,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -5815,7 +5905,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -5825,7 +5915,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setIssuerName($issuerName)
   {
     $this->issuerName = $issuerName;
@@ -5835,7 +5925,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->issuerName;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -5845,7 +5935,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -5855,7 +5945,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -5865,7 +5955,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -5875,7 +5965,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setProvider($provider)
   {
     $this->provider = $provider;
@@ -5885,7 +5975,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->provider;
   }
-  
+
   public function setRedemptionChannel($redemptionChannel)
   {
     $this->redemptionChannel = $redemptionChannel;
@@ -5895,7 +5985,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->redemptionChannel;
   }
-  
+
   public function setRenderSpecs($renderSpecs)
   {
     $this->renderSpecs = $renderSpecs;
@@ -5905,7 +5995,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->renderSpecs;
   }
-  
+
   public function setReview(Google_Service_Walletobjects_CommonWalletObjectClassReview $review)
   {
     $this->review = $review;
@@ -5915,7 +6005,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->review;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -5925,7 +6015,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->reviewStatus;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -5935,7 +6025,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setTitle($title)
   {
     $this->title = $title;
@@ -5945,7 +6035,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->title;
   }
-  
+
   public function setTitleImage(Google_Service_Walletobjects_Image $titleImage)
   {
     $this->titleImage = $titleImage;
@@ -5955,7 +6045,7 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->titleImage;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -5965,7 +6055,6 @@ class Google_Service_Walletobjects_OfferClass extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferClassAddMessageRequest extends Google_Model
@@ -5983,7 +6072,7 @@ class Google_Service_Walletobjects_OfferClassAddMessageRequest extends Google_Mo
   {
     return $this->message;
   }
-  
+
   public function setReviewStatus($reviewStatus)
   {
     $this->reviewStatus = $reviewStatus;
@@ -5993,7 +6082,6 @@ class Google_Service_Walletobjects_OfferClassAddMessageRequest extends Google_Mo
   {
     return $this->reviewStatus;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferClassAddMessageResponse extends Google_Model
@@ -6010,7 +6098,6 @@ class Google_Service_Walletobjects_OfferClassAddMessageResponse extends Google_M
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferClassGetRequest extends Google_Model
@@ -6027,7 +6114,6 @@ class Google_Service_Walletobjects_OfferClassGetRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferClassListRequest extends Google_Model
@@ -6044,7 +6130,6 @@ class Google_Service_Walletobjects_OfferClassListRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferClassListResponse extends Google_Collection
@@ -6063,7 +6148,7 @@ class Google_Service_Walletobjects_OfferClassListResponse extends Google_Collect
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -6073,7 +6158,6 @@ class Google_Service_Walletobjects_OfferClassListResponse extends Google_Collect
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferClassMask extends Google_Collection
@@ -6091,7 +6175,7 @@ class Google_Service_Walletobjects_OfferClassMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -6101,7 +6185,6 @@ class Google_Service_Walletobjects_OfferClassMask extends Google_Collection
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferObject extends Google_Collection
@@ -6142,7 +6225,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->barcode;
   }
-  
+
   public function setClassId($classId)
   {
     $this->classId = $classId;
@@ -6152,7 +6235,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->classId;
   }
-  
+
   public function setClassReference(Google_Service_Walletobjects_OfferClass $classReference)
   {
     $this->classReference = $classReference;
@@ -6162,7 +6245,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->classReference;
   }
-  
+
   public function setHasUsers($hasUsers)
   {
     $this->hasUsers = $hasUsers;
@@ -6172,7 +6255,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->hasUsers;
   }
-  
+
   public function setId($id)
   {
     $this->id = $id;
@@ -6182,7 +6265,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->id;
   }
-  
+
   public function setImageModulesData($imageModulesData)
   {
     $this->imageModulesData = $imageModulesData;
@@ -6192,7 +6275,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->imageModulesData;
   }
-  
+
   public function setInfoModuleData(Google_Service_Walletobjects_InfoModuleData $infoModuleData)
   {
     $this->infoModuleData = $infoModuleData;
@@ -6202,7 +6285,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->infoModuleData;
   }
-  
+
   public function setIssuerData(Google_Service_Walletobjects_TypedValue $issuerData)
   {
     $this->issuerData = $issuerData;
@@ -6212,7 +6295,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->issuerData;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -6222,7 +6305,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setLinksModuleData(Google_Service_Walletobjects_LinksModuleData $linksModuleData)
   {
     $this->linksModuleData = $linksModuleData;
@@ -6232,7 +6315,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->linksModuleData;
   }
-  
+
   public function setLocations($locations)
   {
     $this->locations = $locations;
@@ -6242,7 +6325,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->locations;
   }
-  
+
   public function setMessages($messages)
   {
     $this->messages = $messages;
@@ -6252,7 +6335,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->messages;
   }
-  
+
   public function setState($state)
   {
     $this->state = $state;
@@ -6262,7 +6345,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->state;
   }
-  
+
   public function setTextModulesData($textModulesData)
   {
     $this->textModulesData = $textModulesData;
@@ -6272,7 +6355,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->textModulesData;
   }
-  
+
   public function setValidTimeInterval(Google_Service_Walletobjects_TimeInterval $validTimeInterval)
   {
     $this->validTimeInterval = $validTimeInterval;
@@ -6282,7 +6365,7 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->validTimeInterval;
   }
-  
+
   public function setVersion($version)
   {
     $this->version = $version;
@@ -6292,7 +6375,6 @@ class Google_Service_Walletobjects_OfferObject extends Google_Collection
   {
     return $this->version;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferObjectAddMessageRequest extends Google_Model
@@ -6309,7 +6391,6 @@ class Google_Service_Walletobjects_OfferObjectAddMessageRequest extends Google_M
   {
     return $this->message;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferObjectAddMessageResponse extends Google_Model
@@ -6326,7 +6407,6 @@ class Google_Service_Walletobjects_OfferObjectAddMessageResponse extends Google_
   {
     return $this->resource;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferObjectGetRequest extends Google_Model
@@ -6343,7 +6423,6 @@ class Google_Service_Walletobjects_OfferObjectGetRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferObjectListRequest extends Google_Model
@@ -6360,7 +6439,6 @@ class Google_Service_Walletobjects_OfferObjectListRequest extends Google_Model
   {
     return $this->resultMask;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferObjectListResponse extends Google_Collection
@@ -6379,7 +6457,7 @@ class Google_Service_Walletobjects_OfferObjectListResponse extends Google_Collec
   {
     return $this->pagination;
   }
-  
+
   public function setResources($resources)
   {
     $this->resources = $resources;
@@ -6389,7 +6467,6 @@ class Google_Service_Walletobjects_OfferObjectListResponse extends Google_Collec
   {
     return $this->resources;
   }
-  
 }
 
 class Google_Service_Walletobjects_OfferObjectMask extends Google_Collection
@@ -6407,7 +6484,7 @@ class Google_Service_Walletobjects_OfferObjectMask extends Google_Collection
   {
     return $this->fields;
   }
-  
+
   public function setProjection($projection)
   {
     $this->projection = $projection;
@@ -6417,7 +6494,6 @@ class Google_Service_Walletobjects_OfferObjectMask extends Google_Collection
   {
     return $this->projection;
   }
-  
 }
 
 class Google_Service_Walletobjects_Pagination extends Google_Model
@@ -6435,7 +6511,7 @@ class Google_Service_Walletobjects_Pagination extends Google_Model
   {
     return $this->kind;
   }
-  
+
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
@@ -6445,7 +6521,7 @@ class Google_Service_Walletobjects_Pagination extends Google_Model
   {
     return $this->nextPageToken;
   }
-  
+
   public function setResultsPerPage($resultsPerPage)
   {
     $this->resultsPerPage = $resultsPerPage;
@@ -6455,7 +6531,6 @@ class Google_Service_Walletobjects_Pagination extends Google_Model
   {
     return $this->resultsPerPage;
   }
-  
 }
 
 class Google_Service_Walletobjects_PassengerName extends Google_Model
@@ -6475,7 +6550,7 @@ class Google_Service_Walletobjects_PassengerName extends Google_Model
   {
     return $this->first;
   }
-  
+
   public function setLast($last)
   {
     $this->last = $last;
@@ -6485,7 +6560,7 @@ class Google_Service_Walletobjects_PassengerName extends Google_Model
   {
     return $this->last;
   }
-  
+
   public function setMiddle($middle)
   {
     $this->middle = $middle;
@@ -6495,7 +6570,7 @@ class Google_Service_Walletobjects_PassengerName extends Google_Model
   {
     return $this->middle;
   }
-  
+
   public function setPrefix($prefix)
   {
     $this->prefix = $prefix;
@@ -6505,7 +6580,7 @@ class Google_Service_Walletobjects_PassengerName extends Google_Model
   {
     return $this->prefix;
   }
-  
+
   public function setSuffix($suffix)
   {
     $this->suffix = $suffix;
@@ -6515,7 +6590,6 @@ class Google_Service_Walletobjects_PassengerName extends Google_Model
   {
     return $this->suffix;
   }
-  
 }
 
 class Google_Service_Walletobjects_RenderSpec extends Google_Model
@@ -6532,7 +6606,7 @@ class Google_Service_Walletobjects_RenderSpec extends Google_Model
   {
     return $this->templateFamily;
   }
-  
+
   public function setViewName($viewName)
   {
     $this->viewName = $viewName;
@@ -6542,13 +6616,14 @@ class Google_Service_Walletobjects_RenderSpec extends Google_Model
   {
     return $this->viewName;
   }
-  
 }
 
-class Google_Service_Walletobjects_TextModuleData extends Google_Model
+class Google_Service_Walletobjects_TextModuleData extends Google_Collection
 {
   public $body;
   public $header;
+  protected $iconBodysType = 'Google_Service_Walletobjects_IconBody';
+  protected $iconBodysDataType = 'array';
 
   public function setBody($body)
   {
@@ -6559,7 +6634,7 @@ class Google_Service_Walletobjects_TextModuleData extends Google_Model
   {
     return $this->body;
   }
-  
+
   public function setHeader($header)
   {
     $this->header = $header;
@@ -6569,7 +6644,16 @@ class Google_Service_Walletobjects_TextModuleData extends Google_Model
   {
     return $this->header;
   }
-  
+
+  public function setIconBodys($iconBodys)
+  {
+    $this->iconBodys = $iconBodys;
+  }
+
+  public function getIconBodys()
+  {
+    return $this->iconBodys;
+  }
 }
 
 class Google_Service_Walletobjects_TimeInterval extends Google_Model
@@ -6589,7 +6673,7 @@ class Google_Service_Walletobjects_TimeInterval extends Google_Model
   {
     return $this->end;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -6599,7 +6683,7 @@ class Google_Service_Walletobjects_TimeInterval extends Google_Model
   {
     return $this->kind;
   }
-  
+
   public function setStart(Google_Service_Walletobjects_DateTime $start)
   {
     $this->start = $start;
@@ -6609,7 +6693,6 @@ class Google_Service_Walletobjects_TimeInterval extends Google_Model
   {
     return $this->start;
   }
-  
 }
 
 class Google_Service_Walletobjects_TypedValue extends Google_Collection
@@ -6635,7 +6718,7 @@ class Google_Service_Walletobjects_TypedValue extends Google_Collection
   {
     return $this->bool;
   }
-  
+
   public function setDouble($double)
   {
     $this->double = $double;
@@ -6645,7 +6728,7 @@ class Google_Service_Walletobjects_TypedValue extends Google_Collection
   {
     return $this->double;
   }
-  
+
   public function setImage(Google_Service_Walletobjects_Image $image)
   {
     $this->image = $image;
@@ -6655,7 +6738,7 @@ class Google_Service_Walletobjects_TypedValue extends Google_Collection
   {
     return $this->image;
   }
-  
+
   public function setInt($int)
   {
     $this->int = $int;
@@ -6665,7 +6748,7 @@ class Google_Service_Walletobjects_TypedValue extends Google_Collection
   {
     return $this->int;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -6675,7 +6758,7 @@ class Google_Service_Walletobjects_TypedValue extends Google_Collection
   {
     return $this->kind;
   }
-  
+
   public function setList($list)
   {
     $this->list = $list;
@@ -6685,7 +6768,7 @@ class Google_Service_Walletobjects_TypedValue extends Google_Collection
   {
     return $this->list;
   }
-  
+
   public function setString($string)
   {
     $this->string = $string;
@@ -6695,7 +6778,7 @@ class Google_Service_Walletobjects_TypedValue extends Google_Collection
   {
     return $this->string;
   }
-  
+
   public function setUri(Google_Service_Walletobjects_Uri $uri)
   {
     $this->uri = $uri;
@@ -6705,7 +6788,6 @@ class Google_Service_Walletobjects_TypedValue extends Google_Collection
   {
     return $this->uri;
   }
-  
 }
 
 class Google_Service_Walletobjects_Uri extends Google_Model
@@ -6723,7 +6805,7 @@ class Google_Service_Walletobjects_Uri extends Google_Model
   {
     return $this->description;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -6733,7 +6815,7 @@ class Google_Service_Walletobjects_Uri extends Google_Model
   {
     return $this->kind;
   }
-  
+
   public function setUri($uri)
   {
     $this->uri = $uri;
@@ -6743,7 +6825,6 @@ class Google_Service_Walletobjects_Uri extends Google_Model
   {
     return $this->uri;
   }
-  
 }
 
 class Google_Service_Walletobjects_WalletObjectMessage extends Google_Model
@@ -6767,7 +6848,7 @@ class Google_Service_Walletobjects_WalletObjectMessage extends Google_Model
   {
     return $this->actionUri;
   }
-  
+
   public function setBody($body)
   {
     $this->body = $body;
@@ -6777,7 +6858,7 @@ class Google_Service_Walletobjects_WalletObjectMessage extends Google_Model
   {
     return $this->body;
   }
-  
+
   public function setDisplayInterval(Google_Service_Walletobjects_TimeInterval $displayInterval)
   {
     $this->displayInterval = $displayInterval;
@@ -6787,7 +6868,7 @@ class Google_Service_Walletobjects_WalletObjectMessage extends Google_Model
   {
     return $this->displayInterval;
   }
-  
+
   public function setHeader($header)
   {
     $this->header = $header;
@@ -6797,7 +6878,7 @@ class Google_Service_Walletobjects_WalletObjectMessage extends Google_Model
   {
     return $this->header;
   }
-  
+
   public function setImage(Google_Service_Walletobjects_Image $image)
   {
     $this->image = $image;
@@ -6807,7 +6888,7 @@ class Google_Service_Walletobjects_WalletObjectMessage extends Google_Model
   {
     return $this->image;
   }
-  
+
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -6817,5 +6898,4 @@ class Google_Service_Walletobjects_WalletObjectMessage extends Google_Model
   {
     return $this->kind;
   }
-  
 }

@@ -36,14 +36,10 @@ require_once 'google-api-client/src/Google/Service/Walletobjects.php';
  */
 require_once 'utils/wob_payload.php';
 
-/**
- * Autoloading classes when their object is required.
- */
-function __autoload($class_name) {
-  if (is_file('verticals/'.$class_name . '.php')) {
-    require_once 'verticals/'.$class_name . '.php';
-  }
-}
+/* Including all Verticals */
+require_once 'verticals/Loyalty.php';
+require_once 'verticals/Offer.php';
+require_once 'verticals/GiftCard.php';
 
 $client = new Google_Client();
 // Set application name.

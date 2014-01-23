@@ -38,6 +38,11 @@ switch($_REQUEST['type']) {
       ISSUER_ID, OFFER_CLASS_ID, OFFER_OBJECT_ID);
     $wobPayload->addWalletObjects($offerObject, OFFER_OBJECT_ID);
     break;
+  case 'giftcard' :
+    $giftCardObject = GiftCard::generateGiftCardObject(
+      ISSUER_ID, GIFTCARD_CLASS_ID, GIFTCARD_OBJECT_ID);
+    $wobPayload->addWalletObjects($giftCardObject, GIFTCARD_OBJECT_ID);
+    break;
 }
 // Save to wallet request body.
 $requestBody = $wobPayload->getSaveToWalletRequest();

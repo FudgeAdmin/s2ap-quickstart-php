@@ -1,4 +1,4 @@
-application: YOURAPPID
+application: wobs-quickstart-php
 version: 1
 runtime: php
 api_version: 1

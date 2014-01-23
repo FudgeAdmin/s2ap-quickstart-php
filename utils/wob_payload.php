@@ -89,6 +89,14 @@ class WobPayload {
       if(isset($object) && !(empty($object))) {
         $this->payload['offerObjects'] = array($object);
       }
+    } else if($wobType == GIFTCARD_CLASS_ID) {
+      if(isset($object) && !(empty($object))) {
+        $this->payload['giftCardClasses'] = array($object);
+      }
+    } else if($wobType == GIFTCARD_OBJECT_ID) {
+      if(isset($object) && !(empty($object))) {
+        $this->payload['giftCardObjects'] = array($object);
+      }
     } else {
       throw new InvalidArgumentException('Invalid Object type: '.$wobType);
     }

@@ -29,6 +29,9 @@ switch($type) {
   case 'offerclass' :
   	echo('Offer Classes=<br>');
     $results = $service->offerclass->listOfferclass(ISSUER_ID, $optParams);
+  case 'giftcardclass' :
+    echo('Gift Card Classes=<br>');
+    $results = $service->giftcardclass->listGiftcardclass(ISSUER_ID, $optParams);
   case 'loyaltyobjects' :
   	$classId = $_REQUEST['classId'];
   	echo('Loyalty Object for classid='. $classId . '<br>');
@@ -37,6 +40,10 @@ switch($type) {
   	$classId = $_REQUEST['classId'];
   	echo('Offer Object for classid='. $classId . '<br>');
     $results = $service->offerobject->listOfferobject($classId, $optParams);
+  case 'giftcardobjects' :
+    $classId = $_REQUEST['classId'];
+    echo('Gift Card Object for classid='. $classId . '<br>');
+    $results = $service->giftcardobject->listGiftcardobject($classId, $optParams);
 
   echo('Results per page=' . $results['pagination']['resultsPerPage'] . '<br>');
   echo('Next Page token=' . $results['pagination']['nextPageToken'] . '<br>');
