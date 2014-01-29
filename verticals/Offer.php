@@ -30,26 +30,31 @@ class Offer {
   public static function generateOfferClass($issuerId, $classId) {
     // Used to select which templates to use for rendering in this section.
     $renderSpecs = array(
-        array('templateFamily' => '1.offer1_list',
+        array('templateFamily' => '1.offer_list',
             'viewName' => 'g_list'),
-        array('templateFamily' => '1.offer1_expanded',
+        array('templateFamily' => '1.offer_expanded',
             'viewName' => 'g_expanded'));
     // A list of locations at which the Wallet Class can be used.
     $locations = array(
         array(
             'kind' => 'walletobjects#latLongPoint',
-            'latitude' => 37.442087,
-            'longitude' => -122.161446
+            'latitude' => 37.424015499999996,
+            'longitude' => -122.09259560000001
         ),
         array(
             'kind' => 'walletobjects#latLongPoint',
-            'latitude' => 37.429379,
-            'longitude' => -122.12272999999999
+            'latitude' => 37.424354,
+            'longitude' => -122.09508869999999
         ),
         array(
             'kind' => 'walletobjects#latLongPoint',
-            'latitude' => 37.333646,
-            'longitude' => -121.884853
+            'latitude' => 37.7901435,
+            'longitude' => -122.39026709999997
+        ),
+        array(
+            'kind' => 'walletobjects#latLongPoint',
+            'latitude' => 40.7406578,
+            'longitude' => -74.00208940000002
         )
     );
     // Source uri of home page.
@@ -64,21 +69,48 @@ class Offer {
     $uriTitleImageInstance = new Google_Service_Walletobjects_Uri();
     $imageTitleImageInstance = new Google_Service_Walletobjects_Image();
     $uriTitleImageInstance->setUri(
-        'http://3.bp.blogspot.com/-AvC1agljv9Y/TirbDXOBIPI/AAAAAAAACK0/'.
-        'hR2gs5h2H6A/s1600/Bacon%2BWallpaper.png'
+        'http://farm4.staticflickr.com/3723/11177041115_6e6a3b6f49_o.jpg'
     );
     $imageTitleImageInstance->setSourceUri($uriTitleImageInstance);
+    // Define text module data.
+    $textModulesData = array(
+        array(
+            'header' => 'Details',
+            'body' => '20% off one cup of coffee at all Baconrista Coffee locations. ' .
+                'Only one can be used per visit.'
+        ),
+        array(
+            'header' => 'About Baconrista',
+            'body' => 'Since 2013, Baconrista Coffee has been committed to making high ' .
+                'quality bacon coffee. Visit us in our stores or online at www.baconrista.com'
+        )
+    );
+    // Define links module data.
+    $linksModuleData = new Google_Service_Walletobjects_LinksModuleData();
+    $uris = array (
+        array(
+            'uri' => 'http://www.baconrista.com',
+            'kind' => 'walletobjecs#uri',
+            'description' => 'Baconrista'
+        ),
+        array(
+            'uri' => 'https://maps.google.com/?q=Google+Headquarters,+Amphitheatre+Parkway,+Mountain+View,+CA',
+            'kind' => 'walletobjecs#uri',
+            'description' => 'Store Location'
+        )
+    );
+    $linksModuleData->setUris($uris);
     // Create wallet class.
     $wobClass = new Google_Service_Walletobjects_OfferClass();
     $wobClass->setId($issuerId.'.'.$classId);
     $wobClass->setVersion(1);
     $wobClass->setIssuerName('Baconrista Coffee');
-    $wobClass->setTitle('20% off one cup of coffee');
+    $wobClass->setTitle('20% off on one bacon fat latte');
     $wobClass->setProvider('Baconrista Deals');
-    $wobClass->setDetails('20% off one cup of coffee at all Baconristas');
-    $wobClass->setHomepageUri($uriHomePageInstance);
     $wobClass->setTitleImage($imageTitleImageInstance);
     $wobClass->setRenderSpecs($renderSpecs);
+    $wobClass->setLinksModuleData($linksModuleData);
+    $wobClass->setTextModulesData($textModulesData);
     $wobClass->setRedemptionChannel('both');
     $wobClass->setReviewStatus('underReview');
     $wobClass->setLocations($locations);
@@ -100,7 +132,7 @@ class Offer {
     $barcode->setType('upcA');
     $barcode->setValue('123456789012');
     $barcode->setAlternateText('12345');
-    $barcode->setLabel('User Id');
+    $barcode->setLabel('Offer Code');
     // Create wallet object.
     $wobObject = new Google_Service_Walletobjects_OfferObject();
     $wobObject->setClassId($issuerId.'.'.$classId);
