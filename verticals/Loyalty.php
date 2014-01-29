@@ -30,9 +30,9 @@ class Loyalty {
   public static function generateLoyaltyClass($issuerId, $classId) {
     // Used to select which templates to use for rendering in this section.
     $renderSpecs = array(
-        array('templateFamily' => '1.loyaltyCard1_list',
+        array('templateFamily' => '1.loyalty_list',
             'viewName' => 'g_list'),
-        array('templateFamily' => '1.loyaltyCard1_expanded',
+        array('templateFamily' => '1.loyalty_expanded',
             'viewName' => 'g_expanded'));
     // Define text module data.
     $textModulesData = array(
@@ -75,12 +75,26 @@ class Loyalty {
         ),
         'kind' => 'walletobjects#walletObjectMessage'
     ));
-    // A list of locations at which the Wallet Class can be used.
     $locations = array(
         array(
             'kind' => 'walletobjects#latLongPoint',
-            'latitude' => 37.422601,
-            'longitude' => -122.085286
+            'latitude' => 37.424015499999996,
+            'longitude' => -122.09259560000001
+        ),
+        array(
+            'kind' => 'walletobjects#latLongPoint',
+            'latitude' => 37.424354,
+            'longitude' => -122.09508869999999
+        ),
+        array(
+            'kind' => 'walletobjects#latLongPoint',
+            'latitude' => 37.7901435,
+            'longitude' => -122.39026709999997
+        ),
+        array(
+            'kind' => 'walletobjects#latLongPoint',
+            'latitude' => 40.7406578,
+            'longitude' => -74.00208940000002
         )
     );
     // Source uri of program logo.
