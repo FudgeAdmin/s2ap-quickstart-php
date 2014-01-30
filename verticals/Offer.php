@@ -57,14 +57,6 @@ class Offer {
             'longitude' => -74.00208940000002
         )
     );
-    // Source uri of home page.
-    $uriHomePageInstance = new Google_Service_Walletobjects_Uri();
-    $imageHomePageInstance = new Google_Service_Walletobjects_Image();
-    $uriHomePageInstance->setUri(
-        'http://www.google.com/landing/chrome/ugc/chrome-icon.jpg'
-    );
-    $uriHomePageInstance->setDescription('Website');
-    $imageHomePageInstance->setSourceUri($uriHomePageInstance);
     // Source uri of title image.
     $uriTitleImageInstance = new Google_Service_Walletobjects_Uri();
     $imageTitleImageInstance = new Google_Service_Walletobjects_Image();
@@ -100,6 +92,18 @@ class Offer {
         )
     );
     $linksModuleData->setUris($uris);
+
+    $uriModuleImageInstance = new Google_Service_Walletobjects_Uri();
+    $uriModuleImageInstance->setUri(
+        'http://farm8.staticflickr.com/7401/11177116434_d8e600bba6_o.jpg'
+    );
+    $uriModuleImageInstance->setDescription('Coffee beans');
+    $imageModuleImageInstance = new Google_Service_Walletobjects_Image();
+    $imageModuleImageInstance->setSourceUri($uriModuleImageInstance);
+    $imagesModuleData = new Google_Service_Walletobjects_ImageModuleData();
+    $imagesModuleData->setMainImage($imageModuleImageInstance);
+    $imagesModuleDataArr = array ($imagesModuleData);
+
     // Create wallet class.
     $wobClass = new Google_Service_Walletobjects_OfferClass();
     $wobClass->setId($issuerId.'.'.$classId);
@@ -111,6 +115,7 @@ class Offer {
     $wobClass->setRenderSpecs($renderSpecs);
     $wobClass->setLinksModuleData($linksModuleData);
     $wobClass->setTextModulesData($textModulesData);
+    $wobClass->setImageModulesData($imagesModuleDataArr);
     $wobClass->setRedemptionChannel('both');
     $wobClass->setReviewStatus('underReview');
     $wobClass->setLocations($locations);

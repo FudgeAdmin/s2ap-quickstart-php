@@ -57,6 +57,17 @@ class Loyalty {
     $infoModuleData->setHexBackgroundColor('#ABABAB');
     $infoModuleData->setHexFontColor('#FF3300');
 
+    $uriModuleImageInstance = new Google_Service_Walletobjects_Uri();
+    $uriModuleImageInstance->setUri(
+        'http://farm8.staticflickr.com/7401/11177116434_d8e600bba6_o.jpg'
+    );
+    $uriModuleImageInstance->setDescription('Coffee beans');
+    $imageModuleImageInstance = new Google_Service_Walletobjects_Image();
+    $imageModuleImageInstance->setSourceUri($uriModuleImageInstance);
+    $imagesModuleData = new Google_Service_Walletobjects_ImageModuleData();
+    $imagesModuleData->setMainImage($imageModuleImageInstance);
+    $imagesModuleDataArr = array ($imagesModuleData);
+
     // Messages to be displayed to all users of Wallet Objects.
     $messages = array(array(
         'actionUri' => array(
@@ -119,6 +130,7 @@ class Loyalty {
     $wobClass->setInfoModuleData($infoModuleData);
     $wobClass->setLinksModuleData($linksModuleData);
     $wobClass->setTextModulesData($textModulesData);
+    $wobClass->setImageModulesData($imagesModuleDataArr);
     $wobClass->setMessages($messages);
     $wobClass->setReviewStatus('underReview');
     $wobClass->setAllowMultipleUsersPerObject(true);
