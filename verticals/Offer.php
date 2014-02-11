@@ -81,7 +81,7 @@ class Offer {
     $linksModuleData = new Google_Service_Walletobjects_LinksModuleData();
     $uris = array (
         array(
-            'uri' => 'https://maps.google.com/?q=Google+Headquarters,+Amphitheatre+Parkway,+Mountain+View,+CA',
+            'uri' => 'http://maps.google.com/maps?q=google',
             'kind' => 'walletobjecs#uri',
             'description' => 'Nearby Locations'
         ),
