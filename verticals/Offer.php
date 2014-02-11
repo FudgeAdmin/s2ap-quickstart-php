@@ -81,14 +81,14 @@ class Offer {
     $linksModuleData = new Google_Service_Walletobjects_LinksModuleData();
     $uris = array (
         array(
-            'uri' => 'http://www.baconrista.com',
-            'kind' => 'walletobjecs#uri',
-            'description' => 'Baconrista'
-        ),
-        array(
             'uri' => 'https://maps.google.com/?q=Google+Headquarters,+Amphitheatre+Parkway,+Mountain+View,+CA',
             'kind' => 'walletobjecs#uri',
-            'description' => 'Store Location'
+            'description' => 'Nearby Locations'
+        ),
+        array(
+            'uri' => 'tel:6505555555',
+            'kind' => 'walletobjecs#uri',
+            'description' => 'Call Customer Service'
         )
     );
     $linksModuleData->setUris($uris);

@@ -38,28 +38,33 @@ class Loyalty {
     $textModulesData = array(
         array(
             'header' => 'Rewards details',
-            'body' => 'Welcome to Baconrista rewards. For every 5 ' .
-                'coffees purchased you will receive a free bacon fat latte.'
+            'body' => 'Welcome to Baconrista rewards.  Enjoy your rewards for being a loyal customer. ' .
+                '10 points for every dollar spent.  Redeem your points for free coffee, bacon and more!'
         )
     );
     // Define links module data.
     $linksModuleData = new Google_Service_Walletobjects_LinksModuleData();
     $uris = array (
         array(
-            'uri' => 'http://www.baconrista.com',
+            'uri' => 'https://maps.google.com/?q=Google+Headquarters,+Amphitheatre+Parkway,+Mountain+View,+CA',
             'kind' => 'walletobjecs#uri',
-            'description' => 'Baconrista'
+            'description' => 'Nearby Locations'
+        ),
+        array(
+            'uri' => 'tel:6505555555',
+            'kind' => 'walletobjecs#uri',
+            'description' => 'Call Customer Service'
         )
     );
     $linksModuleData->setUris($uris);
     // Define info module data.
     $infoModuleData = new Google_Service_Walletobjects_InfoModuleData();
-    $infoModuleData->setHexBackgroundColor('#ABABAB');
-    $infoModuleData->setHexFontColor('#FF3300');
+    $infoModuleData->setHexBackgroundColor('#442905');
+    $infoModuleData->setHexFontColor('#F8EDC1');
 
     $uriModuleImageInstance = new Google_Service_Walletobjects_Uri();
     $uriModuleImageInstance->setUri(
-        'http://farm8.staticflickr.com/7401/11177116434_d8e600bba6_o.jpg'
+        'http://farm4.staticflickr.com/3738/12440799783_3dc3c20606_b.jpg'
     );
     $uriModuleImageInstance->setDescription('Coffee beans');
     $imageModuleImageInstance = new Google_Service_Walletobjects_Image();
@@ -157,8 +162,9 @@ class Loyalty {
     $textModulesData = array(
         array(
             'header' => 'Janes Baconrista Rewards',
-            'body' => 'You are 5 coffees away from receiving a free '.
-                      'bacon fat latte'
+            'body' => 'Save more at your local Mountain View store Jane. ' .
+                      'You get 1 bacon fat latte for every 5 coffees purchased. ' .
+                      'Also just for you, 10% off all pastries in the Mountain View store.'
         )
     );
     // Define links module data.
@@ -174,21 +180,8 @@ class Loyalty {
     // Define label values.
     $labelValueRows = array(
         array(
-            'hexFontColor' => '#000000',
-            'hexBackgroundColor' => '#BBCCFC',
-            'columns' => array(
-                array(
-                    'label' => 'Member Name',
-                    'value' => 'Jane Doe'
-                ), array(
-                    'label' => 'Membership #',
-                    'value' => '1234567890'
-                )
-            )
-        ),
-        array(
-            'hexFontColor' => '#EDEDDD',
-            'hexBackgroundColor' => '#FFFB00',
+            'hexFontColor' => '#F8EDC1',
+            'hexBackgroundColor' => '#922635',
             'columns' => array(
                 array(
                     'label' => 'Next Reward in',
@@ -198,12 +191,22 @@ class Loyalty {
                     'value' => '01/15/2013'
                 )
             )
+        ),
+        array(
+            'hexFontColor' => '#F8EDC1',
+            'hexBackgroundColor' => '#922635',
+            'columns' => array(
+                array(
+                    'label' => 'Local Store',
+                    'value' => 'Mountain View'
+                )
+            )
         )
     );
     // Define info module data.
     $infoModuleData = new Google_Service_Walletobjects_InfoModuleData();
-    $infoModuleData->setHexBackgroundColor('#FC058C');
-    $infoModuleData->setHexFontColor('#FFFFFF');
+    $infoModuleData->setHexBackgroundColor('#442905');
+    $infoModuleData->setHexFontColor('#F8EDC1');
     $infoModuleData->setShowLastUpdateTime(true);
     $infoModuleData->setLabelValueRows($labelValueRows);
     // Messages to be displayed.
