@@ -26,21 +26,22 @@ require_once 'header.php';
 require_once 'utils/wob_utils.php';
 
 $wobPayload = new WobPayload($ORIGINS);
+$objId = strval(rand(1, 100));
 
 switch($_REQUEST['type']) {
   case 'loyalty' :
     $loyaltyObject = Loyalty::generateLoyaltyObject(
-      ISSUER_ID, LOYALTY_CLASS_ID, LOYALTY_OBJECT_ID);
+      ISSUER_ID, LOYALTY_CLASS_ID, LOYALTY_OBJECT_ID . $objId);
     $wobPayload->addWalletObjects($loyaltyObject, LOYALTY_OBJECT_ID);
     break;
   case 'offer' :
     $offerObject = Offer::generateOfferObject(
-      ISSUER_ID, OFFER_CLASS_ID, OFFER_OBJECT_ID);
+      ISSUER_ID, OFFER_CLASS_ID, OFFER_OBJECT_ID . $objId);
     $wobPayload->addWalletObjects($offerObject, OFFER_OBJECT_ID);
     break;
   case 'giftcard' :
     $giftCardObject = GiftCard::generateGiftCardObject(
-      ISSUER_ID, GIFTCARD_CLASS_ID, GIFTCARD_OBJECT_ID);
+      ISSUER_ID, GIFTCARD_CLASS_ID, GIFTCARD_OBJECT_ID . $objId);
     $wobPayload->addWalletObjects($giftCardObject, GIFTCARD_OBJECT_ID);
     break;
 }
