@@ -46,7 +46,7 @@ class Loyalty {
     $linksModuleData = new Google_Service_Walletobjects_LinksModuleData();
     $uris = array (
         array(
-            'uri' => 'http://maps.google.com/maps?q=google',
+            'uri' => 'http://maps.google.com/?q=google',
             'kind' => 'walletobjecs#uri',
             'description' => 'Nearby Locations'
         ),
