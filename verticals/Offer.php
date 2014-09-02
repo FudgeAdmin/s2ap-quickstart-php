@@ -143,6 +143,7 @@ class Offer {
     $wobObject->setId($issuerId.'.'.$objectId);
     $wobObject->setBarcode($barcode);
     $wobObject->setState('active');
+    $wobObject->setVersion(1);
     return $wobObject;
   }
 }

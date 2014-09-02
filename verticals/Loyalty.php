@@ -239,6 +239,7 @@ class Loyalty {
     $wobObject->setClassId($issuerId.".".$classId);
     $wobObject->setId($issuerId.".".$objectId);
     $wobObject->setState('active');
+    $wobObject->setVersion(1);
     $wobObject->setBarcode($barcode);
     $wobObject->setInfoModuleData($infoModuleData);
     $wobObject->setLinksModuleData($linksModuleData);
