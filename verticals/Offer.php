@@ -107,7 +107,6 @@ class Offer {
     // Create wallet class.
     $wobClass = new Google_Service_Walletobjects_OfferClass();
     $wobClass->setId($issuerId.'.'.$classId);
-    $wobClass->setVersion(1);
     $wobClass->setIssuerName('Baconrista Coffee');
     $wobClass->setTitle('20% off on one bacon fat latte');
     $wobClass->setProvider('Baconrista Deals');
@@ -142,7 +141,6 @@ class Offer {
     $wobObject = new Google_Service_Walletobjects_OfferObject();
     $wobObject->setClassId($issuerId.'.'.$classId);
     $wobObject->setId($issuerId.'.'.$objectId);
-    $wobObject->setVersion(1);
     $wobObject->setBarcode($barcode);
     $wobObject->setState('active');
     return $wobObject;

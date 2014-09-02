@@ -123,7 +123,6 @@ class Loyalty {
     // Create wallet class.
     $wobClass = new Google_Service_Walletobjects_LoyaltyClass();
     $wobClass->setId($issuerId.'.'.$classId);
-    $wobClass->setVersion(1);
     $wobClass->setIssuerName('Baconrista');
     $wobClass->setProgramName('Baconrista Rewards');
     $wobClass->setProgramLogo($imageInstance);
@@ -239,7 +238,6 @@ class Loyalty {
     $wobObject = new Google_Service_Walletobjects_LoyaltyObject();
     $wobObject->setClassId($issuerId.".".$classId);
     $wobObject->setId($issuerId.".".$objectId);
-    $wobObject->setVersion(1);
     $wobObject->setState('active');
     $wobObject->setBarcode($barcode);
     $wobObject->setInfoModuleData($infoModuleData);

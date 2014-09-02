@@ -73,7 +73,6 @@ class GiftCard {
     // Create wallet class.
     $wobClass = new Google_Service_Walletobjects_GiftCardClass();
     $wobClass->setId($issuerId.'.'.$classId);
-    $wobClass->setVersion(1);
     $wobClass->setIssuerName('Baconrista');
     $wobClass->setMerchantName('Baconrista');
     $wobClass->setProgramLogo($imageInstance);
@@ -133,7 +132,6 @@ class GiftCard {
     $wobObject = new Google_Service_Walletobjects_GiftCardObject();
     $wobObject->setClassId($issuerId.".".$classId);
     $wobObject->setId($issuerId.".".$objectId);
-    $wobObject->setVersion(1);
     $wobObject->setState('active');
     $wobObject->setBarcode($barcode);
     $wobObject->setLinksModuleData($linksModuleData);
