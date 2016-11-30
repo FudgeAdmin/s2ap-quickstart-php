@@ -1,12 +1,12 @@
 /**
- * Save to Wallet success handler.
+ * Save to Android Pay success handler.
  */
 var successHandler = function(params) {
   console.log('Object added successfully' + params);
 }
 
 /**
- * Save to Wallet failure handler.
+ * Save to Android Pay failure handler.
  */
 var failureHandler = function(params) {
   console.log('Object insertion failed' + params);
@@ -38,29 +38,29 @@ function init() {
   $.when(
     // Get jwt of loyalty object and render 'Save card' wallet button.
     $.get('jwt?type=loyalty', function(data) {
-      saveToWallet = document.createElement('g:savetowallet');
-      saveToWallet.setAttribute('jwt', data);
-      saveToWallet.setAttribute('onsuccess', 'successHandler');
-      saveToWallet.setAttribute('onfailure', 'failureHandler');
-      document.querySelector('#loyaltysave').appendChild(saveToWallet);
+      saveToAndroidPay = document.createElement('g:savetoandroidpay');
+      saveToAndroidPay.setAttribute('jwt', data);
+      saveToAndroidPay.setAttribute('onsuccess', 'successHandler');
+      saveToAndroidPay.setAttribute('onfailure', 'failureHandler');
+      document.querySelector('#loyaltysave').appendChild(saveToAndroidPay);
       }
     ),
     // Get jwt of offer object and render 'Get offer' wallet button.
     $.get('jwt?type=offer', function(data) {
-      saveToWallet = document.createElement('g:savetowallet');
-      saveToWallet.setAttribute('jwt', data);
-      saveToWallet.setAttribute('onsuccess', 'successHandler');
-      saveToWallet.setAttribute('onfailure', 'failureHandler');
-      document.querySelector('#offersave').appendChild(saveToWallet);
+      saveToAndroidPay = document.createElement('g:savetoandroidpay');
+      saveToAndroidPay.setAttribute('jwt', data);
+      saveToAndroidPay.setAttribute('onsuccess', 'successHandler');
+      saveToAndroidPay.setAttribute('onfailure', 'failureHandler');
+      document.querySelector('#offersave').appendChild(saveToAndroidPay);
       }
     ),
     // Get jwt of giftcard object and render 'Get Gift Card' wallet button.
     $.get('jwt?type=giftcard', function(data) {
-      saveToWallet = document.createElement('g:savetowallet');
-      saveToWallet.setAttribute('jwt', data);
-      saveToWallet.setAttribute('onsuccess', 'successHandler');
-      saveToWallet.setAttribute('onfailure', 'failureHandler');
-      document.querySelector('#giftcardsave').appendChild(saveToWallet);
+      saveToAndroidPay = document.createElement('g:savetoandroidpay');
+      saveToAndroidPay.setAttribute('jwt', data);
+      saveToAndroidPay.setAttribute('onsuccess', 'successHandler');
+      saveToAndroidPay.setAttribute('onfailure', 'failureHandler');
+      document.querySelector('#giftcardsave').appendChild(saveToAndroidPay);
       }
     )
     ).done(function() {
