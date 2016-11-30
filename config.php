@@ -22,7 +22,7 @@ define('APPLICATION_NAME', 'Wallet Objects Demo');
 // Application origins for save to wallet button.
 $ORIGINS = array('http://localhost:8080');
 // Type of request.
-define('SAVE_TO_WALLET', 'savetowallet');
+define('SAVE_TO_ANDROID_PAY', 'savetoandroidpay');
 define('LOYALTY_WEB', 'loyaltywebservice');
 // Api scopes url.
 define('SCOPES', 'https://www.googleapis.com/auth/wallet_object.issuer');
