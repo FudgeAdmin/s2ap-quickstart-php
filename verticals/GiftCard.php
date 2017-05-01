@@ -28,12 +28,6 @@ class GiftCard {
    * @return Object $wobClass Loyaltyclass resource.
    */
   public static function generateGiftCardClass($issuerId, $classId) {
-    // Used to select which templates to use for rendering in this section.
-    $renderSpecs = array(
-        array('templateFamily' => '1.giftCard1_list',
-            'viewName' => 'g_list'),
-        array('templateFamily' => '1.giftCard1_expanded',
-            'viewName' => 'g_expanded'));
     // Define text module data.
     $textModulesData = array(
         array(
@@ -76,7 +70,6 @@ class GiftCard {
     $wobClass->setIssuerName('Baconrista');
     $wobClass->setMerchantName('Baconrista');
     $wobClass->setProgramLogo($imageInstance);
-    $wobClass->setRenderSpecs($renderSpecs);
     $wobClass->setLinksModuleData($linksModuleData);
     $wobClass->setTextModulesData($textModulesData);
     $wobClass->setReviewStatus('underReview');
