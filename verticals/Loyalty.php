@@ -28,12 +28,6 @@ class Loyalty {
    * @return Object $wobClass Loyaltyclass resource.
    */
   public static function generateLoyaltyClass($issuerId, $classId) {
-    // Used to select which templates to use for rendering in this section.
-    $renderSpecs = array(
-        array('templateFamily' => '1.loyalty_list',
-            'viewName' => 'g_list'),
-        array('templateFamily' => '1.loyalty_expanded',
-            'viewName' => 'g_expanded'));
     // Define text module data.
     $textModulesData = array(
         array(
@@ -130,7 +124,6 @@ class Loyalty {
     $wobClass->setRewardsTier('Gold');
     $wobClass->setAccountNameLabel('Member Name');
     $wobClass->setAccountIdLabel('Member Id');
-    $wobClass->setRenderSpecs($renderSpecs);
     $wobClass->setInfoModuleData($infoModuleData);
     $wobClass->setLinksModuleData($linksModuleData);
     $wobClass->setTextModulesData($textModulesData);

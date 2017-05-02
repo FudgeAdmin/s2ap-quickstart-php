@@ -28,12 +28,6 @@ class Offer {
    * @return Object $wobClass Offerclass resource.
    */
   public static function generateOfferClass($issuerId, $classId) {
-    // Used to select which templates to use for rendering in this section.
-    $renderSpecs = array(
-        array('templateFamily' => '1.offer_list',
-            'viewName' => 'g_list'),
-        array('templateFamily' => '1.offer_expanded',
-            'viewName' => 'g_expanded'));
     // A list of locations at which the Wallet Class can be used.
     $locations = array(
         array(
@@ -111,7 +105,6 @@ class Offer {
     $wobClass->setTitle('20% off on one bacon fat latte');
     $wobClass->setProvider('Baconrista Deals');
     $wobClass->setTitleImage($imageTitleImageInstance);
-    $wobClass->setRenderSpecs($renderSpecs);
     $wobClass->setLinksModuleData($linksModuleData);
     $wobClass->setTextModulesData($textModulesData);
     $wobClass->setImageModulesData($imagesModuleDataArr);
