@@ -18,26 +18,26 @@ var failureHandler = function(params) {
 function init() {
   // Bind click event for 'Insert Loyalty Class' button.
   document.getElementById('loyalty').addEventListener('click', function() {
-    $.get('insert?type=loyalty', function(data) {
+    $.get('insert.php?type=loyalty', function(data) {
       console.log(data);
     });
   });
   // Bind click event for 'Insert Offer Class' button.
   document.getElementById('offer').addEventListener('click', function() {
-    $.get('insert?type=offer', function(data) {
+    $.get('insert.php?type=offer', function(data) {
       console.log(data);
     });
   });
   // Bind click event for 'Insert Gift Card Class' button.
   document.getElementById('giftcard').addEventListener('click', function() {
-    $.get('insert?type=giftcard', function(data) {
+    $.get('insert.php?type=giftcard', function(data) {
       console.log(data);
     });
   });
 
   $.when(
     // Get jwt of loyalty object and render 'Save card' wallet button.
-    $.get('jwt?type=loyalty', function(data) {
+    $.get('jwt.php?type=loyalty', function(data) {
       saveToAndroidPay = document.createElement('g:savetoandroidpay');
       saveToAndroidPay.setAttribute('jwt', data);
       saveToAndroidPay.setAttribute('onsuccess', 'successHandler');
@@ -46,7 +46,7 @@ function init() {
       }
     ),
     // Get jwt of offer object and render 'Get offer' wallet button.
-    $.get('jwt?type=offer', function(data) {
+    $.get('jwt.php?type=offer', function(data) {
       saveToAndroidPay = document.createElement('g:savetoandroidpay');
       saveToAndroidPay.setAttribute('jwt', data);
       saveToAndroidPay.setAttribute('onsuccess', 'successHandler');
@@ -55,7 +55,7 @@ function init() {
       }
     ),
     // Get jwt of giftcard object and render 'Get Gift Card' wallet button.
-    $.get('jwt?type=giftcard', function(data) {
+    $.get('jwt.php?type=giftcard', function(data) {
       saveToAndroidPay = document.createElement('g:savetoandroidpay');
       saveToAndroidPay.setAttribute('jwt', data);
       saveToAndroidPay.setAttribute('onsuccess', 'successHandler');
