@@ -62,7 +62,7 @@ class WobPayload {
   function __construct($origins) {
     $this->iss = SERVICE_ACCOUNT_EMAIL_ADDRESS;
     $this->audience = AUDIENCE;
-    $this->type = SAVE_TO_WALLET;
+    $this->type = SAVE_TO_ANDROID_PAY;
     $this->iat = time();
     $this->origins = $origins;
   }
