@@ -49,4 +49,4 @@ switch($_REQUEST['type']) {
 $requestBody = $wobPayload->getSaveToWalletRequest();
 // Create the response JWT.
 $utils = new WobUtils();
-echo $jwt = $utils->makeSignedJwt($requestBody, $cred);
+echo $jwt = $utils->makeSignedJwt($requestBody, $client);
