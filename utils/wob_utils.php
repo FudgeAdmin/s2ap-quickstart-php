@@ -18,7 +18,6 @@
 require_once 'webservice/webservice_wallet_user.php';
 require_once 'webservice/webservice_params.php';
 require_once 'webservice/webservice_request.php';
-require_once 'google-api-client/src/Google/Utils.php';
 use \Firebase\JWT\JWT;
 
 class WobUtils {
