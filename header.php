@@ -24,12 +24,7 @@ require_once 'config.php';
 /**
  * Google client library class.
  */
-require_once 'google-api-client/src/Google/Client.php';
-
-/**
- * Google wallet object service.
- */
-require_once 'google-api-client/src/Google/Service/Walletobjects.php';
+require_once 'google-api-client/vendor/autoload.php';
 
 /**
  * Generates wob payload.
@@ -53,17 +48,11 @@ session_start();
 if (isset($_SESSION['service_token'])) {
   $client->setAccessToken($_SESSION['service_token']);
 }
-// Load the key in PKCS 12 format (you need to download this from the
+// Load the key in json format (you need to download this from the
 // Google API Console when the service account was created.
-$key = file_get_contents(SERVICE_ACCOUNT_PRIVATE_KEY);
-$cred = new Google_Auth_AssertionCredentials(
-    SERVICE_ACCOUNT_EMAIL_ADDRESS,
-    array(SCOPES),
-    $key
-);
-$client->setAssertionCredentials($cred);
-if($client->getAuth()->isAccessTokenExpired()) {
-  $client->getAuth()->refreshTokenWithAssertion($cred);
+$client->setAuthConfigFile(SERVICE_ACCOUNT_PRIVATE_KEY);
+if($client->isAccessTokenExpired()) {
+  $client->refreshTokenWithAssertion();
 }
 $_SESSION['service_token'] = $client->getAccessToken();
 

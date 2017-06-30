@@ -18,7 +18,7 @@
 require_once 'webservice/webservice_wallet_user.php';
 require_once 'webservice/webservice_params.php';
 require_once 'webservice/webservice_request.php';
-require_once 'google-api-client/src/Google/Utils.php';
+use \Firebase\JWT\JWT;
 
 class WobUtils {
 
@@ -129,16 +129,15 @@ class WobUtils {
     return $this->responseBody;
   }
   // Creates a signed JWT.
-  public function makeSignedJwt($payload,$cred) {
+  public function makeSignedJwt($payload,$client) {
     $header = array("typ" => "JWT", "alg" => "RS256");
     $segments = array();
-    $segments[] = Google_Utils::urlSafeB64Encode(json_encode($header));
-    $segments[] = Google_Utils::urlSafeB64Encode(json_encode($payload));
+    $segments[] = JWT::urlSafeB64Encode(json_encode($header));
+    $segments[] = JWT::urlSafeB64Encode(json_encode($payload));
     $signing_input = implode(".", $segments);
-
-    $signer = new Google_Signer_P12($cred->privateKey, $cred->privateKeyPassword);
-    $signature = $signer->sign($signing_input);
-    $segments[] = Google_Utils::urlSafeB64Encode($signature);
+    
+    $signature = JWT::sign($signing_input, $client->getConfig("signing_key"), $alg = "RS256");
+    $segments[] = JWT::urlSafeB64Encode($signature);
 
     return implode(".", $segments);
   }

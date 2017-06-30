@@ -17,8 +17,8 @@
 
 define('SERVICE_ACCOUNT_EMAIL_ADDRESS', 'ServiceAccountEmail@developer.gserviceaccount.com');
 define('ISSUER_ID', 'IssuerId');
-define('SERVICE_ACCOUNT_PRIVATE_KEY', 'wobs-privatekey.p12');
-define('APPLICATION_NAME', 'Wallet Objects Demo');
+define('SERVICE_ACCOUNT_PRIVATE_KEY', 'privatekey.json');
+define('APPLICATION_NAME', 'Android Pay Demo');
 // Application origins for save to wallet button.
 $ORIGINS = array('http://localhost:8080');
 // Type of request.

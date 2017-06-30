@@ -13,7 +13,7 @@ handlers:
   script: index.html
   secure: always
 
-- url: /insert
+- url: /insert.php
   script: insert.php
   secure: always
 
@@ -21,11 +21,11 @@ handlers:
   script: webservice.php
   secure: always
 
-- url: /jwt
+- url: /jwt.php
   script: jwt.php
   secure: always
 
-- url: /list
+- url: /list.php
   script: list.php
   secure: always
 
